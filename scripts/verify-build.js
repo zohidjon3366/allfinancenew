@@ -16,7 +16,7 @@ const services = [
 const required = [
   'server.js','package.json','index.html','xizmatlar.html','team.html','narxlar.html',
   'yangiliklar.html','maqola.html','foydali.html','assets/css/style.css','assets/js/site.js',
-  'assets/js/news-client.js','assets/js/admin-news.js','assets/js/admin-team.js','assets/js/team-client.js','assets/js/useful-client.js','assets/js/useful-pages.js','assets/css/admin.css','admin/yangiliklar.html','admin/jamoa.html','data/team.json','assets/img/logo-horizontal.png','assets/img/office-section-bg.jpg',
+  'assets/js/news-client.js','assets/js/admin-news.js','assets/js/admin-team.js','assets/js/team-client.js','assets/js/useful-client.js','assets/js/useful-pages.js','assets/js/useful-live.js','assets/css/admin.css','admin/yangiliklar.html','admin/jamoa.html','data/team.json','assets/img/logo-horizontal.png','assets/img/office-section-bg.jpg',
   'assets/img/header-finance.jpg','data/news.json',
   'assets/img/process-4-step-uz.png','assets/img/process-4-step-ru.png','assets/img/process-4-step-en.png','assets/img/process-4-step-zh.png',
   'assets/img/solution-documents-uz.png','assets/img/solution-documents-ru.png','assets/img/solution-documents-en.png','assets/img/solution-documents-zh.png','robots.txt','sitemap.xml','SEO-MEDIA-BACKUP-SOZLASH.txt','assets/img/og/og-uz.jpg','assets/img/og/og-ru.jpg','assets/img/og/og-en.jpg','assets/img/og/og-zh.jpg',
@@ -82,7 +82,7 @@ for(const flag of ['uz','ru','en','zh']){const rel=`assets/img/flags/${flag}.svg
 
 
 // Syntax and SEO checks added in v15.
-for (const rel of ['server.js','assets/js/site.js','assets/js/news-client.js','assets/js/admin-news.js','assets/js/admin-team.js','assets/js/team-client.js','assets/js/useful-client.js','assets/js/useful-pages.js']) {
+for (const rel of ['server.js','assets/js/site.js','assets/js/news-client.js','assets/js/admin-news.js','assets/js/admin-team.js','assets/js/team-client.js','assets/js/useful-client.js','assets/js/useful-pages.js','assets/js/useful-live.js']) {
   try { execFileSync(process.execPath, ['--check', path.join(root, rel)], { stdio: 'pipe' }); console.log(`OK JS syntax: ${rel}`); }
   catch (error) { console.error(`INVALID JS: ${rel}`); failed = true; }
 }
@@ -117,7 +117,7 @@ for(const [page,images] of Object.entries(localizedPages)){
 
 for (const page of ['team.html','ru/team.html','en/team.html','zh/team.html']) {
   const html = fs.readFileSync(path.join(root, page), 'utf8');
-  if (!html.includes('data-team-grid') || !html.includes('team-client.js?v=22')) {
+  if (!html.includes('data-team-grid') || !html.includes('team-client.js?v=23')) {
     console.error('INVALID TEAM PAGE:', page);
     process.exitCode = 1;
   } else console.log('OK:', page, 'uses dynamic team data');
@@ -136,8 +136,8 @@ for (const langDir of ['', 'ru/', 'en/', 'zh/']) {
     if (!fs.existsSync(path.join(root, f))) { console.error('MISSING useful subpage:', f); process.exitCode = 1; }
     else {
       const html = fs.readFileSync(path.join(root, f), 'utf8');
-      if (!html.includes('bp-panel') || !html.includes('bp-info-card') || !html.includes('useful-pages.js?v=21')) { console.error('INVALID useful subpage:', f); process.exitCode = 1; }
-      else console.log('OK:', f, 'separate internal useful page');
+      if (!html.includes('useful-live-frame') || !html.includes('/buxpro/') || !html.includes('useful-live.js?v=23')) { console.error('INVALID useful subpage:', f); process.exitCode = 1; }
+      else console.log('OK:', f, 'live internal useful page');
     }
   }
   const hub = langDir + 'foydali.html';
