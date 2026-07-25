@@ -1,0 +1,4 @@
+Build: npm install
+Start: node server.js
+Env (optional for Telegram form): TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+Health check: /health

@@ -1,0 +1,11 @@
+Foydali maʼlumotlar sahifasi qo‘shildi.
+
+Manzillar:
+- /foydali.html
+- /ru/foydali.html
+- /en/foydali.html
+- /zh/foydali.html
+
+Bo‘limlar BuxgalterPRO manbalariga havola orqali bog‘langan. Amaldagi info oynasidagi BHM, MHEKM va asosiy stavka BuxgalterPRO info oynasi asosida ko‘rsatilgan.
+
+GitHubʼdagi fayllarni ushbu paket bilan to‘liq almashtiring va Renderʼda Clear build cache & deploy qiling.
