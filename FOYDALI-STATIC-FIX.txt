@@ -1,0 +1,14 @@
+Foydali baza v20 tuzatish.
+
+Muammo: avval foydali bo‘lim kartalari yoki cache qilingan JS sabab foydalanuvchi tashqi manbaga o‘tib ketayotgandek ko‘rindi.
+
+Tuzatish:
+1. Foydali baza bo‘limlari endi HTML ichida oldindan render qilingan.
+2. Kartalar faqat shu sahifadagi ichki bloklarga (#useful-calendar va boshqalar) olib boradi.
+3. Tashqi BuxgalterPRO havolasi faqat manba sifatida pastki qatorda qolgan, karta bosilganda tashqi sayt ochilmaydi.
+4. useful-client.js faqat aktiv kartani belgilaydi, sahifani ochish uchun API shart emas.
+5. Script cache busting qo‘shildi: useful-client.js?v=20.
+
+Deploy:
+GitHub'dagi fayllarni to‘liq almashtiring va Render'da Manual Deploy -> Clear build cache & deploy bosing.
+Brauzerda ham Ctrl+F5 qiling.
