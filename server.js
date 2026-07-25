@@ -602,6 +602,145 @@ async function getUsefulData(slug, force = false, lang = 'uz') {
   return { ...usefulTranslate(found, lang), updatedAt, fromCache: false, internal: true };
 }
 
+
+const BUXPRO_ORIGIN = 'https://buxgalterpro.uz';
+const BUXPRO_PAGES = {
+  calendar: '/calendar.html',
+  workdays: '/tools/ish_vaqti_normasi_2026.html',
+  rent: '/tools/eng_kam_ijara_stavkalari_2026.html',
+  laws: '/content/lex/lexuz.html',
+  links: '/'
+};
+
+function buxproUrlFor(key) {
+  const pathname = BUXPRO_PAGES[key];
+  if (!pathname) return '';
+  return new URL(pathname, BUXPRO_ORIGIN).href;
+}
+
+function isAllowedBuxproUrl(rawUrl) {
+  try {
+    const parsed = new URL(String(rawUrl || ''), BUXPRO_ORIGIN);
+    return parsed.origin === BUXPRO_ORIGIN || /(^|\.)buxgalterpro\.uz$/.test(parsed.hostname);
+  } catch {
+    return false;
+  }
+}
+
+async function fetchBuxpro(url) {
+  const response = await fetch(url, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 ALL-FINANCE-LiveUseful/23',
+      'Accept': '*/*',
+      'Accept-Language': 'uz-UZ,uz;q=0.9,ru;q=0.8,en;q=0.7'
+    }
+  });
+  const contentType = response.headers.get('content-type') || 'text/html; charset=utf-8';
+  const buffer = Buffer.from(await response.arrayBuffer());
+  return { response, contentType, buffer };
+}
+
+function buxproErrorHtml(title, sourceUrl, message) {
+  return `<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+    body{margin:0;font-family:Inter,Arial,sans-serif;background:#f3f8fb;color:#092454}.box{max-width:920px;margin:40px auto;padding:34px;border-radius:28px;background:#fff;border:1px solid #dbe8f6;box-shadow:0 18px 50px rgba(18,59,139,.12)}h1{margin:0 0 10px;font-size:30px;color:#123b8b}.source{display:inline-flex;padding:8px 12px;border-radius:999px;background:#e6f7ef;color:#0d8e57;font-weight:800;margin-top:14px}p{font-size:16px;line-height:1.6}.hint{color:#5b708f}</style></head><body><div class="box"><h1>${escapeHtml(title)}</h1><p>${escapeHtml(message || 'Manba saytga vaqtincha ulanib bo‘lmadi.')}</p><p class="hint">Render serverida internet/DNS ulanishi yoki BuxgalterPRO sahifasi vaqtincha javob bermagan bo‘lishi mumkin. Sahifa yangilanganda qayta urinadi.</p><span class="source">${escapeHtml(sourceUrl)}</span></div></body></html>`;
+}
+
+function injectBuxproHtml(html, key, sourceUrl) {
+  let output = String(html || '');
+  output = output.replace(/<script[^>]+src=["'][^"']*googletagmanager[^>]*><\/script>/gi, '');
+  output = output.replace(/<script[^>]+src=["'][^"']*google-analytics[^>]*><\/script>/gi, '');
+  output = output.replace(/<script[^>]+src=["'][^"']*yandex[^>]*><\/script>/gi, '');
+
+  const injectedHead = `
+  <base href="${BUXPRO_ORIGIN}/">
+  <style id="allfinance-buxpro-style">
+    :root{--af-navy:#123b8b;--af-deep:#08275d;--af-green:#16a66a;--af-line:#dbe7f5;--af-bg:#eef6fa;--af-soft:#f6f9fd;}
+    html,body{background:linear-gradient(180deg,#eef7fb 0%,#f8fbff 100%)!important;color:#0a285a!important;font-family:Inter,Arial,"Noto Sans",sans-serif!important;}
+    body{margin:0!important;overflow-x:auto!important;}
+    body:before{content:"ALL FINANCE live data";position:fixed;right:18px;top:14px;z-index:9999;background:rgba(255,255,255,.86);border:1px solid var(--af-line);border-radius:999px;padding:7px 13px;font:800 12px/1 Inter,Arial;color:var(--af-navy);box-shadow:0 12px 34px rgba(18,59,139,.10);backdrop-filter:blur(8px)}
+    a{color:var(--af-navy)!important;text-decoration:none!important}a:hover{color:var(--af-green)!important}
+    h1,h2,h3{color:var(--af-navy)!important;letter-spacing:-.02em!important}
+    button,.btn,input,select{border-radius:14px!important;font-family:inherit!important}
+    input,select{border:1px solid var(--af-line)!important;background:#fff!important;color:#0a285a!important;box-shadow:0 8px 24px rgba(18,59,139,.05)!important}
+    button,.btn,[role="button"]{background:linear-gradient(135deg,var(--af-navy),#2468d8)!important;color:#fff!important;border:0!important;box-shadow:0 12px 30px rgba(18,59,139,.16)!important;font-weight:800!important}
+    table{border-collapse:separate!important;border-spacing:0!important;background:#fff!important;border:1px solid var(--af-line)!important;border-radius:18px!important;overflow:hidden!important;box-shadow:0 18px 50px rgba(18,59,139,.10)!important;}
+    th{background:#eaf2ff!important;color:#456080!important;font-weight:900!important;border-color:#d4e2f1!important;}
+    td{background:#fff!important;color:#0a285a!important;border-color:#e7eef7!important;}
+    tr:nth-child(even) td{background:#fbfdff!important;}
+    .container,.wrapper,.main,.content,main,section{max-width:1240px!important;margin-left:auto!important;margin-right:auto!important;}
+    .calendar-card,.month-card,.region-card,.card,.box,.panel{border-radius:22px!important;border-color:var(--af-line)!important;box-shadow:0 16px 46px rgba(18,59,139,.10)!important;}
+    footer,.footer,[class*="telegram"],iframe[src*="youtube"],.ads,.ad,[id*="ad" i],[class*="advert" i]{display:none!important;}
+    @media(max-width:900px){body:before{display:none}.container,.wrapper,.main,.content,main,section{max-width:100%!important;padding-left:8px!important;padding-right:8px!important}table{font-size:12px!important}}
+  </style>
+  <script id="allfinance-buxpro-bridge">
+  (function(){
+    var sourceKey=${JSON.stringify(key)};
+    var buxOrigin=${JSON.stringify(BUXPRO_ORIGIN)};
+    function mapUrl(value){
+      try{
+        var u=new URL(value, buxOrigin + '/');
+        if(u.hostname==='buxgalterpro.uz' || /\\.buxgalterpro\\.uz$/.test(u.hostname)) return '/buxpro/raw?url=' + encodeURIComponent(u.href);
+      }catch(e){}
+      return value;
+    }
+    var oldFetch=window.fetch;
+    if(oldFetch){
+      window.fetch=function(input, init){
+        var url=typeof input==='string'?input:(input&&input.url)||'';
+        var mapped=mapUrl(url);
+        if(typeof input==='string') return oldFetch(mapped, init);
+        try{input=new Request(mapped, input);}catch(e){}
+        return oldFetch(input, init);
+      };
+    }
+    var OldXHR=window.XMLHttpRequest;
+    if(OldXHR){
+      window.XMLHttpRequest=function(){
+        var xhr=new OldXHR();
+        var oldOpen=xhr.open;
+        xhr.open=function(method,url){ arguments[1]=mapUrl(url); return oldOpen.apply(xhr, arguments); };
+        return xhr;
+      };
+    }
+    function sendHeight(){
+      var d=document.documentElement,b=document.body;
+      var h=Math.max(d?d.scrollHeight:0,b?b.scrollHeight:0,d?d.offsetHeight:0,b?b.offsetHeight:0,760);
+      parent.postMessage({type:'af-buxpro-height',source:sourceKey,height:h}, '*');
+    }
+    window.addEventListener('load',function(){setTimeout(sendHeight,100);setTimeout(sendHeight,800);setTimeout(sendHeight,1800);});
+    document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a'); if(!a) return; var h=a.getAttribute('href')||''; if(/^https?:/i.test(h)&&h.indexOf('buxgalterpro.uz')<0){a.target='_blank';a.rel='noopener noreferrer';}},true);
+    setInterval(sendHeight,1200);
+  })();
+  </script>`;
+  if (/<head[^>]*>/i.test(output)) output = output.replace(/<head([^>]*)>/i, `<head$1>${injectedHead}`);
+  else output = `<!doctype html><html><head>${injectedHead}</head><body>${output}</body></html>`;
+  return output;
+}
+
+async function serveBuxproPage(res, key) {
+  const sourceUrl = buxproUrlFor(key);
+  if (!sourceUrl) return send(res, 404, 'Not found', 'text/plain; charset=utf-8');
+  try {
+    const { response, contentType, buffer } = await fetchBuxpro(sourceUrl);
+    if (!response.ok) throw new Error(`BuxgalterPRO ${response.status}`);
+    const html = buffer.toString('utf8');
+    return send(res, 200, injectBuxproHtml(html, key, sourceUrl), 'text/html; charset=utf-8', { 'Cache-Control': 'no-cache, no-store, must-revalidate' });
+  } catch (error) {
+    return send(res, 200, buxproErrorHtml(USEFUL_SOURCES[key]?.title || 'Foydali maʼlumot', sourceUrl, error.message), 'text/html; charset=utf-8', { 'Cache-Control': 'no-cache, no-store, must-revalidate' });
+  }
+}
+
+async function serveBuxproRaw(req, res, url) {
+  const raw = url.searchParams.get('url') || '';
+  if (!isAllowedBuxproUrl(raw)) return send(res, 403, 'Forbidden', 'text/plain; charset=utf-8');
+  try {
+    const { response, contentType, buffer } = await fetchBuxpro(raw);
+    return send(res, response.ok ? 200 : response.status, buffer, contentType, { 'Cache-Control': 'public, max-age=900' });
+  } catch (error) {
+    return send(res, 502, `BuxgalterPRO proxy error: ${error.message}`, 'text/plain; charset=utf-8');
+  }
+}
+
 async function sendTelegram(data) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -627,6 +766,11 @@ const server = http.createServer(async (req, res) => {
     const pathname = decodeURIComponent(url.pathname);
 
     if (pathname === '/health') return sendJson(res, 200, { ok: true, service: 'allfinanceuz' });
+
+
+    const buxproToolMatch = pathname.match(/^\/buxpro\/(calendar|workdays|rent|laws|links)$/);
+    if (buxproToolMatch && req.method === 'GET') return serveBuxproPage(res, buxproToolMatch[1]);
+    if (pathname === '/buxpro/raw' && req.method === 'GET') return serveBuxproRaw(req, res, url);
 
 
 
