@@ -116,7 +116,17 @@ for(const [page,images] of Object.entries(localizedPages)){
 
 for (const f of ['foydali.html','ru/foydali.html','en/foydali.html','zh/foydali.html']) {
   const html = fs.readFileSync(path.join(root, f), 'utf8');
-  if (!html.includes('current-info-card') || !html.includes('data-useful="calendar"') || !html.includes('usefulLivePanel') || !html.includes('useful-client.js')) {
+  if (!html.includes('current-info-card') || !html.includes('href="#useful-calendar"') || !html.includes('useful-static-panel') || !html.includes('useful-client.js')) {
     console.error('INVALID useful page:', f); process.exitCode = 1;
-  } else console.log('OK:', f, 'internal useful resources page');
+  } else console.log('OK:', f, 'static internal useful resources page');
+}
+
+for (const f of ['foydali.html','ru/foydali.html','en/foydali.html','zh/foydali.html']) {
+  const html = fs.readFileSync(path.join(root, f), 'utf8');
+  if (html.includes('buxgalterpro.uz/calendar.html') && html.includes('class="useful-card" href="https://')) {
+    console.error('INVALID: useful cards redirect externally in '+f); process.exitCode = 1;
+  }
+  const panels = (html.match(/class="useful-static-panel"/g) || []).length;
+  if (panels < 5) { console.error('INVALID: '+f+' must render useful sections internally'); process.exitCode = 1; }
+  else console.log('OK:', f, 'renders useful sections internally');
 }
