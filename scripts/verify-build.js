@@ -16,7 +16,7 @@ const services = [
 const required = [
   'server.js','package.json','index.html','xizmatlar.html','team.html','narxlar.html',
   'yangiliklar.html','maqola.html','foydali.html','assets/css/style.css','assets/js/site.js',
-  'assets/js/news-client.js','assets/js/admin-news.js','assets/js/useful-client.js','assets/css/admin.css','admin/yangiliklar.html','assets/img/logo-horizontal.png','assets/img/office-section-bg.jpg',
+  'assets/js/news-client.js','assets/js/admin-news.js','assets/js/admin-team.js','assets/js/team-client.js','assets/js/useful-client.js','assets/js/useful-pages.js','assets/css/admin.css','admin/yangiliklar.html','admin/jamoa.html','data/team.json','assets/img/logo-horizontal.png','assets/img/office-section-bg.jpg',
   'assets/img/header-finance.jpg','data/news.json',
   'assets/img/process-4-step-uz.png','assets/img/process-4-step-ru.png','assets/img/process-4-step-en.png','assets/img/process-4-step-zh.png',
   'assets/img/solution-documents-uz.png','assets/img/solution-documents-ru.png','assets/img/solution-documents-en.png','assets/img/solution-documents-zh.png','robots.txt','sitemap.xml','SEO-MEDIA-BACKUP-SOZLASH.txt','assets/img/og/og-uz.jpg','assets/img/og/og-ru.jpg','assets/img/og/og-en.jpg','assets/img/og/og-zh.jpg',
@@ -82,7 +82,7 @@ for(const flag of ['uz','ru','en','zh']){const rel=`assets/img/flags/${flag}.svg
 
 
 // Syntax and SEO checks added in v15.
-for (const rel of ['server.js','assets/js/site.js','assets/js/news-client.js','assets/js/admin-news.js','assets/js/useful-client.js']) {
+for (const rel of ['server.js','assets/js/site.js','assets/js/news-client.js','assets/js/admin-news.js','assets/js/admin-team.js','assets/js/team-client.js','assets/js/useful-client.js','assets/js/useful-pages.js']) {
   try { execFileSync(process.execPath, ['--check', path.join(root, rel)], { stdio: 'pipe' }); console.log(`OK JS syntax: ${rel}`); }
   catch (error) { console.error(`INVALID JS: ${rel}`); failed = true; }
 }
@@ -114,19 +114,34 @@ for(const [page,images] of Object.entries(localizedPages)){
   if(/(?:process-4-step|solution-documents)-(?:uz|ru|en|zh)\.svg/.test(source)){console.error(`INVALID: obsolete SVG reference remains in ${page}`);process.exitCode=1;}
 }
 
-for (const f of ['foydali.html','ru/foydali.html','en/foydali.html','zh/foydali.html']) {
-  const html = fs.readFileSync(path.join(root, f), 'utf8');
-  if (!html.includes('current-info-card') || !html.includes('href="#useful-calendar"') || !html.includes('useful-static-panel') || !html.includes('useful-client.js')) {
-    console.error('INVALID useful page:', f); process.exitCode = 1;
-  } else console.log('OK:', f, 'static internal useful resources page');
-}
 
-for (const f of ['foydali.html','ru/foydali.html','en/foydali.html','zh/foydali.html']) {
-  const html = fs.readFileSync(path.join(root, f), 'utf8');
-  if (html.includes('buxgalterpro.uz/calendar.html') && html.includes('class="useful-card" href="https://')) {
-    console.error('INVALID: useful cards redirect externally in '+f); process.exitCode = 1;
+for (const page of ['team.html','ru/team.html','en/team.html','zh/team.html']) {
+  const html = fs.readFileSync(path.join(root, page), 'utf8');
+  if (!html.includes('data-team-grid') || !html.includes('team-client.js?v=22')) {
+    console.error('INVALID TEAM PAGE:', page);
+    process.exitCode = 1;
+  } else console.log('OK:', page, 'uses dynamic team data');
+}
+try {
+  const teamData = JSON.parse(fs.readFileSync(path.join(root, 'data/team.json'), 'utf8'));
+  if (!Array.isArray(teamData) || !teamData.length) { console.error('INVALID data/team.json'); process.exitCode = 1; }
+  else console.log('OK: data/team.json contains default team');
+} catch (error) { console.error('INVALID JSON: data/team.json', error.message); process.exitCode = 1; }
+
+
+const usefulRequired = ['foydali-calendar.html','foydali-workdays.html','foydali-rent.html','foydali-laws.html','foydali-links.html'];
+for (const langDir of ['', 'ru/', 'en/', 'zh/']) {
+  for (const rel of usefulRequired) {
+    const f = langDir + rel;
+    if (!fs.existsSync(path.join(root, f))) { console.error('MISSING useful subpage:', f); process.exitCode = 1; }
+    else {
+      const html = fs.readFileSync(path.join(root, f), 'utf8');
+      if (!html.includes('bp-panel') || !html.includes('bp-info-card') || !html.includes('useful-pages.js?v=21')) { console.error('INVALID useful subpage:', f); process.exitCode = 1; }
+      else console.log('OK:', f, 'separate internal useful page');
+    }
   }
-  const panels = (html.match(/class="useful-static-panel"/g) || []).length;
-  if (panels < 5) { console.error('INVALID: '+f+' must render useful sections internally'); process.exitCode = 1; }
-  else console.log('OK:', f, 'renders useful sections internally');
+  const hub = langDir + 'foydali.html';
+  const hubHtml = fs.readFileSync(path.join(root, hub), 'utf8');
+  if (!hubHtml.includes('foydali-calendar.html') || !hubHtml.includes('bp-tool-card')) { console.error('INVALID useful hub:', hub); process.exitCode = 1; }
+  else console.log('OK:', hub, 'links to separate useful pages');
 }
