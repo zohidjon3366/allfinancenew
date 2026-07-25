@@ -8,6 +8,7 @@ const PORT = Number(process.env.PORT || 3000);
 const DATA_DIR = process.env.DATA_DIR || path.join(ROOT, 'data');
 const REQUESTS_FILE = path.join(DATA_DIR, 'consult-requests.json');
 const NEWS_FILE = path.join(DATA_DIR, 'news.json');
+const TEAM_FILE = path.join(DATA_DIR, 'team.json');
 const MEDIA_DIR = path.join(DATA_DIR, 'media');
 const BACKUP_DIR = path.join(DATA_DIR, 'backups');
 const BACKUP_RETENTION_WEEKS = Math.max(2, Number(process.env.BACKUP_RETENTION_WEEKS || 8));
@@ -40,6 +41,11 @@ function ensureDataFiles() {
     const fallback = path.join(ROOT, 'data', 'news.json');
     if (fallback !== NEWS_FILE && fs.existsSync(fallback)) fs.copyFileSync(fallback, NEWS_FILE);
     else fs.writeFileSync(NEWS_FILE, '[]', 'utf8');
+  }
+  if (!fs.existsSync(TEAM_FILE)) {
+    const fallback = path.join(ROOT, 'data', 'team.json');
+    if (fallback !== TEAM_FILE && fs.existsSync(fallback)) fs.copyFileSync(fallback, TEAM_FILE);
+    else fs.writeFileSync(TEAM_FILE, '[]', 'utf8');
   }
 }
 ensureDataFiles();
@@ -152,6 +158,87 @@ function writeNews(items) {
   fs.renameSync(temp, NEWS_FILE);
 }
 
+function normalizeTeamItem(item) {
+  const baseTranslations = { uz: {}, ru: {}, en: {}, zh: {} };
+  const translations = item?.translations || {};
+  for (const lang of SUPPORTED_LANGS) {
+    const t = translations[lang] || {};
+    baseTranslations[lang] = {
+      name: String(t.name || '').trim(),
+      role: String(t.role || '').trim(),
+      experienceText: String(t.experienceText || '').trim(),
+      bio: String(t.bio || '').trim()
+    };
+  }
+  return {
+    id: String(item?.id || '').trim() || `member-${Date.now()}`,
+    order: Number.isFinite(Number(item?.order)) ? Number(item.order) : 100,
+    status: item?.status === 'hidden' ? 'hidden' : 'active',
+    image: String(item?.image || '').trim(),
+    translations: baseTranslations,
+    createdAt: item?.createdAt || '',
+    updatedAt: item?.updatedAt || ''
+  };
+}
+function readTeam() {
+  try {
+    const value = JSON.parse(fs.readFileSync(TEAM_FILE, 'utf8'));
+    return Array.isArray(value) ? value.map(normalizeTeamItem) : [];
+  } catch {
+    return [];
+  }
+}
+function writeTeam(items) {
+  const temp = `${TEAM_FILE}.tmp`;
+  fs.writeFileSync(temp, JSON.stringify(items.map(normalizeTeamItem), null, 2), 'utf8');
+  fs.renameSync(temp, TEAM_FILE);
+}
+function teamLangPart(item, lang) {
+  const normalized = normalizeTeamItem(item);
+  const selected = normalized.translations?.[lang] || {};
+  const uz = normalized.translations?.uz || {};
+  return {
+    name: selected.name || uz.name || '',
+    role: selected.role || uz.role || '',
+    experienceText: selected.experienceText || uz.experienceText || '',
+    bio: selected.bio || uz.bio || ''
+  };
+}
+function localizedTeamItem(item, lang) {
+  const normalized = normalizeTeamItem(item);
+  return {
+    id: normalized.id,
+    order: normalized.order,
+    image: normalized.image,
+    ...teamLangPart(normalized, lang)
+  };
+}
+function validateTeamInput(data, existingId = '') {
+  const raw = data.translations || {};
+  const translations = {};
+  for (const lang of SUPPORTED_LANGS) {
+    const part = raw[lang] || {};
+    translations[lang] = {
+      name: String(part.name || '').trim(),
+      role: String(part.role || '').trim(),
+      experienceText: String(part.experienceText || '').trim(),
+      bio: String(part.bio || '').trim()
+    };
+  }
+  if (!translations.uz.name || translations.uz.name.length < 3) throw new Error('Özbekça F.I.Sh. majburiy');
+  if (!translations.uz.role || translations.uz.role.length < 2) throw new Error('Özbekça lavozim majburiy');
+  if (!translations.uz.experienceText || translations.uz.experienceText.length < 3) throw new Error('Özbekça tajriba/maʼlumot majburiy');
+  for (const lang of SUPPORTED_LANGS) {
+    if (translations[lang].name.length > 160) throw new Error(`${lang.toUpperCase()}: F.I.Sh. juda uzun`);
+    if (translations[lang].role.length > 120) throw new Error(`${lang.toUpperCase()}: lavozim juda uzun`);
+    if (translations[lang].experienceText.length > 800) throw new Error(`${lang.toUpperCase()}: tajriba matni juda uzun`);
+    if (translations[lang].bio.length > 1200) throw new Error(`${lang.toUpperCase()}: izoh juda uzun`);
+  }
+  const order = Number.isFinite(Number(data.order)) ? Number(data.order) : 100;
+  const status = data.status === 'hidden' ? 'hidden' : 'active';
+  return { id: existingId || slugify(data.id || translations.uz.name), order, status, translations, updatedAt: new Date().toISOString() };
+}
+
 function countFilesAndBytes(dir) {
   let files = 0, bytes = 0;
   if (!fs.existsSync(dir)) return { files, bytes };
@@ -190,9 +277,10 @@ function createFullBackup(force = false) {
   fs.rmSync(temp, { recursive: true, force: true });
   fs.mkdirSync(temp, { recursive: true });
   if (fs.existsSync(NEWS_FILE)) fs.copyFileSync(NEWS_FILE, path.join(temp, 'news.json'));
+  if (fs.existsSync(TEAM_FILE)) fs.copyFileSync(TEAM_FILE, path.join(temp, 'team.json'));
   if (fs.existsSync(MEDIA_DIR)) fs.cpSync(MEDIA_DIR, path.join(temp, 'media'), { recursive: true });
   const stats = countFilesAndBytes(path.join(temp, 'media'));
-  fs.writeFileSync(path.join(temp, 'manifest.json'), JSON.stringify({ createdAt: createdAt.toISOString(), mediaFiles: stats.files, mediaBytes: stats.bytes, newsFile: 'news.json' }, null, 2), 'utf8');
+  fs.writeFileSync(path.join(temp, 'manifest.json'), JSON.stringify({ createdAt: createdAt.toISOString(), mediaFiles: stats.files, mediaBytes: stats.bytes, newsFile: 'news.json', teamFile: 'team.json' }, null, 2), 'utf8');
   fs.renameSync(temp, finalDir);
   const all = listBackups();
   all.slice(BACKUP_RETENTION_WEEKS).forEach(item => fs.rmSync(path.join(BACKUP_DIR, item.name), { recursive: true, force: true }));
@@ -541,6 +629,17 @@ const server = http.createServer(async (req, res) => {
     if (pathname === '/health') return sendJson(res, 200, { ok: true, service: 'allfinanceuz' });
 
 
+
+    if (pathname === '/api/team' && req.method === 'GET') {
+      const lang = SUPPORTED_LANGS.includes(url.searchParams.get('lang')) ? url.searchParams.get('lang') : 'uz';
+      const members = readTeam()
+        .filter(item => item.status !== 'hidden')
+        .sort((a, b) => Number(a.order || 100) - Number(b.order || 100))
+        .map(item => localizedTeamItem(item, lang))
+        .filter(item => item.name && item.role);
+      return sendJson(res, 200, members);
+    }
+
     if (pathname === '/api/useful' && req.method === 'GET') {
       const lang = SUPPORTED_LANGS.includes(url.searchParams.get('lang')) ? url.searchParams.get('lang') : 'uz';
       const slugs = readUsefulStatic().map(x => x.slug);
@@ -605,6 +704,66 @@ const server = http.createServer(async (req, res) => {
 
     if (pathname === '/api/admin/session' && req.method === 'GET') {
       return sendJson(res, isAdmin(req) ? 200 : 401, { authenticated: isAdmin(req) });
+    }
+
+
+    if (pathname === '/api/admin/team' && req.method === 'GET') {
+      if (!requireAdmin(req, res)) return;
+      const members = readTeam().sort((a, b) => Number(a.order || 100) - Number(b.order || 100));
+      return sendJson(res, 200, members);
+    }
+
+    if (pathname === '/api/admin/team' && req.method === 'POST') {
+      if (!requireAdmin(req, res)) return;
+      const data = await readJsonBody(req);
+      const team = readTeam();
+      const item = validateTeamInput(data);
+      let id = item.id;
+      let suffix = 2;
+      while (team.some(x => x.id === id)) id = `${item.id}-${suffix++}`;
+      item.id = id;
+      item.createdAt = new Date().toISOString();
+      item.image = data.imageData ? saveImage(data.imageData, data.imageName || `${id}.webp`) : '';
+      team.push(item);
+      writeTeam(team);
+      return sendJson(res, 201, item);
+    }
+
+    const adminTeamMatch = pathname.match(/^\/api\/admin\/team\/([^/]+)$/);
+    if (adminTeamMatch && req.method === 'PUT') {
+      if (!requireAdmin(req, res)) return;
+      const id = adminTeamMatch[1];
+      const data = await readJsonBody(req);
+      const team = readTeam();
+      const index = team.findIndex(x => x.id === id);
+      if (index < 0) return sendJson(res, 404, { message: 'Xodim topilmadi' });
+      const old = team[index];
+      const item = validateTeamInput(data, id);
+      item.createdAt = old.createdAt || new Date().toISOString();
+      item.image = old.image || '';
+      if (data.removeImage) {
+        deleteManagedImage(item.image);
+        item.image = '';
+      }
+      if (data.imageData) {
+        deleteManagedImage(item.image);
+        item.image = saveImage(data.imageData, data.imageName || `${id}.webp`);
+      }
+      team[index] = item;
+      writeTeam(team);
+      return sendJson(res, 200, item);
+    }
+
+    if (adminTeamMatch && req.method === 'DELETE') {
+      if (!requireAdmin(req, res)) return;
+      const id = adminTeamMatch[1];
+      const team = readTeam();
+      const index = team.findIndex(x => x.id === id);
+      if (index < 0) return sendJson(res, 404, { message: 'Xodim topilmadi' });
+      const [removed] = team.splice(index, 1);
+      deleteManagedImage(removed.image);
+      writeTeam(team);
+      return sendJson(res, 200, { ok: true });
     }
 
     if (pathname === '/api/admin/news' && req.method === 'GET') {
