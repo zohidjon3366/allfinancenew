@@ -741,6 +741,69 @@ async function serveBuxproRaw(req, res, url) {
   }
 }
 
+
+
+// v24 — Useful base managed from Render admin panel.
+const USEFUL_CUSTOM_FILE = path.join(DATA_DIR, 'useful-admin-data.json');
+const USEFUL_CUSTOM_FALLBACK_FILE = path.join(ROOT, 'data', 'useful-admin-data.json');
+function deepClone(value){ return JSON.parse(JSON.stringify(value)); }
+function readUsefulCustomFallback(){
+  try { return JSON.parse(fs.readFileSync(USEFUL_CUSTOM_FALLBACK_FILE, 'utf8')); }
+  catch { return { updatedAt: new Date().toISOString(), sections: {} }; }
+}
+function ensureUsefulCustomFile(){
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  if (!fs.existsSync(USEFUL_CUSTOM_FILE)) {
+    const seed = readUsefulCustomFallback();
+    fs.writeFileSync(USEFUL_CUSTOM_FILE, JSON.stringify(seed, null, 2), 'utf8');
+  }
+}
+function readUsefulCustom(){
+  try { ensureUsefulCustomFile(); return JSON.parse(fs.readFileSync(USEFUL_CUSTOM_FILE, 'utf8')); }
+  catch { return readUsefulCustomFallback(); }
+}
+function writeUsefulCustom(store){
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  store.updatedAt = new Date().toISOString();
+  fs.writeFileSync(USEFUL_CUSTOM_FILE, JSON.stringify(store, null, 2), 'utf8');
+}
+function resetUsefulCustom(){
+  const seed = readUsefulCustomFallback();
+  writeUsefulCustom(seed);
+  return seed;
+}
+function localizeObject(value, lang){
+  if (Array.isArray(value)) return value.map(x => localizeObject(x, lang));
+  if (value && typeof value === 'object') {
+    const keys = Object.keys(value);
+    const isLangMap = keys.length && keys.every(k => SUPPORTED_LANGS.includes(k));
+    if (isLangMap) return value[lang] ?? value.uz ?? value.ru ?? value.en ?? value.zh ?? '';
+    const out = {};
+    for (const [k, v] of Object.entries(value)) out[k] = localizeObject(v, lang);
+    return out;
+  }
+  return value;
+}
+function usefulPublicPayload(lang){
+  const store = readUsefulCustom();
+  return { updatedAt: store.updatedAt, sections: store.sections || {} };
+}
+function sanitizeUsefulSection(input, existingSlug){
+  const section = input && typeof input === 'object' ? input : {};
+  const slug = String(section.slug || existingSlug || '').trim().toLowerCase();
+  if (!/^[a-z0-9-]+$/.test(slug)) throw new Error('Bo‘lim slug qiymati noto‘g‘ri');
+  const kind = String(section.kind || '').trim() || slug;
+  const title = section.title && typeof section.title === 'object' ? section.title : {};
+  const subtitle = section.subtitle && typeof section.subtitle === 'object' ? section.subtitle : {};
+  const out = { ...section, slug, kind, title: {}, subtitle: {}, sourceName: String(section.sourceName || '').trim(), sourceUrl: String(section.sourceUrl || '').trim() };
+  for (const l of SUPPORTED_LANGS) {
+    out.title[l] = String(title[l] || title.uz || '').trim();
+    out.subtitle[l] = String(subtitle[l] || subtitle.uz || '').trim();
+  }
+  if (!out.title.uz) throw new Error('O‘zbekcha sarlavha majburiy');
+  return out;
+}
+
 async function sendTelegram(data) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -767,6 +830,21 @@ const server = http.createServer(async (req, res) => {
 
     if (pathname === '/health') return sendJson(res, 200, { ok: true, service: 'allfinanceuz' });
 
+
+
+
+    if (pathname === '/api/useful-custom' && req.method === 'GET') {
+      const lang = SUPPORTED_LANGS.includes(url.searchParams.get('lang')) ? url.searchParams.get('lang') : 'uz';
+      return sendJson(res, 200, usefulPublicPayload(lang));
+    }
+    const usefulCustomMatch = pathname.match(/^\/api\/useful-custom\/([a-z0-9-]+)$/);
+    if (usefulCustomMatch && req.method === 'GET') {
+      const lang = SUPPORTED_LANGS.includes(url.searchParams.get('lang')) ? url.searchParams.get('lang') : 'uz';
+      const store = readUsefulCustom();
+      const section = store.sections && store.sections[usefulCustomMatch[1]];
+      if (!section) return sendJson(res, 404, { message: 'Foydali bo‘lim topilmadi' });
+      return sendJson(res, 200, section);
+    }
 
     const buxproToolMatch = pathname.match(/^\/buxpro\/(calendar|workdays|rent|laws|links)$/);
     if (buxproToolMatch && req.method === 'GET') return serveBuxproPage(res, buxproToolMatch[1]);
@@ -850,6 +928,31 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, isAdmin(req) ? 200 : 401, { authenticated: isAdmin(req) });
     }
 
+
+
+
+    if (pathname === '/api/admin/useful-custom' && req.method === 'GET') {
+      if (!requireAdmin(req, res)) return;
+      return sendJson(res, 200, readUsefulCustom());
+    }
+    if (pathname === '/api/admin/useful-custom/reset' && req.method === 'POST') {
+      if (!requireAdmin(req, res)) return;
+      return sendJson(res, 200, resetUsefulCustom());
+    }
+    const adminUsefulCustomMatch = pathname.match(/^\/api\/admin\/useful-custom\/([a-z0-9-]+)$/);
+    if (adminUsefulCustomMatch && req.method === 'PUT') {
+      if (!requireAdmin(req, res)) return;
+      const oldSlug = adminUsefulCustomMatch[1];
+      const data = await readJsonBody(req, 4_000_000);
+      const section = sanitizeUsefulSection(data, oldSlug);
+      const store = readUsefulCustom();
+      store.sections = store.sections || {};
+      if (section.slug !== oldSlug && store.sections[section.slug]) throw new Error('Bunday slug bilan boshqa bo‘lim mavjud');
+      delete store.sections[oldSlug];
+      store.sections[section.slug] = section;
+      writeUsefulCustom(store);
+      return sendJson(res, 200, section);
+    }
 
     if (pathname === '/api/admin/team' && req.method === 'GET') {
       if (!requireAdmin(req, res)) return;
