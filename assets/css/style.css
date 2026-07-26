@@ -267,3 +267,6 @@ html[lang="zh-CN"] body{letter-spacing:.01em}.language-switcher a:last-child{min
 @media(max-width:1100px){.bp-workday-months{grid-template-columns:repeat(3,minmax(0,1fr))}.bp-rent-layout{grid-template-columns:1fr}.bp-region-list{position:relative;top:auto;max-height:none;display:flex;flex-wrap:wrap}.bp-region-list button{width:auto}}
 @media(max-width:760px){.bp-workday-months{grid-template-columns:repeat(2,minmax(0,1fr))}.bp-deadline-card{grid-template-columns:1fr}.bp-deadline-date{place-items:start;text-align:left;min-height:auto;padding:14px}.bp-calendar-month{padding:10px}.bp-mini-week span{font-size:11px;min-height:21px}}
 @media(max-width:520px){.bp-workday-months{grid-template-columns:1fr}.bp-rent-banner:after{display:none}}
+
+/* v25 — robust ijara JSON rendering */
+.bp-rent-stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.bp-rent-stat{display:inline-flex;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.18);padding:7px 10px;font-size:12px;font-weight:900}.bp-region-row td{background:#f1f7ff!important;color:var(--navy)!important;font-weight:900!important;font-size:16px}.bp-table td small{display:block;color:var(--muted);font-size:12px;font-weight:800;margin-top:3px}.bp-region-list button:first-child{font-weight:950;color:var(--green)}

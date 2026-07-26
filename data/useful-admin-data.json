@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T00:00:00.000Z",
+  "updatedAt": "2026-07-26T00:00:00.000Z",
   "sections": {
     "info": {
       "slug": "info",
@@ -3003,7 +3003,7 @@
         "en": "For individuals and legal entities leasing property",
         "zh": "适用于出租财产的个人和法人"
       },
-      "sourceName": "BuxgalterPRO eng_kam_ijara_stavkalari_2026.html",
+      "sourceName": "eng_kam_ijara_stavkalari_2026.html",
       "sourceUrl": "https://buxgalterpro.uz/tools/eng_kam_ijara_stavkalari_2026.html",
       "regions": [
         "Toshkent sh.",
@@ -3361,7 +3361,1149 @@
           "residential": "",
           "nonResidential": 91200
         }
-      ]
+      ],
+      "sarlavha": "2026 yil uchun mol-mulkni ijaraga beruvchi jismoniy va yuridik shaxslar uchun ijara to'lovining eng kam stavkalari",
+      "yil": 2026,
+      "valyuta": "UZS",
+      "olchov_birligi": "so'm/m²/oy",
+      "manba": "https://buxgalterpro.uz/tools/eng_kam_ijara_stavkalari_2026.html",
+      "hududlar": [
+        {
+          "hudud": "Андижон",
+          "holat": "elon_qilingan",
+          "joylar": [
+            {
+              "nomi": "Андижон",
+              "turi": "shahar",
+              "turar_joy": 21750,
+              "noturar_joy": 42600
+            },
+            {
+              "nomi": "Хонобод",
+              "turi": "shahar",
+              "turar_joy": 8260,
+              "noturar_joy": 16520
+            },
+            {
+              "nomi": "Олтинкўл",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Андижон",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Балиқчи",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Бўстон",
+              "turi": "tuman",
+              "turar_joy": 5900,
+              "noturar_joy": 11800
+            },
+            {
+              "nomi": "Булоқбоши",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Жалақудуқ",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Избоскан",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Улуғнор",
+              "turi": "tuman",
+              "turar_joy": 5900,
+              "noturar_joy": 11800
+            },
+            {
+              "nomi": "Қўрғонтепа",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Асака",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Марҳамат",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Шаҳрихон",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Пахтаобод",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Хўжаобод",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            }
+          ]
+        },
+        {
+          "hudud": "Бухоро",
+          "holat": "elon_qilingan",
+          "joylar": [
+            {
+              "nomi": "Бухоро",
+              "turi": "shahar",
+              "turar_joy": 21750,
+              "noturar_joy": 42600
+            },
+            {
+              "nomi": "Когон",
+              "turi": "shahar",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Олот",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Бухоро",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Вобкент",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Ғиждувон",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Жондор",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Когон",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Қоракўл",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Пешку",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Ромитан",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Шофиркон",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Қоровулбозор",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            }
+          ]
+        },
+        {
+          "hudud": "Фарғона",
+          "holat": "elon_qilingan",
+          "joylar": [
+            {
+              "nomi": "Фарғона",
+              "turi": "shahar",
+              "turar_joy": 17400,
+              "noturar_joy": 34080
+            },
+            {
+              "nomi": "Марғилон",
+              "turi": "shahar",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Қўқон",
+              "turi": "shahar",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Қувасой",
+              "turi": "shahar",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Бешариқ",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Боғдод",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Бувайда",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Данғара",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Фарғона",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Фурқат",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Ўзбекистон",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Олтиариқ",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Қуштепа",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Қува",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Риштон",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Сўх",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Тошлоқ",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Учкўприк",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            },
+            {
+              "nomi": "Ёзёвон",
+              "turi": "tuman",
+              "turar_joy": 6195,
+              "noturar_joy": 12390
+            }
+          ]
+        },
+        {
+          "hudud": "Хоразм",
+          "holat": "elon_qilingan",
+          "joylar": [
+            {
+              "nomi": "Урганч",
+              "turi": "shahar",
+              "turar_joy": 14500,
+              "noturar_joy": 28400
+            },
+            {
+              "nomi": "Хива",
+              "turi": "shahar",
+              "turar_joy": 11800,
+              "noturar_joy": 23600
+            },
+            {
+              "nomi": "Урганч",
+              "turi": "tuman",
+              "turar_joy": 7500,
+              "noturar_joy": 15000
+            },
+            {
+              "nomi": "Хива",
+              "turi": "tuman",
+              "turar_joy": 7500,
+              "noturar_joy": 15000
+            },
+            {
+              "nomi": "Хазарасп",
+              "turi": "tuman",
+              "turar_joy": 7500,
+              "noturar_joy": 15000
+            },
+            {
+              "nomi": "Гурлан",
+              "turi": "tuman",
+              "turar_joy": 7500,
+              "noturar_joy": 15000
+            },
+            {
+              "nomi": "Шовот",
+              "turi": "tuman",
+              "turar_joy": 7500,
+              "noturar_joy": 15000
+            },
+            {
+              "nomi": "Янгиариқ",
+              "turi": "tuman",
+              "turar_joy": 7500,
+              "noturar_joy": 15000
+            },
+            {
+              "nomi": "Қўшкўпир",
+              "turi": "tuman",
+              "turar_joy": 7500,
+              "noturar_joy": 15000
+            },
+            {
+              "nomi": "Боғот",
+              "turi": "tuman",
+              "turar_joy": 7500,
+              "noturar_joy": 15000
+            },
+            {
+              "nomi": "Ҳонқа",
+              "turi": "tuman",
+              "turar_joy": 7500,
+              "noturar_joy": 15000
+            },
+            {
+              "nomi": "Янгибозор",
+              "turi": "tuman",
+              "turar_joy": 7500,
+              "noturar_joy": 15000
+            },
+            {
+              "nomi": "Тупроққалъа",
+              "turi": "tuman",
+              "turar_joy": 7500,
+              "noturar_joy": 15000
+            }
+          ]
+        },
+        {
+          "hudud": "Жиззах",
+          "holat": "elon_qilingan",
+          "joylar": [
+            {
+              "nomi": "Жиззах",
+              "turi": "shahar",
+              "turar_joy": 23925,
+              "noturar_joy": 46860
+            },
+            {
+              "nomi": "Арнасой",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Бахмал",
+              "turi": "tuman",
+              "turar_joy": 7375,
+              "noturar_joy": 14750
+            },
+            {
+              "nomi": "Ғаллаорол",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 15930
+            },
+            {
+              "nomi": "Ш. Рашидов",
+              "turi": "tuman",
+              "turar_joy": 8555,
+              "noturar_joy": 17110
+            },
+            {
+              "nomi": "Дўстлик",
+              "turi": "tuman",
+              "turar_joy": 7375,
+              "noturar_joy": 14750
+            },
+            {
+              "nomi": "Зарбдор",
+              "turi": "tuman",
+              "turar_joy": 7375,
+              "noturar_joy": 14750
+            },
+            {
+              "nomi": "Зомин",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 15930
+            },
+            {
+              "nomi": "Зафаробод",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 14750
+            },
+            {
+              "nomi": "Мирзачўл",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 14750
+            },
+            {
+              "nomi": "Пахтакор",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 15930
+            },
+            {
+              "nomi": "Фориш",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 14750
+            },
+            {
+              "nomi": "Янгиобод",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 13570
+            }
+          ]
+        },
+        {
+          "hudud": "Навоий",
+          "holat": "elon_qilingan",
+          "joylar": [
+            {
+              "nomi": "Зарафшон",
+              "turi": "shahar",
+              "turar_joy": 7080,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Навоий",
+              "turi": "shahar",
+              "turar_joy": 18850,
+              "noturar_joy": 36920
+            },
+            {
+              "nomi": "Ғозғон",
+              "turi": "tuman",
+              "turar_joy": 5900,
+              "noturar_joy": 11800
+            },
+            {
+              "nomi": "Кармана",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Қизилтепа",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Конимех",
+              "turi": "tuman",
+              "turar_joy": 5900,
+              "noturar_joy": 11800
+            },
+            {
+              "nomi": "Навбаҳор",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Нурота",
+              "turi": "tuman",
+              "turar_joy": 5900,
+              "noturar_joy": 11800
+            },
+            {
+              "nomi": "Томди",
+              "turi": "tuman",
+              "turar_joy": 5900,
+              "noturar_joy": 11800
+            },
+            {
+              "nomi": "Учкўприк",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Хатирчи",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            }
+          ],
+          "izoh": "Manba sahifasida «Учкўприк тумани» deb ko'rsatilgan; bu Navoiy viloyatidagi «Учқудуқ тумани» nomining imlo xatosi bo'lishi mumkin."
+        },
+        {
+          "hudud": "Қашқадарё",
+          "holat": "elon_qilingan",
+          "joylar": [
+            {
+              "nomi": "Қарши",
+              "turi": "shahar",
+              "turar_joy": 21750,
+              "noturar_joy": 45440
+            },
+            {
+              "nomi": "Шахрисабз",
+              "turi": "shahar",
+              "turar_joy": 8260,
+              "noturar_joy": 17700
+            },
+            {
+              "nomi": "Ғузор",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 16520
+            },
+            {
+              "nomi": "Дехқонобод",
+              "turi": "tuman",
+              "turar_joy": 5900,
+              "noturar_joy": 11800
+            },
+            {
+              "nomi": "Қамаши",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Қарши",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 16520
+            },
+            {
+              "nomi": "Косон",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 16520
+            },
+            {
+              "nomi": "Китоб",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 16520
+            },
+            {
+              "nomi": "Муборак",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Нишон",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Касби",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Чироқчи",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 16520
+            },
+            {
+              "nomi": "Шахрисабз",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 16520
+            },
+            {
+              "nomi": "Яккабоғ",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 16520
+            },
+            {
+              "nomi": "Миришкор",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Кўкдала",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 15340
+            }
+          ]
+        },
+        {
+          "hudud": "Қорақалпоғистон Республикаси",
+          "holat": "elon_qilinmagan",
+          "joylar": []
+        },
+        {
+          "hudud": "Наманган",
+          "holat": "elon_qilingan",
+          "joylar": [
+            {
+              "nomi": "Наманган",
+              "turi": "shahar",
+              "turar_joy": 19575,
+              "noturar_joy": 56800
+            },
+            {
+              "nomi": "Мингбулок",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 17700
+            },
+            {
+              "nomi": "Косонсой",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 17700
+            },
+            {
+              "nomi": "Наманган",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 17700
+            },
+            {
+              "nomi": "Поп",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 17700
+            },
+            {
+              "nomi": "Туракургон",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 17700
+            },
+            {
+              "nomi": "Уйчи",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 17700
+            },
+            {
+              "nomi": "Чорток",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 17700
+            },
+            {
+              "nomi": "Янгикургон",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 17700
+            },
+            {
+              "nomi": "Норин",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 17700
+            },
+            {
+              "nomi": "Учкургон",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 17700
+            },
+            {
+              "nomi": "Чуст",
+              "turi": "tuman",
+              "turar_joy": 7965,
+              "noturar_joy": 17700
+            }
+          ]
+        },
+        {
+          "hudud": "Самарқанд",
+          "holat": "elon_qilingan",
+          "joylar": [
+            {
+              "nomi": "Самарқанд",
+              "turi": "shahar",
+              "turar_joy": 16965,
+              "noturar_joy": 33228
+            },
+            {
+              "nomi": "Каттақўрғон",
+              "turi": "shahar",
+              "turar_joy": 6903,
+              "noturar_joy": 13806
+            },
+            {
+              "nomi": "Тайлоқ",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Оқдарё",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Булунғур",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Жомбой",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Иштихон",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Каттақўрғон",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Қўшработ",
+              "turi": "tuman",
+              "turar_joy": 5900,
+              "noturar_joy": 11800
+            },
+            {
+              "nomi": "Нарпай",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Паяриқ",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Пастдарғом",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Пахтачи",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            },
+            {
+              "nomi": "Самарқанд",
+              "turi": "tuman",
+              "turar_joy": 6903,
+              "noturar_joy": 13806
+            },
+            {
+              "nomi": "Нуробод",
+              "turi": "tuman",
+              "turar_joy": 5900,
+              "noturar_joy": 11800
+            },
+            {
+              "nomi": "Ургут",
+              "turi": "tuman",
+              "turar_joy": 6785,
+              "noturar_joy": 13570
+            }
+          ]
+        },
+        {
+          "hudud": "Сирдарё",
+          "holat": "elon_qilingan",
+          "joylar": [
+            {
+              "nomi": "Гулистон",
+              "turi": "shahar",
+              "turar_joy": 20300,
+              "noturar_joy": 39760
+            },
+            {
+              "nomi": "Ширин",
+              "turi": "shahar",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Янгиер",
+              "turi": "shahar",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Оқолтин",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Боёвут",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Гулистон",
+              "turi": "tuman",
+              "turar_joy": 7080,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Мирзаобод",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Сайхунобод",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Сирдарё",
+              "turi": "tuman",
+              "turar_joy": 6050,
+              "noturar_joy": 12100
+            },
+            {
+              "nomi": "Ховос",
+              "turi": "tuman",
+              "turar_joy": 6050,
+              "noturar_joy": 12100
+            },
+            {
+              "nomi": "Сардоба",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            }
+          ]
+        },
+        {
+          "hudud": "Сурхондарё",
+          "holat": "elon_qilinmagan",
+          "joylar": []
+        },
+        {
+          "hudud": "Тошкент вилояти",
+          "holat": "elon_qilingan",
+          "joylar": [
+            {
+              "nomi": "Нурафшон",
+              "turi": "shahar",
+              "turar_joy": 18850,
+              "noturar_joy": 36920
+            },
+            {
+              "nomi": "Ангрен",
+              "turi": "shahar",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Бекобод",
+              "turi": "shahar",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Чирчиқ",
+              "turi": "shahar",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Охангарон",
+              "turi": "shahar",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Олмалиқ",
+              "turi": "shahar",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Янгийўл",
+              "turi": "shahar",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Бекобод",
+              "turi": "tuman",
+              "turar_joy": 6200,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Бўка",
+              "turi": "tuman",
+              "turar_joy": 6200,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Бўстонлиқ",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Чиноз",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Ўрта-Чирчиқ",
+              "turi": "tuman",
+              "turar_joy": 6200,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Охангарон",
+              "turi": "tuman",
+              "turar_joy": 6200,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Оққўрғон",
+              "turi": "tuman",
+              "turar_joy": 6200,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Паркент",
+              "turi": "tuman",
+              "turar_joy": 6200,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Пскент",
+              "turi": "tuman",
+              "turar_joy": 6200,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Қибрай",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Қуйи-Чирчиқ",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Тошкент",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            },
+            {
+              "nomi": "Янгийўл",
+              "turi": "tuman",
+              "turar_joy": 6200,
+              "noturar_joy": 14160
+            },
+            {
+              "nomi": "Юқори-Чирчиқ",
+              "turi": "tuman",
+              "turar_joy": 6490,
+              "noturar_joy": 12980
+            },
+            {
+              "nomi": "Зангиота",
+              "turi": "tuman",
+              "turar_joy": 7670,
+              "noturar_joy": 15340
+            }
+          ]
+        },
+        {
+          "hudud": "Тошкент шаҳри",
+          "holat": "elon_qilingan",
+          "tuzilma": "zonalar_va_faoliyat_turlari",
+          "zonalar": [
+            {
+              "zona": 1,
+              "turar_joy": 57000,
+              "noturar_joy": {
+                "omborxona": 72000,
+                "ishlab_chiqarish": 67200,
+                "hunarmandchilik": 67200,
+                "xizmat": 91200,
+                "umumiy_ovqatlanish": 91200,
+                "boshqalar": 91200,
+                "savdo": 91200,
+                "ofis": 91200
+              }
+            },
+            {
+              "zona": 2,
+              "turar_joy": 57000,
+              "noturar_joy": {
+                "omborxona": 67200,
+                "ishlab_chiqarish": 62400,
+                "hunarmandchilik": 62400,
+                "xizmat": 91200,
+                "umumiy_ovqatlanish": 86400,
+                "boshqalar": 91200,
+                "savdo": 91200,
+                "ofis": 91200
+              }
+            },
+            {
+              "zona": 3,
+              "turar_joy": 57000,
+              "noturar_joy": {
+                "omborxona": 62400,
+                "ishlab_chiqarish": 57600,
+                "hunarmandchilik": 57600,
+                "xizmat": 76800,
+                "umumiy_ovqatlanish": 76800,
+                "boshqalar": 81600,
+                "savdo": 91200,
+                "ofis": 91200
+              }
+            },
+            {
+              "zona": 4,
+              "turar_joy": 54000,
+              "noturar_joy": {
+                "omborxona": 57600,
+                "ishlab_chiqarish": 52800,
+                "hunarmandchilik": 52800,
+                "xizmat": 72000,
+                "umumiy_ovqatlanish": 67200,
+                "boshqalar": 72000,
+                "savdo": 86400,
+                "ofis": 81600
+              }
+            },
+            {
+              "zona": 5,
+              "turar_joy": 51000,
+              "noturar_joy": {
+                "omborxona": 52800,
+                "ishlab_chiqarish": 48000,
+                "hunarmandchilik": 48000,
+                "xizmat": 67200,
+                "umumiy_ovqatlanish": 62400,
+                "boshqalar": 62400,
+                "savdo": 81600,
+                "ofis": 67200
+              }
+            }
+          ]
+        }
+      ],
+      "statistika": {
+        "hududlar_soni": 14,
+        "elon_qilinmagan_hududlar": [
+          "Қорақалпоғистон Республикаси",
+          "Сурхондарё"
+        ],
+        "oddiy_shahar_tuman_qatorlari": 162,
+        "toshkent_shahri_zonalari": 5
+      }
     },
     "laws": {
       "slug": "laws",
