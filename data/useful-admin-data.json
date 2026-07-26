@@ -1,0 +1,3628 @@
+{
+  "updatedAt": "2026-07-25T00:00:00.000Z",
+  "sections": {
+    "info": {
+      "slug": "info",
+      "kind": "info",
+      "title": {
+        "uz": "Amaldagi info",
+        "ru": "Актуальная информация",
+        "en": "Current info",
+        "zh": "当前信息"
+      },
+      "subtitle": {
+        "uz": "BHM, MHEKM, asosiy stavka va tezkor o‘tishlar",
+        "ru": "БРВ, МРОТ, основная ставка и быстрые ссылки",
+        "en": "BCU, minimum wage, key rate and quick links",
+        "zh": "基本计算单位、最低工资、基准利率和快捷链接"
+      },
+      "sourceName": "BuxgalterPRO",
+      "sourceUrl": "https://buxgalterpro.uz/",
+      "metrics": [
+        {
+          "label": {
+            "uz": "BHM",
+            "ru": "БРВ",
+            "en": "BCU",
+            "zh": "基本计算单位"
+          },
+          "value": "412 000"
+        },
+        {
+          "label": {
+            "uz": "MHEKM",
+            "ru": "МРОТ",
+            "en": "Minimum wage",
+            "zh": "最低工资"
+          },
+          "value": "1 271 000"
+        },
+        {
+          "label": {
+            "uz": "Asosiy stavka",
+            "ru": "Основная ставка",
+            "en": "Key rate",
+            "zh": "基准利率"
+          },
+          "value": "14 %"
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "uz": "mySoliq",
+            "ru": "mySoliq",
+            "en": "mySoliq",
+            "zh": "mySoliq"
+          },
+          "url": "https://my.soliq.uz",
+          "note": {
+            "uz": "Soliq kabineti va hisobotlar",
+            "ru": "Налоговый кабинет и отчеты",
+            "en": "Tax cabinet and reports",
+            "zh": "税务账户和报表"
+          }
+        },
+        {
+          "title": {
+            "uz": "myMehnat",
+            "ru": "myMehnat",
+            "en": "myMehnat",
+            "zh": "myMehnat"
+          },
+          "url": "https://my.mehnat.uz",
+          "note": {
+            "uz": "Mehnat shartnomalari va kadrlar",
+            "ru": "Трудовые договоры и кадры",
+            "en": "Labor contracts and HR",
+            "zh": "劳动合同和人事"
+          }
+        },
+        {
+          "title": {
+            "uz": "INPS",
+            "ru": "ИНПС",
+            "en": "INPS",
+            "zh": "INPS"
+          },
+          "url": "https://nps.xb.uz",
+          "note": {
+            "uz": "Jamg‘arib boriladigan pensiya",
+            "ru": "Накопительная пенсионная система",
+            "en": "Pension savings",
+            "zh": "养老金储蓄"
+          }
+        },
+        {
+          "title": {
+            "uz": "CBU",
+            "ru": "ЦБ РУз",
+            "en": "Central Bank",
+            "zh": "中央银行"
+          },
+          "url": "https://cbu.uz",
+          "note": {
+            "uz": "Valyuta kurslari va asosiy stavka",
+            "ru": "Курсы валют и основная ставка",
+            "en": "FX rates and key rate",
+            "zh": "汇率和基准利率"
+          }
+        },
+        {
+          "title": {
+            "uz": "Faktura",
+            "ru": "Faktura",
+            "en": "E-invoice",
+            "zh": "电子发票"
+          },
+          "url": "https://my.soliq.uz",
+          "note": {
+            "uz": "Elektron hisobvaraq-faktura",
+            "ru": "Электронные счета-фактуры",
+            "en": "Electronic invoices",
+            "zh": "电子发票"
+          }
+        }
+      ]
+    },
+    "calendar": {
+      "slug": "calendar",
+      "kind": "calendar",
+      "title": {
+        "uz": "Buxgalter taqvimi 2026",
+        "ru": "Календарь бухгалтера 2026",
+        "en": "Accountant calendar 2026",
+        "zh": "会计日历 2026"
+      },
+      "subtitle": {
+        "uz": "Soliq hisobotlari va to‘lov muddatlari · O‘zbekiston",
+        "ru": "Сроки налоговых отчетов и платежей · Узбекистан",
+        "en": "Tax reporting and payment deadlines · Uzbekistan",
+        "zh": "税务申报和付款期限 · 乌兹别克斯坦"
+      },
+      "sourceName": "BuxgalterPRO calendar.html",
+      "sourceUrl": "https://buxgalterpro.uz/calendar.html",
+      "months": [
+        {
+          "month": 1,
+          "name": {
+            "uz": "Yanvar",
+            "ru": "Январь",
+            "en": "January",
+            "zh": "一月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ],
+            [
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
+            ],
+            [
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 2,
+          "name": {
+            "uz": "Fevral",
+            "ru": "Февраль",
+            "en": "February",
+            "zh": "二月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            ],
+            [
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 3,
+          "name": {
+            "uz": "Mart",
+            "ru": "Март",
+            "en": "March",
+            "zh": "三月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            ],
+            [
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ],
+            [
+              30,
+              31,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 4,
+          "name": {
+            "uz": "Aprel",
+            "ru": "Апрель",
+            "en": "April",
+            "zh": "四月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            [
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            [
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26
+            ],
+            [
+              27,
+              28,
+              29,
+              30,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 5,
+          "name": {
+            "uz": "May",
+            "ru": "Май",
+            "en": "May",
+            "zh": "五月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            [
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ],
+            [
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ]
+        },
+        {
+          "month": 6,
+          "name": {
+            "uz": "Iyun",
+            "ru": "Июнь",
+            "en": "June",
+            "zh": "六月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            [
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21
+            ],
+            [
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28
+            ],
+            [
+              29,
+              30,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 7,
+          "name": {
+            "uz": "Iyul",
+            "ru": "Июль",
+            "en": "July",
+            "zh": "七月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            [
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            [
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26
+            ],
+            [
+              27,
+              28,
+              29,
+              30,
+              31,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 8,
+          "name": {
+            "uz": "Avgust",
+            "ru": "Август",
+            "en": "August",
+            "zh": "八月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            [
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            [
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ],
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            [
+              31,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 9,
+          "name": {
+            "uz": "Sentabr",
+            "ru": "Сентябрь",
+            "en": "September",
+            "zh": "九月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            [
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27
+            ],
+            [
+              28,
+              29,
+              30,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 10,
+          "name": {
+            "uz": "Oktabr",
+            "ru": "Октябрь",
+            "en": "October",
+            "zh": "十月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ],
+            [
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
+            ],
+            [
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 11,
+          "name": {
+            "uz": "Noyabr",
+            "ru": "Ноябрь",
+            "en": "November",
+            "zh": "十一月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            ],
+            [
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ],
+            [
+              30,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 12,
+          "name": {
+            "uz": "Dekabr",
+            "ru": "Декабрь",
+            "en": "December",
+            "zh": "十二月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            [
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27
+            ],
+            [
+              28,
+              29,
+              30,
+              31,
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-04-01",
+          "day": 1,
+          "month": 4,
+          "weekday": {
+            "uz": "Chorshanba",
+            "ru": "Chorshanba",
+            "en": "Chorshanba",
+            "zh": "Chorshanba"
+          },
+          "type": "hisobot",
+          "count": {
+            "uz": "1 ta muddat",
+            "ru": "1 ta muddat",
+            "en": "1 ta muddat",
+            "zh": "1 ta muddat"
+          },
+          "title": {
+            "uz": "1-korxona statistika hisoboti",
+            "ru": "1-korxona statistika hisoboti",
+            "en": "1-korxona statistika hisoboti",
+            "zh": "1-korxona statistika hisoboti"
+          },
+          "description": {
+            "uz": "1-korxona statistika hisoboti.",
+            "ru": "1-korxona statistika hisoboti.",
+            "en": "1-korxona statistika hisoboti.",
+            "zh": "1-korxona statistika hisoboti."
+          }
+        },
+        {
+          "date": "2026-04-06",
+          "day": 6,
+          "month": 4,
+          "weekday": {
+            "uz": "Dushanba",
+            "ru": "Dushanba",
+            "en": "Dushanba",
+            "zh": "Dushanba"
+          },
+          "type": "tolov",
+          "count": {
+            "uz": "1 ta muddat",
+            "ru": "1 ta muddat",
+            "en": "1 ta muddat",
+            "zh": "1 ta muddat"
+          },
+          "title": {
+            "uz": "Bank: norezidentlarga fevralda to‘langan daromadlar bo‘yicha foyda solig‘ini to‘lash",
+            "ru": "Bank: norezidentlarga fevralda to‘langan daromadlar bo‘yicha foyda solig‘ini to‘lash",
+            "en": "Bank: norezidentlarga fevralda to‘langan daromadlar bo‘yicha foyda solig‘ini to‘lash",
+            "zh": "Bank: norezidentlarga fevralda to‘langan daromadlar bo‘yicha foyda solig‘ini to‘lash"
+          },
+          "description": {
+            "uz": "Bank: norezidentlarga fevralda to‘langan daromadlar bo‘yicha foyda solig‘ini to‘lash.",
+            "ru": "Bank: norezidentlarga fevralda to‘langan daromadlar bo‘yicha foyda solig‘ini to‘lash.",
+            "en": "Bank: norezidentlarga fevralda to‘langan daromadlar bo‘yicha foyda solig‘ini to‘lash.",
+            "zh": "Bank: norezidentlarga fevralda to‘langan daromadlar bo‘yicha foyda solig‘ini to‘lash."
+          }
+        },
+        {
+          "date": "2026-04-07",
+          "day": 7,
+          "month": 4,
+          "weekday": {
+            "uz": "Seshanba",
+            "ru": "Seshanba",
+            "en": "Seshanba",
+            "zh": "Seshanba"
+          },
+          "type": "tolov",
+          "count": {
+            "uz": "1 ta muddat",
+            "ru": "1 ta muddat",
+            "en": "1 ta muddat",
+            "zh": "1 ta muddat"
+          },
+          "title": {
+            "uz": "O‘tgan oyda natural shaklda to‘langan daromaddan JShDS to‘lash",
+            "ru": "O‘tgan oyda natural shaklda to‘langan daromaddan JShDS to‘lash",
+            "en": "O‘tgan oyda natural shaklda to‘langan daromaddan JShDS to‘lash",
+            "zh": "O‘tgan oyda natural shaklda to‘langan daromaddan JShDS to‘lash"
+          },
+          "description": {
+            "uz": "O‘tgan oyda natural shaklda to‘langan daromaddan JShDS to‘lash; natural shaklda oylik to‘langan bo‘lsa, INPSni 5 kun ichida to‘lash.",
+            "ru": "O‘tgan oyda natural shaklda to‘langan daromaddan JShDS to‘lash; natural shaklda oylik to‘langan bo‘lsa, INPSni 5 kun ichida to‘lash.",
+            "en": "O‘tgan oyda natural shaklda to‘langan daromaddan JShDS to‘lash; natural shaklda oylik to‘langan bo‘lsa, INPSni 5 kun ichida to‘lash.",
+            "zh": "O‘tgan oyda natural shaklda to‘langan daromaddan JShDS to‘lash; natural shaklda oylik to‘langan bo‘lsa, INPSni 5 kun ichida to‘lash."
+          }
+        },
+        {
+          "date": "2026-04-09",
+          "day": 9,
+          "month": 4,
+          "weekday": {
+            "uz": "Payshanba",
+            "ru": "Payshanba",
+            "en": "Payshanba",
+            "zh": "Payshanba"
+          },
+          "type": "tolov",
+          "count": {
+            "uz": "1 ta muddat",
+            "ru": "1 ta muddat",
+            "en": "1 ta muddat",
+            "zh": "1 ta muddat"
+          },
+          "title": {
+            "uz": "Alkogol, pivo va tamaki mahsulotlarini sotish huquqi yig‘imini to‘lash",
+            "ru": "Alkogol, pivo va tamaki mahsulotlarini sotish huquqi yig‘imini to‘lash",
+            "en": "Alkogol, pivo va tamaki mahsulotlarini sotish huquqi yig‘imini to‘lash",
+            "zh": "Alkogol, pivo va tamaki mahsulotlarini sotish huquqi yig‘imini to‘lash"
+          },
+          "description": {
+            "uz": "Alkogol, pivo va tamaki mahsulotlarini sotish huquqi yig‘imini to‘lash.",
+            "ru": "Alkogol, pivo va tamaki mahsulotlarini sotish huquqi yig‘imini to‘lash.",
+            "en": "Alkogol, pivo va tamaki mahsulotlarini sotish huquqi yig‘imini to‘lash.",
+            "zh": "Alkogol, pivo va tamaki mahsulotlarini sotish huquqi yig‘imini to‘lash."
+          }
+        },
+        {
+          "date": "2026-04-10",
+          "day": 10,
+          "month": 4,
+          "weekday": {
+            "uz": "Juma",
+            "ru": "Juma",
+            "en": "Juma",
+            "zh": "Juma"
+          },
+          "type": "hisobot tolov boshqa",
+          "count": {
+            "uz": "4 ta muddat",
+            "ru": "4 ta muddat",
+            "en": "4 ta muddat",
+            "zh": "4 ta muddat"
+          },
+          "title": {
+            "uz": "Aksiz solig‘i",
+            "ru": "Aksiz solig‘i",
+            "en": "Aksiz solig‘i",
+            "zh": "Aksiz solig‘i"
+          },
+          "description": {
+            "uz": "Aksiz solig‘i; yer solig‘i 1/12 qismi; mol-mulk solig‘i 1/12 qismi; nogiron bolasi bor ishchiga qo‘shimcha dam olish kuni bo‘yicha qoplash arizasi.",
+            "ru": "Aksiz solig‘i; yer solig‘i 1/12 qismi; mol-mulk solig‘i 1/12 qismi; nogiron bolasi bor ishchiga qo‘shimcha dam olish kuni bo‘yicha qoplash arizasi.",
+            "en": "Aksiz solig‘i; yer solig‘i 1/12 qismi; mol-mulk solig‘i 1/12 qismi; nogiron bolasi bor ishchiga qo‘shimcha dam olish kuni bo‘yicha qoplash arizasi.",
+            "zh": "Aksiz solig‘i; yer solig‘i 1/12 qismi; mol-mulk solig‘i 1/12 qismi; nogiron bolasi bor ishchiga qo‘shimcha dam olish kuni bo‘yicha qoplash arizasi."
+          }
+        },
+        {
+          "date": "2026-04-15",
+          "day": 15,
+          "month": 4,
+          "weekday": {
+            "uz": "Chorshanba",
+            "ru": "Chorshanba",
+            "en": "Chorshanba",
+            "zh": "Chorshanba"
+          },
+          "type": "hisobot tolov",
+          "count": {
+            "uz": "7 ta muddat",
+            "ru": "7 ta muddat",
+            "en": "7 ta muddat",
+            "zh": "7 ta muddat"
+          },
+          "title": {
+            "uz": "Aylanmadan soliq",
+            "ru": "Aylanmadan soliq",
+            "en": "Aylanmadan soliq",
+            "zh": "Aylanmadan soliq"
+          },
+          "description": {
+            "uz": "Aylanmadan soliq; daromad va ijtimoiy soliq; INPS reestri; soliq agentlari bo‘yicha AOS; ekologiya hisoboti; onlayn-NKM texnik xatolarini tuzatish; foyda solig‘i avans ma’lumotnomasi.",
+            "ru": "Aylanmadan soliq; daromad va ijtimoiy soliq; INPS reestri; soliq agentlari bo‘yicha AOS; ekologiya hisoboti; onlayn-NKM texnik xatolarini tuzatish; foyda solig‘i avans ma’lumotnomasi.",
+            "en": "Aylanmadan soliq; daromad va ijtimoiy soliq; INPS reestri; soliq agentlari bo‘yicha AOS; ekologiya hisoboti; onlayn-NKM texnik xatolarini tuzatish; foyda solig‘i avans ma’lumotnomasi.",
+            "zh": "Aylanmadan soliq; daromad va ijtimoiy soliq; INPS reestri; soliq agentlari bo‘yicha AOS; ekologiya hisoboti; onlayn-NKM texnik xatolarini tuzatish; foyda solig‘i avans ma’lumotnomasi."
+          }
+        },
+        {
+          "date": "2026-04-20",
+          "day": 20,
+          "month": 4,
+          "weekday": {
+            "uz": "Dushanba",
+            "ru": "Dushanba",
+            "en": "Dushanba",
+            "zh": "Dushanba"
+          },
+          "type": "hisobot tolov",
+          "count": {
+            "uz": "10 ta muddat",
+            "ru": "10 ta muddat",
+            "en": "10 ta muddat",
+            "zh": "10 ta muddat"
+          },
+          "title": {
+            "uz": "QQS hisoboti va to‘lovi",
+            "ru": "QQS hisoboti va to‘lovi",
+            "en": "QQS hisoboti va to‘lovi",
+            "zh": "QQS hisoboti va to‘lovi"
+          },
+          "description": {
+            "uz": "QQS hisoboti va to‘lovi; soliq agentlari uchun QQS va foyda solig‘i; yer qa’ridan foydalanganlik; renta solig‘i; dividend/foiz hisoboti; foyda solig‘i 1-chorak; suv solig‘i 1/12 qismi; onlayn-NKM tuzatishlari.",
+            "ru": "QQS hisoboti va to‘lovi; soliq agentlari uchun QQS va foyda solig‘i; yer qa’ridan foydalanganlik; renta solig‘i; dividend/foiz hisoboti; foyda solig‘i 1-chorak; suv solig‘i 1/12 qismi; onlayn-NKM tuzatishlari.",
+            "en": "QQS hisoboti va to‘lovi; soliq agentlari uchun QQS va foyda solig‘i; yer qa’ridan foydalanganlik; renta solig‘i; dividend/foiz hisoboti; foyda solig‘i 1-chorak; suv solig‘i 1/12 qismi; onlayn-NKM tuzatishlari.",
+            "zh": "QQS hisoboti va to‘lovi; soliq agentlari uchun QQS va foyda solig‘i; yer qa’ridan foydalanganlik; renta solig‘i; dividend/foiz hisoboti; foyda solig‘i 1-chorak; suv solig‘i 1/12 qismi; onlayn-NKM tuzatishlari."
+          }
+        },
+        {
+          "date": "2026-04-23",
+          "day": 23,
+          "month": 4,
+          "weekday": {
+            "uz": "Payshanba",
+            "ru": "Payshanba",
+            "en": "Payshanba",
+            "zh": "Payshanba"
+          },
+          "type": "tolov",
+          "count": {
+            "uz": "1 ta muddat",
+            "ru": "1 ta muddat",
+            "en": "1 ta muddat",
+            "zh": "1 ta muddat"
+          },
+          "title": {
+            "uz": "Foyda solig‘i aprel oyiga avans to‘lovi (daromadi 20 mlrd so‘mdan yuqori korxonalar)",
+            "ru": "Foyda solig‘i aprel oyiga avans to‘lovi (daromadi 20 mlrd so‘mdan yuqori korxonalar)",
+            "en": "Foyda solig‘i aprel oyiga avans to‘lovi (daromadi 20 mlrd so‘mdan yuqori korxonalar)",
+            "zh": "Foyda solig‘i aprel oyiga avans to‘lovi (daromadi 20 mlrd so‘mdan yuqori korxonalar)"
+          },
+          "description": {
+            "uz": "Foyda solig‘i aprel oyiga avans to‘lovi (daromadi 20 mlrd so‘mdan yuqori korxonalar).",
+            "ru": "Foyda solig‘i aprel oyiga avans to‘lovi (daromadi 20 mlrd so‘mdan yuqori korxonalar).",
+            "en": "Foyda solig‘i aprel oyiga avans to‘lovi (daromadi 20 mlrd so‘mdan yuqori korxonalar).",
+            "zh": "Foyda solig‘i aprel oyiga avans to‘lovi (daromadi 20 mlrd so‘mdan yuqori korxonalar)."
+          }
+        },
+        {
+          "date": "2026-04-27",
+          "day": 27,
+          "month": 4,
+          "weekday": {
+            "uz": "Dushanba",
+            "ru": "Dushanba",
+            "en": "Dushanba",
+            "zh": "Dushanba"
+          },
+          "type": "boshqa",
+          "count": {
+            "uz": "1 ta muddat",
+            "ru": "1 ta muddat",
+            "en": "1 ta muddat",
+            "zh": "1 ta muddat"
+          },
+          "title": {
+            "uz": "Xodimning mehnatda mayib bo‘lishi yoki kasb kasalligi tufayli tayinlangan nogironlik va boquvchisini yo‘qotganlik pensiyalarini korxona qoplashi bo‘yicha majburiyat",
+            "ru": "Xodimning mehnatda mayib bo‘lishi yoki kasb kasalligi tufayli tayinlangan nogironlik va boquvchisini yo‘qotganlik pensiyalarini korxona qoplashi bo‘yicha majburiyat",
+            "en": "Xodimning mehnatda mayib bo‘lishi yoki kasb kasalligi tufayli tayinlangan nogironlik va boquvchisini yo‘qotganlik pensiyalarini korxona qoplashi bo‘yicha majburiyat",
+            "zh": "Xodimning mehnatda mayib bo‘lishi yoki kasb kasalligi tufayli tayinlangan nogironlik va boquvchisini yo‘qotganlik pensiyalarini korxona qoplashi bo‘yicha majburiyat"
+          },
+          "description": {
+            "uz": "Xodimning mehnatda mayib bo‘lishi yoki kasb kasalligi tufayli tayinlangan nogironlik va boquvchisini yo‘qotganlik pensiyalarini korxona qoplashi bo‘yicha majburiyat.",
+            "ru": "Xodimning mehnatda mayib bo‘lishi yoki kasb kasalligi tufayli tayinlangan nogironlik va boquvchisini yo‘qotganlik pensiyalarini korxona qoplashi bo‘yicha majburiyat.",
+            "en": "Xodimning mehnatda mayib bo‘lishi yoki kasb kasalligi tufayli tayinlangan nogironlik va boquvchisini yo‘qotganlik pensiyalarini korxona qoplashi bo‘yicha majburiyat.",
+            "zh": "Xodimning mehnatda mayib bo‘lishi yoki kasb kasalligi tufayli tayinlangan nogironlik va boquvchisini yo‘qotganlik pensiyalarini korxona qoplashi bo‘yicha majburiyat."
+          }
+        }
+      ]
+    },
+    "workdays": {
+      "slug": "workdays",
+      "kind": "workdays",
+      "title": {
+        "uz": "2026-yil ish kunlari va soatlari taqvim-balansi",
+        "ru": "Календарь-баланс рабочих дней и часов на 2026 год",
+        "en": "2026 workdays and hours calendar balance",
+        "zh": "2026年工作日和工时日历平衡"
+      },
+      "subtitle": {
+        "uz": "5 kunlik va 6 kunlik ish haftasi bo‘yicha kalendar va ish vaqti balansi",
+        "ru": "Календарь и баланс рабочего времени для 5- и 6-дневной недели",
+        "en": "Calendar and working time balance for 5-day and 6-day weeks",
+        "zh": "五天和六天工作周的日历与工时平衡"
+      },
+      "sourceName": "BuxgalterPRO ish_vaqti_normasi_2026.html",
+      "sourceUrl": "https://buxgalterpro.uz/tools/ish_vaqti_normasi_2026.html",
+      "months": [
+        {
+          "month": 1,
+          "name": {
+            "uz": "Yanvar",
+            "ru": "Январь",
+            "en": "January",
+            "zh": "一月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ],
+            [
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
+            ],
+            [
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 2,
+          "name": {
+            "uz": "Fevral",
+            "ru": "Февраль",
+            "en": "February",
+            "zh": "二月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            ],
+            [
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 3,
+          "name": {
+            "uz": "Mart",
+            "ru": "Март",
+            "en": "March",
+            "zh": "三月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            ],
+            [
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ],
+            [
+              30,
+              31,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 4,
+          "name": {
+            "uz": "Aprel",
+            "ru": "Апрель",
+            "en": "April",
+            "zh": "四月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            [
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            [
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26
+            ],
+            [
+              27,
+              28,
+              29,
+              30,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 5,
+          "name": {
+            "uz": "May",
+            "ru": "Май",
+            "en": "May",
+            "zh": "五月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            [
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ],
+            [
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ]
+        },
+        {
+          "month": 6,
+          "name": {
+            "uz": "Iyun",
+            "ru": "Июнь",
+            "en": "June",
+            "zh": "六月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            [
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21
+            ],
+            [
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28
+            ],
+            [
+              29,
+              30,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 7,
+          "name": {
+            "uz": "Iyul",
+            "ru": "Июль",
+            "en": "July",
+            "zh": "七月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            [
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            [
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26
+            ],
+            [
+              27,
+              28,
+              29,
+              30,
+              31,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 8,
+          "name": {
+            "uz": "Avgust",
+            "ru": "Август",
+            "en": "August",
+            "zh": "八月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            [
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            [
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ],
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            [
+              31,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 9,
+          "name": {
+            "uz": "Sentabr",
+            "ru": "Сентябрь",
+            "en": "September",
+            "zh": "九月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            [
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27
+            ],
+            [
+              28,
+              29,
+              30,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 10,
+          "name": {
+            "uz": "Oktabr",
+            "ru": "Октябрь",
+            "en": "October",
+            "zh": "十月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ],
+            [
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
+            ],
+            [
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 11,
+          "name": {
+            "uz": "Noyabr",
+            "ru": "Ноябрь",
+            "en": "November",
+            "zh": "十一月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            ],
+            [
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ],
+            [
+              30,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "month": 12,
+          "name": {
+            "uz": "Dekabr",
+            "ru": "Декабрь",
+            "en": "December",
+            "zh": "十二月"
+          },
+          "weekdays": {
+            "uz": [
+              "Du",
+              "Se",
+              "Cho",
+              "Pa",
+              "Ju",
+              "Sha",
+              "Ya"
+            ],
+            "ru": [
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб",
+              "Вс"
+            ],
+            "en": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ],
+            "zh": [
+              "一",
+              "二",
+              "三",
+              "四",
+              "五",
+              "六",
+              "日"
+            ]
+          },
+          "weeks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            [
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27
+            ],
+            [
+              28,
+              29,
+              30,
+              31,
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "balance": [
+        {
+          "month": 1,
+          "name": {
+            "uz": "Yanvar",
+            "ru": "Январь",
+            "en": "January",
+            "zh": "一月"
+          },
+          "days5": 20,
+          "hours5": 160,
+          "days6": "",
+          "hours6": ""
+        },
+        {
+          "month": 2,
+          "name": {
+            "uz": "Fevral",
+            "ru": "Февраль",
+            "en": "February",
+            "zh": "二月"
+          },
+          "days5": 20,
+          "hours5": 160,
+          "days6": "",
+          "hours6": ""
+        },
+        {
+          "month": 3,
+          "name": {
+            "uz": "Mart",
+            "ru": "Март",
+            "en": "March",
+            "zh": "三月"
+          },
+          "days5": 19,
+          "hours5": 151,
+          "days6": "",
+          "hours6": ""
+        },
+        {
+          "month": 4,
+          "name": {
+            "uz": "Aprel",
+            "ru": "Апрель",
+            "en": "April",
+            "zh": "四月"
+          },
+          "days5": 22,
+          "hours5": 176,
+          "days6": "",
+          "hours6": ""
+        },
+        {
+          "month": 5,
+          "name": {
+            "uz": "May",
+            "ru": "Май",
+            "en": "May",
+            "zh": "五月"
+          },
+          "days5": 17,
+          "hours5": 134,
+          "days6": "",
+          "hours6": ""
+        },
+        {
+          "month": 6,
+          "name": {
+            "uz": "Iyun",
+            "ru": "Июнь",
+            "en": "June",
+            "zh": "六月"
+          },
+          "days5": 22,
+          "hours5": 176,
+          "days6": "",
+          "hours6": ""
+        },
+        {
+          "month": 7,
+          "name": {
+            "uz": "Iyul",
+            "ru": "Июль",
+            "en": "July",
+            "zh": "七月"
+          },
+          "days5": 23,
+          "hours5": 184,
+          "days6": "",
+          "hours6": ""
+        },
+        {
+          "month": 8,
+          "name": {
+            "uz": "Avgust",
+            "ru": "Август",
+            "en": "August",
+            "zh": "八月"
+          },
+          "days5": 20,
+          "hours5": 160,
+          "days6": "",
+          "hours6": ""
+        },
+        {
+          "month": 9,
+          "name": {
+            "uz": "Sentabr",
+            "ru": "Сентябрь",
+            "en": "September",
+            "zh": "九月"
+          },
+          "days5": 21,
+          "hours5": 167,
+          "days6": "",
+          "hours6": ""
+        },
+        {
+          "month": 10,
+          "name": {
+            "uz": "Oktabr",
+            "ru": "Октябрь",
+            "en": "October",
+            "zh": "十月"
+          },
+          "days5": 21,
+          "hours5": 168,
+          "days6": "",
+          "hours6": ""
+        },
+        {
+          "month": 11,
+          "name": {
+            "uz": "Noyabr",
+            "ru": "Ноябрь",
+            "en": "November",
+            "zh": "十一月"
+          },
+          "days5": 21,
+          "hours5": 168,
+          "days6": "",
+          "hours6": ""
+        },
+        {
+          "month": 12,
+          "name": {
+            "uz": "Dekabr",
+            "ru": "Декабрь",
+            "en": "December",
+            "zh": "十二月"
+          },
+          "days5": 22,
+          "hours5": 175,
+          "days6": "",
+          "hours6": ""
+        }
+      ],
+      "holidays": [
+        {
+          "date": "2026-01-01",
+          "name": {
+            "uz": "Yangi yil",
+            "ru": "Новый год",
+            "en": "New Year",
+            "zh": "新年"
+          }
+        },
+        {
+          "date": "2026-03-08",
+          "name": {
+            "uz": "Xotin-qizlar kuni",
+            "ru": "Международный женский день",
+            "en": "International Women’s Day",
+            "zh": "国际妇女节"
+          }
+        },
+        {
+          "date": "2026-03-20",
+          "name": {
+            "uz": "Ramazon hayiti (o‘zgarishi mumkin)",
+            "ru": "Руза хайит (может измениться)",
+            "en": "Eid al-Fitr (may change)",
+            "zh": "开斋节（可能变动）"
+          }
+        },
+        {
+          "date": "2026-03-21",
+          "name": {
+            "uz": "Navro‘z bayrami",
+            "ru": "Навруз",
+            "en": "Navruz",
+            "zh": "纳乌鲁兹节"
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "name": {
+            "uz": "Xotira va qadrlash kuni",
+            "ru": "День памяти и почестей",
+            "en": "Day of Memory and Honor",
+            "zh": "纪念和荣誉日"
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "name": {
+            "uz": "Qurbon hayiti (o‘zgarishi mumkin)",
+            "ru": "Курбан хайит (может измениться)",
+            "en": "Eid al-Adha (may change)",
+            "zh": "古尔邦节（可能变动）"
+          }
+        },
+        {
+          "date": "2026-09-01",
+          "name": {
+            "uz": "Mustaqillik kuni",
+            "ru": "День независимости",
+            "en": "Independence Day",
+            "zh": "独立日"
+          }
+        },
+        {
+          "date": "2026-10-01",
+          "name": {
+            "uz": "O‘qituvchi va murabbiylar kuni",
+            "ru": "День учителя и наставника",
+            "en": "Teachers and Mentors Day",
+            "zh": "教师节"
+          }
+        },
+        {
+          "date": "2026-12-08",
+          "name": {
+            "uz": "Konstitutsiya kuni",
+            "ru": "День Конституции",
+            "en": "Constitution Day",
+            "zh": "宪法日"
+          }
+        }
+      ]
+    },
+    "rent": {
+      "slug": "rent",
+      "kind": "rent",
+      "title": {
+        "uz": "2026-yil eng kam ijara stavkalari",
+        "ru": "Минимальные ставки аренды на 2026 год",
+        "en": "Minimum rent rates for 2026",
+        "zh": "2026年最低租赁费率"
+      },
+      "subtitle": {
+        "uz": "Mol-mulkni ijaraga beruvchi jismoniy va yuridik shaxslar uchun",
+        "ru": "Для физических и юридических лиц, сдающих имущество в аренду",
+        "en": "For individuals and legal entities leasing property",
+        "zh": "适用于出租财产的个人和法人"
+      },
+      "sourceName": "BuxgalterPRO eng_kam_ijara_stavkalari_2026.html",
+      "sourceUrl": "https://buxgalterpro.uz/tools/eng_kam_ijara_stavkalari_2026.html",
+      "regions": [
+        "Toshkent sh.",
+        "Andijon",
+        "Buxoro",
+        "Farg‘ona",
+        "Xorazm",
+        "Jizzax",
+        "Namangan",
+        "Navoiy",
+        "Qashqadaryo",
+        "Qoraqalpog‘iston resp.",
+        "Samarqand",
+        "Sirdaryo",
+        "Surxondaryo",
+        "Toshkent vil."
+      ],
+      "rates": [
+        {
+          "region": "Toshkent sh.",
+          "zone": "1-zona",
+          "name": {
+            "uz": "1-zona",
+            "ru": "1-zona",
+            "en": "1-zona",
+            "zh": "1-zona"
+          },
+          "residential": "",
+          "nonResidential": "",
+          "isZone": true
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "1-zona",
+          "name": {
+            "uz": "Omborxona",
+            "ru": "Omborxona",
+            "en": "Omborxona",
+            "zh": "Omborxona"
+          },
+          "residential": "",
+          "nonResidential": 72000
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "1-zona",
+          "name": {
+            "uz": "Ishlab chiqarish",
+            "ru": "Ishlab chiqarish",
+            "en": "Ishlab chiqarish",
+            "zh": "Ishlab chiqarish"
+          },
+          "residential": "",
+          "nonResidential": 67200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "1-zona",
+          "name": {
+            "uz": "Hunarmand",
+            "ru": "Hunarmand",
+            "en": "Hunarmand",
+            "zh": "Hunarmand"
+          },
+          "residential": "",
+          "nonResidential": 67200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "1-zona",
+          "name": {
+            "uz": "Xizmat ko‘rsatish",
+            "ru": "Xizmat ko‘rsatish",
+            "en": "Xizmat ko‘rsatish",
+            "zh": "Xizmat ko‘rsatish"
+          },
+          "residential": "",
+          "nonResidential": 91200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "1-zona",
+          "name": {
+            "uz": "Umumiy ovqatlanish",
+            "ru": "Umumiy ovqatlanish",
+            "en": "Umumiy ovqatlanish",
+            "zh": "Umumiy ovqatlanish"
+          },
+          "residential": "",
+          "nonResidential": 91200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "1-zona",
+          "name": {
+            "uz": "Boshqalar",
+            "ru": "Boshqalar",
+            "en": "Boshqalar",
+            "zh": "Boshqalar"
+          },
+          "residential": "",
+          "nonResidential": 91200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "1-zona",
+          "name": {
+            "uz": "Savdo",
+            "ru": "Savdo",
+            "en": "Savdo",
+            "zh": "Savdo"
+          },
+          "residential": "",
+          "nonResidential": 91200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "1-zona",
+          "name": {
+            "uz": "Ofis",
+            "ru": "Ofis",
+            "en": "Ofis",
+            "zh": "Ofis"
+          },
+          "residential": "",
+          "nonResidential": 91200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "1-zona",
+          "name": {
+            "uz": "Turar joy",
+            "ru": "Turar joy",
+            "en": "Turar joy",
+            "zh": "Turar joy"
+          },
+          "residential": 57000,
+          "nonResidential": ""
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "2-zona",
+          "name": {
+            "uz": "2-zona",
+            "ru": "2-zona",
+            "en": "2-zona",
+            "zh": "2-zona"
+          },
+          "residential": "",
+          "nonResidential": "",
+          "isZone": true
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "2-zona",
+          "name": {
+            "uz": "Omborxona",
+            "ru": "Omborxona",
+            "en": "Omborxona",
+            "zh": "Omborxona"
+          },
+          "residential": "",
+          "nonResidential": 67200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "2-zona",
+          "name": {
+            "uz": "Ishlab chiqarish",
+            "ru": "Ishlab chiqarish",
+            "en": "Ishlab chiqarish",
+            "zh": "Ishlab chiqarish"
+          },
+          "residential": "",
+          "nonResidential": 62400
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "2-zona",
+          "name": {
+            "uz": "Hunarmand",
+            "ru": "Hunarmand",
+            "en": "Hunarmand",
+            "zh": "Hunarmand"
+          },
+          "residential": "",
+          "nonResidential": 62400
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "2-zona",
+          "name": {
+            "uz": "Xizmat ko‘rsatish",
+            "ru": "Xizmat ko‘rsatish",
+            "en": "Xizmat ko‘rsatish",
+            "zh": "Xizmat ko‘rsatish"
+          },
+          "residential": "",
+          "nonResidential": 91200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "2-zona",
+          "name": {
+            "uz": "Umumiy ovqatlanish",
+            "ru": "Umumiy ovqatlanish",
+            "en": "Umumiy ovqatlanish",
+            "zh": "Umumiy ovqatlanish"
+          },
+          "residential": "",
+          "nonResidential": 86400
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "2-zona",
+          "name": {
+            "uz": "Boshqalar",
+            "ru": "Boshqalar",
+            "en": "Boshqalar",
+            "zh": "Boshqalar"
+          },
+          "residential": "",
+          "nonResidential": 91200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "2-zona",
+          "name": {
+            "uz": "Savdo",
+            "ru": "Savdo",
+            "en": "Savdo",
+            "zh": "Savdo"
+          },
+          "residential": "",
+          "nonResidential": 91200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "2-zona",
+          "name": {
+            "uz": "Ofis",
+            "ru": "Ofis",
+            "en": "Ofis",
+            "zh": "Ofis"
+          },
+          "residential": "",
+          "nonResidential": 91200
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "2-zona",
+          "name": {
+            "uz": "Turar joy",
+            "ru": "Turar joy",
+            "en": "Turar joy",
+            "zh": "Turar joy"
+          },
+          "residential": 57000,
+          "nonResidential": ""
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "3-zona",
+          "name": {
+            "uz": "3-zona",
+            "ru": "3-zona",
+            "en": "3-zona",
+            "zh": "3-zona"
+          },
+          "residential": "",
+          "nonResidential": "",
+          "isZone": true
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "3-zona",
+          "name": {
+            "uz": "Omborxona",
+            "ru": "Omborxona",
+            "en": "Omborxona",
+            "zh": "Omborxona"
+          },
+          "residential": "",
+          "nonResidential": 62400
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "3-zona",
+          "name": {
+            "uz": "Ishlab chiqarish",
+            "ru": "Ishlab chiqarish",
+            "en": "Ishlab chiqarish",
+            "zh": "Ishlab chiqarish"
+          },
+          "residential": "",
+          "nonResidential": 57600
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "3-zona",
+          "name": {
+            "uz": "Hunarmand",
+            "ru": "Hunarmand",
+            "en": "Hunarmand",
+            "zh": "Hunarmand"
+          },
+          "residential": "",
+          "nonResidential": 57600
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "3-zona",
+          "name": {
+            "uz": "Xizmat ko‘rsatish",
+            "ru": "Xizmat ko‘rsatish",
+            "en": "Xizmat ko‘rsatish",
+            "zh": "Xizmat ko‘rsatish"
+          },
+          "residential": "",
+          "nonResidential": 76800
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "3-zona",
+          "name": {
+            "uz": "Umumiy ovqatlanish",
+            "ru": "Umumiy ovqatlanish",
+            "en": "Umumiy ovqatlanish",
+            "zh": "Umumiy ovqatlanish"
+          },
+          "residential": "",
+          "nonResidential": 76800
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "3-zona",
+          "name": {
+            "uz": "Boshqalar",
+            "ru": "Boshqalar",
+            "en": "Boshqalar",
+            "zh": "Boshqalar"
+          },
+          "residential": "",
+          "nonResidential": 81600
+        },
+        {
+          "region": "Toshkent sh.",
+          "zone": "3-zona",
+          "name": {
+            "uz": "Savdo",
+            "ru": "Savdo",
+            "en": "Savdo",
+            "zh": "Savdo"
+          },
+          "residential": "",
+          "nonResidential": 91200
+        }
+      ]
+    },
+    "laws": {
+      "slug": "laws",
+      "kind": "laws",
+      "title": {
+        "uz": "Qonun hujjatlar",
+        "ru": "Нормативные документы",
+        "en": "Legislation",
+        "zh": "法律法规"
+      },
+      "subtitle": {
+        "uz": "BHMS, buxgalteriya, soliq, huquq va kadr bo‘yicha zarur manbalar",
+        "ru": "НСБУ, бухгалтерия, налоги, право и кадры",
+        "en": "Accounting standards, tax, legal and HR references",
+        "zh": "会计准则、税务、法律和人事参考"
+      },
+      "sourceName": "BuxgalterPRO lexuz.html",
+      "sourceUrl": "https://buxgalterpro.uz/content/lex/lexuz.html",
+      "items": [
+        {
+          "category": {
+            "uz": "Soliq",
+            "ru": "Налог",
+            "en": "Tax",
+            "zh": "税务"
+          },
+          "title": {
+            "uz": "Soliq kodeksi 2026",
+            "ru": "Налоговый кодекс 2026",
+            "en": "Tax Code 2026",
+            "zh": "税法典 2026"
+          },
+          "url": "https://lex.uz",
+          "note": {
+            "uz": "Soliq majburiyatlari, hisobotlar va to‘lov muddatlari",
+            "ru": "Налоговые обязательства, отчеты и сроки",
+            "en": "Tax obligations, reports and deadlines",
+            "zh": "税务义务、报表和期限"
+          }
+        },
+        {
+          "category": {
+            "uz": "BHMS",
+            "ru": "НСБУ",
+            "en": "NAS",
+            "zh": "会计准则"
+          },
+          "title": {
+            "uz": "Buxgalteriya hisobi milliy standartlari",
+            "ru": "Национальные стандарты бухучета",
+            "en": "National accounting standards",
+            "zh": "国家会计准则"
+          },
+          "url": "https://lex.uz",
+          "note": {
+            "uz": "Buxgalteriya hisobini yuritish qoidalari",
+            "ru": "Правила ведения бухучета",
+            "en": "Accounting rules",
+            "zh": "会计规则"
+          }
+        },
+        {
+          "category": {
+            "uz": "Mehnat",
+            "ru": "Труд",
+            "en": "Labor",
+            "zh": "劳动"
+          },
+          "title": {
+            "uz": "Mehnat kodeksi",
+            "ru": "Трудовой кодекс",
+            "en": "Labor Code",
+            "zh": "劳动法典"
+          },
+          "url": "https://lex.uz",
+          "note": {
+            "uz": "Kadrlar, mehnat shartnomalari, dam olish va ish vaqti",
+            "ru": "Кадры, трудовые договоры, отдых и рабочее время",
+            "en": "HR, labor contracts, rest and work time",
+            "zh": "人事、劳动合同、休息和工作时间"
+          }
+        },
+        {
+          "category": {
+            "uz": "Huquq",
+            "ru": "Право",
+            "en": "Law",
+            "zh": "法律"
+          },
+          "title": {
+            "uz": "Fuqarolik kodeksi",
+            "ru": "Гражданский кодекс",
+            "en": "Civil Code",
+            "zh": "民法典"
+          },
+          "url": "https://lex.uz",
+          "note": {
+            "uz": "Shartnomalar va majburiyatlar",
+            "ru": "Договоры и обязательства",
+            "en": "Contracts and obligations",
+            "zh": "合同和义务"
+          }
+        }
+      ]
+    },
+    "links": {
+      "slug": "links",
+      "kind": "links",
+      "title": {
+        "uz": "Foydali linklar",
+        "ru": "Полезные ссылки",
+        "en": "Useful links",
+        "zh": "实用链接"
+      },
+      "subtitle": {
+        "uz": "Buxgalter va rahbar uchun tezkor xizmatlar va foydali materiallar",
+        "ru": "Быстрые сервисы и материалы для бухгалтера и руководителя",
+        "en": "Quick services and materials for accountants and managers",
+        "zh": "面向会计和管理者的快捷服务和资料"
+      },
+      "sourceName": "BuxgalterPRO",
+      "sourceUrl": "https://buxgalterpro.uz/",
+      "links": [
+        {
+          "title": {
+            "uz": "mySoliq",
+            "ru": "mySoliq",
+            "en": "mySoliq",
+            "zh": "mySoliq"
+          },
+          "url": "https://my.soliq.uz",
+          "note": {
+            "uz": "Soliq kabineti va hisobotlar",
+            "ru": "Налоговый кабинет и отчеты",
+            "en": "Tax cabinet and reports",
+            "zh": "税务账户和报表"
+          }
+        },
+        {
+          "title": {
+            "uz": "myMehnat",
+            "ru": "myMehnat",
+            "en": "myMehnat",
+            "zh": "myMehnat"
+          },
+          "url": "https://my.mehnat.uz",
+          "note": {
+            "uz": "Mehnat shartnomalari va kadrlar",
+            "ru": "Трудовые договоры и кадры",
+            "en": "Labor contracts and HR",
+            "zh": "劳动合同和人事"
+          }
+        },
+        {
+          "title": {
+            "uz": "INPS",
+            "ru": "ИНПС",
+            "en": "INPS",
+            "zh": "INPS"
+          },
+          "url": "https://nps.xb.uz",
+          "note": {
+            "uz": "Jamg‘arib boriladigan pensiya",
+            "ru": "Накопительная пенсионная система",
+            "en": "Pension savings",
+            "zh": "养老金储蓄"
+          }
+        },
+        {
+          "title": {
+            "uz": "CBU",
+            "ru": "ЦБ РУз",
+            "en": "Central Bank",
+            "zh": "中央银行"
+          },
+          "url": "https://cbu.uz",
+          "note": {
+            "uz": "Valyuta kurslari va asosiy stavka",
+            "ru": "Курсы валют и основная ставка",
+            "en": "FX rates and key rate",
+            "zh": "汇率和基准利率"
+          }
+        },
+        {
+          "title": {
+            "uz": "Faktura",
+            "ru": "Faktura",
+            "en": "E-invoice",
+            "zh": "电子发票"
+          },
+          "url": "https://my.soliq.uz",
+          "note": {
+            "uz": "Elektron hisobvaraq-faktura",
+            "ru": "Электронные счета-фактуры",
+            "en": "Electronic invoices",
+            "zh": "电子发票"
+          }
+        },
+        {
+          "title": {
+            "uz": "Lex.uz",
+            "ru": "Lex.uz",
+            "en": "Lex.uz",
+            "zh": "Lex.uz"
+          },
+          "url": "https://lex.uz",
+          "note": {
+            "uz": "Qonun hujjatlari bazasi",
+            "ru": "База законодательства",
+            "en": "Legislation database",
+            "zh": "法律数据库"
+          }
+        }
+      ],
+      "posts": [
+        {
+          "title": {
+            "uz": "6% QQS to‘lovchidan tovar olib, 12% QQS bilan sotish holati",
+            "ru": "Покупка у плательщика 6% НДС и продажа с 12% НДС",
+            "en": "Buying from 6% VAT payer and selling with 12% VAT",
+            "zh": "从6%增值税纳税人采购并按12%销售"
+          },
+          "url": "https://buxgalterpro.uz/",
+          "note": {
+            "uz": "QQS bo‘yicha amaliy vaziyat",
+            "ru": "Практическая ситуация по НДС",
+            "en": "Practical VAT case",
+            "zh": "增值税实务案例"
+          }
+        },
+        {
+          "title": {
+            "uz": "Transport vositasini ijaraga berish tartibi",
+            "ru": "Порядок сдачи транспортного средства в аренду",
+            "en": "Vehicle rental procedure",
+            "zh": "车辆租赁程序"
+          },
+          "url": "https://buxgalterpro.uz/",
+          "note": {
+            "uz": "Ijara va soliq oqibatlari",
+            "ru": "Аренда и налоговые последствия",
+            "en": "Rental and tax implications",
+            "zh": "租赁和税务影响"
+          }
+        },
+        {
+          "title": {
+            "uz": "TMZni tekin berish yoki olishni rasmiylashtirish",
+            "ru": "Оформление безвозмездной передачи/получения ТМЗ",
+            "en": "Documenting free transfer/receipt of inventories",
+            "zh": "库存无偿转让/接收文件"
+          },
+          "url": "https://buxgalterpro.uz/",
+          "note": {
+            "uz": "Buxgalteriya va soliq yozuvlari",
+            "ru": "Бухгалтерский и налоговый учет",
+            "en": "Accounting and tax entries",
+            "zh": "会计和税务分录"
+          }
+        }
+      ]
+    }
+  }
+}
