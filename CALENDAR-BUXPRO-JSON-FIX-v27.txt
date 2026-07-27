@@ -1,0 +1,26 @@
+ALL FINANCE v27 — Buxgalter taqvimi JSON tuzatishi
+
+Muammo:
+- BuxgalterPRO formatidagi buxgalter_taqvimi_2026_iyul.json faylida maʼlumotlar sanalar[] ichida, har bir sana ichida muddatlar[] ko‘rinishida keladi.
+- Oldingi kod faqat events/deadlines/muddatlar kabi oddiy ro‘yxatni o‘qiyotgan edi.
+
+Tuzatildi:
+- assets/js/useful-custom.js endi calendar bo‘limida quyidagi formatni ham o‘qiydi:
+  sanalar[] -> muddatlar[]
+- sana, hafta kuni, muddat turi, hisobot davri, eslatma, asl muddat va ko‘chirish sababi chiqariladi.
+- hisobot_va_tolov va reestr_va_tolov kabi kategoriyalar filterlarda to‘g‘ri ishlaydi.
+- script versiyasi useful-custom.js?v=27 qilindi.
+- data/useful-admin-data.json ichiga boshlang‘ich maʼlumot sifatida yuborilgan iyul 2026 taqvimi joylashtirildi.
+
+Render’da ishlatish:
+1. GitHub’dagi fayllarni ushbu paket bilan to‘liq almashtiring.
+2. Render: Manual Deploy -> Clear build cache & deploy.
+3. Brauzerda Ctrl+F5 bosing.
+4. Agar Render Persistent Disk’da eski useful-admin-data.json saqlangan bo‘lsa, admin panelda calendar bo‘limiga shu JSONni qayta saqlang yoki “Boshlang‘ichga qaytarish” tugmasini bosing.
+
+Muhim fayllar:
+- assets/js/useful-custom.js
+- assets/css/style.css
+- data/useful-admin-data.json
+- admin/foydali.html
+- foydali-calendar.html va til papkalaridagi foydali-calendar.html
