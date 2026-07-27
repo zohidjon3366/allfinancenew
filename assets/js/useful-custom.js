@@ -19,6 +19,8 @@
     zh:['一','二','三','四','五','六','日']
   };
   const DEFAULT_MONTHS = Array.from({length:12},(_,i)=>({month:i+1,name:{uz:MONTH_NAMES.uz[i],ru:MONTH_NAMES.ru[i],en:MONTH_NAMES.en[i],zh:MONTH_NAMES.zh[i]}}));
+  const USEFUL_LABEL = {uz:'Foydali maʼlumotlar',ru:'Полезная информация',en:'Useful information',zh:'实用信息'};
+
 
   const t = (v) => {
     if (v && typeof v === 'object' && !Array.isArray(v)) {
@@ -45,12 +47,12 @@
   };
 
   async function get(slug){
-    const res = await fetch(`/api/useful-custom/${slug}?lang=${lang}&v=27`, {cache:'no-store'});
+    const res = await fetch(`/api/useful-custom/${slug}?lang=${lang}&v=28`, {cache:'no-store'});
     if(!res.ok) throw new Error('Maʼlumot yuklanmadi');
     return await res.json();
   }
   async function getAll(){
-    const res = await fetch(`/api/useful-custom?lang=${lang}&v=27`, {cache:'no-store'});
+    const res = await fetch(`/api/useful-custom?lang=${lang}&v=28`, {cache:'no-store'});
     if(!res.ok) throw new Error('Maʼlumot yuklanmadi');
     return await res.json();
   }
@@ -73,7 +75,7 @@
   }
 
   function sectionHeader(d){
-    return `<div class="bp-toolbar custom-bp-title"><div><span class="bp-pill">${esc(d.sourceName||'ALL FINANCE')}</span><h2>${esc(t(d.title))}</h2><p>${esc(t(d.subtitle))}</p></div><a class="bp-back" href="foydali.html">← ${lang==='ru'?'Полезная база':lang==='en'?'Useful resources':lang==='zh'?'实用资料库':'Foydali baza'}</a></div>`;
+    return `<div class="bp-toolbar custom-bp-title"><div><h2>${esc(t(d.title))}</h2><p>${esc(t(d.subtitle))}</p></div><a class="bp-back" href="foydali.html">← ${esc(USEFUL_LABEL[lang])}</a></div>`;
   }
 
   function normalizeInfoData(data){
@@ -104,7 +106,7 @@
     const d = normalizeInfoData(data);
     const metrics = (d.metrics||[]).map(m=>`<div><span>${esc(t(m.label))}</span><strong>${esc(fmt(m.value))}</strong></div>`).join('');
     const links = (d.links||[]).slice(0,8).map(l=>`<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(t(l.title))}</a>`).join('');
-    target.innerHTML = `<div class="bp-info-head"><span class="eyebrow">${lang==='ru'?'Редактируется в Render':lang==='en'?'Managed in Render':lang==='zh'?'在 Render 中维护':'Render orqali boshqariladi'}</span><h3>${esc(t(d.title))}</h3><p>${esc(t(d.subtitle))}</p></div><div class="bp-info-list">${metrics || `<div><span>${lang==='ru'?'Нет данных':lang==='en'?'No data':lang==='zh'?'无数据':'Maʼlumot yo‘q'}</span><strong>—</strong></div>`}</div><div class="quick-links-box"><h4>${lang==='ru'?'Быстрый переход':lang==='en'?'Quick access':lang==='zh'?'快捷入口':'Tezkor o‘tish'}</h4><div>${links}</div></div>`;
+    target.innerHTML = `<div class="bp-info-head"><h3>${esc(t(d.title))}</h3><p>${esc(t(d.subtitle))}</p></div><div class="bp-info-list">${metrics || `<div><span>${lang==='ru'?'Нет данных':lang==='en'?'No data':lang==='zh'?'无数据':'Maʼlumot yo‘q'}</span><strong>—</strong></div>`}</div><div class="quick-links-box"><h4>${lang==='ru'?'Быстрый переход':lang==='en'?'Quick access':lang==='zh'?'快捷入口':'Tezkor o‘tish'}</h4><div>${links}</div></div>`;
   }
 
   function dateParts(value){
@@ -263,7 +265,7 @@
     const events = d.events || [];
     const monthsWithEvents = [...new Set(events.map(e=>Number(e.month || dateParts(e.date).month)).filter(Boolean))];
     const monthButtons = months.filter(m=>!monthsWithEvents.length || monthsWithEvents.includes(Number(m.month))).map(m=>`<button class="bp-filter month-filter" data-month="${esc(m.month)}">${esc(t(m.name))}</button>`).join('');
-    root.innerHTML = sectionHeader(d) + `<div class="bp-controls"><input class="bp-search" data-search placeholder="${lang==='ru'?'Поиск по срокам':lang==='en'?'Search deadlines':lang==='zh'?'搜索期限':'Muddatlar bo‘yicha qidirish'}"><div class="bp-filters"><button class="bp-filter active" data-type="all">${lang==='ru'?'Все':lang==='en'?'All':lang==='zh'?'全部':'Hammasi'}</button><button class="bp-filter" data-type="hisobot">${lang==='ru'?'Отчет':lang==='en'?'Report':lang==='zh'?'报表':'Hisobot'}</button><button class="bp-filter" data-type="tolov">${lang==='ru'?'Платеж':lang==='en'?'Payment':lang==='zh'?'付款':'To‘lov'}</button><button class="bp-filter" data-type="boshqa">${lang==='ru'?'Другое':lang==='en'?'Other':lang==='zh'?'其他':'Boshqa'}</button></div></div><div class="bp-month-strip">${monthButtons}</div><div class="bp-calendar-list" data-calendar-list></div><p class="bp-source-note">${lang==='ru'?'Данные можно обновлять из админ-панели Render.':lang==='en'?'You can update the data from the Render admin panel.':lang==='zh'?'可在 Render 管理面板中更新数据。':'Maʼlumotlarni Render admin panelidan yangilashingiz mumkin.'}</p>`;
+    root.innerHTML = sectionHeader(d) + `<div class="bp-controls"><input class="bp-search" data-search placeholder="${lang==='ru'?'Поиск по срокам':lang==='en'?'Search deadlines':lang==='zh'?'搜索期限':'Muddatlar bo‘yicha qidirish'}"><div class="bp-filters"><button class="bp-filter active" data-type="all">${lang==='ru'?'Все':lang==='en'?'All':lang==='zh'?'全部':'Hammasi'}</button><button class="bp-filter" data-type="hisobot">${lang==='ru'?'Отчет':lang==='en'?'Report':lang==='zh'?'报表':'Hisobot'}</button><button class="bp-filter" data-type="tolov">${lang==='ru'?'Платеж':lang==='en'?'Payment':lang==='zh'?'付款':'To‘lov'}</button><button class="bp-filter" data-type="boshqa">${lang==='ru'?'Другое':lang==='en'?'Other':lang==='zh'?'其他':'Boshqa'}</button></div></div><div class="bp-month-strip">${monthButtons}</div><div class="bp-calendar-list" data-calendar-list></div>`;
     const list = root.querySelector('[data-calendar-list]');
     let type='all', month=monthsWithEvents[0] || 'all';
     const render = () => {
@@ -416,7 +418,7 @@
   async function initPage(){
     if(root){
       const slug=root.dataset.usefulCustomPage;
-      root.innerHTML='<div class="bp-empty-note">Yuklanmoqda...</div>';
+      root.innerHTML=`<div class="bp-empty-note">${lang==='ru'?'Загрузка...':lang==='en'?'Loading...':lang==='zh'?'正在加载...':'Yuklanmoqda...'}</div>`;
       try{
         const data=await get(slug);
         const kind = String(data.kind || slug);
@@ -434,7 +436,7 @@
         const cards = ['calendar','workdays','rent','laws','links'];
         const labels={calendar:'📅',workdays:'🗓️',rent:'🏢',laws:'⚖️',links:'🔗'};
         const urls={calendar:'foydali-calendar.html',workdays:'foydali-workdays.html',rent:'foydali-rent.html',laws:'foydali-laws.html',links:'foydali-links.html'};
-        hub.innerHTML = cards.map(slug=>{const d=normalizedForHub(slug, (all.sections||{})[slug]||{}); return `<a class="bp-tool-card" href="${urls[slug]}"><div class="bp-tool-icon"><span class="bp-card-emoji">${labels[slug]}</span></div><div class="bp-tool-body"><small>ALL FINANCE baza</small><strong>${esc(t(d.title))}</strong><em>${esc(t(d.subtitle))}</em></div><span class="bp-open">Ochish →</span></a>`}).join('');
+        hub.innerHTML = cards.map(slug=>{const d=normalizedForHub(slug, (all.sections||{})[slug]||{}); return `<a class="bp-tool-card" href="${urls[slug]}"><div class="bp-tool-icon"><span class="bp-card-emoji">${labels[slug]}</span></div><div class="bp-tool-body"><strong>${esc(t(d.title))}</strong><em>${esc(t(d.subtitle))}</em></div><span class="bp-open">${lang==='ru'?'Открыть':lang==='en'?'Open':lang==='zh'?'打开':'Ochish'} →</span></a>`}).join('');
       }catch(e){}
     }
     if(infoBoxes.length){ try{ const info=await get('info'); infoBoxes.forEach(box=>renderInfo(info,box)); }catch(e){} }

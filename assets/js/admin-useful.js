@@ -1,11 +1,36 @@
 const $ = id => document.getElementById(id);
 let store = null;
 let currentSlug = 'info';
+const LANGS = ['uz','ru','en','zh'];
 const SLUG_LABELS = {
-  info: 'Amaldagi info', calendar: 'Buxgalter taqvimi', workdays: '2026 ish kunlari', rent: 'Ijara stavkalari', laws: 'Qonun hujjatlar', links: 'Foydali linklar'
+  info: 'Amaldagi info',
+  calendar: 'Buxgalter taqvimi',
+  workdays: '2026 ish kunlari',
+  rent: 'Ijara stavkalari',
+  laws: 'Qonun hujjatlar',
+  links: 'Foydali linklar'
 };
+const META_KEYS = new Set(['slug','kind','title','subtitle','sourceName','sourceUrl','langData']);
 function escapeHtml(value){return String(value||'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[ch]));}
 function showMessage(el, text, ok=false){el.textContent=text||''; el.className='message '+(ok?'success':'');}
+function safeStringify(value){return JSON.stringify(value && typeof value === 'object' ? value : {}, null, 2);}
+function parseJsonField(id, label){
+  const text = ($(id)?.value || '').trim();
+  if(!text) return {};
+  try{
+    const parsed = JSON.parse(text);
+    if(!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) throw new Error('JSON obyekt bo‘lishi kerak');
+    return parsed;
+  }catch(e){
+    throw new Error(label + ' JSON bloki noto‘g‘ri: ' + e.message);
+  }
+}
+function basePayload(section){
+  const copy = JSON.parse(JSON.stringify(section || {}));
+  for(const key of META_KEYS) delete copy[key];
+  return copy;
+}
+function isNonEmptyObject(value){return value && typeof value === 'object' && !Array.isArray(value) && Object.keys(value).length > 0;}
 async function api(url, options={}){
   const res = await fetch(url,{headers:{'Content-Type':'application/json',...(options.headers||{})},...options});
   let data={}; try{data=await res.json();}catch{}
@@ -42,21 +67,33 @@ function selectSection(slug){
   $('kind').value = d.kind || '';
   $('sourceName').value = d.sourceName || '';
   $('sourceUrl').value = d.sourceUrl || '';
-  ['uz','ru','en','zh'].forEach(l=>{
+  LANGS.forEach(l=>{
     $(`title_${l}`).value = d.title?.[l] || '';
     $(`subtitle_${l}`).value = d.subtitle?.[l] || '';
   });
-  const copy = JSON.parse(JSON.stringify(d));
-  delete copy.slug; delete copy.kind; delete copy.title; delete copy.subtitle; delete copy.sourceName; delete copy.sourceUrl;
-  $('jsonData').value = JSON.stringify(copy, null, 2);
+  const base = basePayload(d);
+  const langData = d.langData && typeof d.langData === 'object' ? d.langData : null;
+  LANGS.forEach(l=>{
+    const value = langData && isNonEmptyObject(langData[l]) ? langData[l] : (l === 'uz' ? base : {});
+    $(`json_${l}`).value = safeStringify(value);
+  });
   showMessage($('formMessage'),'');
 }
 function collect(){
-  const jsonText = $('jsonData').value.trim() || '{}';
-  let rest = {};
-  try{ rest = JSON.parse(jsonText); }catch(e){ throw new Error('JSON maʼlumotlar bloki noto‘g‘ri: '+e.message); }
-  const data = { ...rest, slug: $('slug').value.trim() || currentSlug, kind: $('kind').value.trim(), sourceName: $('sourceName').value.trim(), sourceUrl: $('sourceUrl').value.trim(), title:{}, subtitle:{} };
-  ['uz','ru','en','zh'].forEach(l=>{ data.title[l]=$(`title_${l}`).value.trim(); data.subtitle[l]=$(`subtitle_${l}`).value.trim(); });
+  const langData = {};
+  LANGS.forEach(l=>{ langData[l] = parseJsonField(`json_${l}`, l.toUpperCase()); });
+  const uzData = langData.uz || {};
+  const data = {
+    ...uzData,
+    slug: $('slug').value.trim() || currentSlug,
+    kind: $('kind').value.trim(),
+    sourceName: $('sourceName').value.trim(),
+    sourceUrl: $('sourceUrl').value.trim(),
+    title:{},
+    subtitle:{},
+    langData
+  };
+  LANGS.forEach(l=>{ data.title[l]=$(`title_${l}`).value.trim(); data.subtitle[l]=$(`subtitle_${l}`).value.trim(); });
   return data;
 }
 $('sectionForm').addEventListener('submit',async e=>{
@@ -71,10 +108,10 @@ $('sectionForm').addEventListener('submit',async e=>{
 });
 $('downloadBtn').addEventListener('click',()=>{
   const blob = new Blob([JSON.stringify(store,null,2)], {type:'application/json'});
-  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'allfinance-foydali-baza.json'; a.click(); URL.revokeObjectURL(a.href);
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'allfinance-foydali-malumotlar.json'; a.click(); URL.revokeObjectURL(a.href);
 });
 $('resetBtn').addEventListener('click',async()=>{
-  if(!confirm('Foydali baza maʼlumotlarini boshlang‘ich paketdagi holatga qaytarasizmi?')) return;
+  if(!confirm('Foydali maʼlumotlarni boshlang‘ich paketdagi holatga qaytarasizmi?')) return;
   try{await api('/api/admin/useful-custom/reset',{method:'POST',body:'{}'}); await loadStore(); alert('Boshlang‘ich maʼlumotlar qayta tiklandi.');}catch(err){alert(err.message);}
 });
 document.querySelectorAll('[data-lang-tab]').forEach(btn=>btn.addEventListener('click',()=>{
