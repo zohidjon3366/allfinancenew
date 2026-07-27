@@ -1,4 +1,4 @@
-ALL FINANCE v24 — Foydali baza admin panel
+ALL FINANCE v24 — Foydali maʼlumotlar admin panel
 
 1) Yangi admin sahifa:
    /admin/foydali.html

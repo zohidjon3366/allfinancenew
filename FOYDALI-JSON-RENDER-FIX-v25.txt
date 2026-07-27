@@ -1,4 +1,4 @@
-ALL FINANCE v25 — Foydali baza JSON ko‘rsatish tuzatildi
+ALL FINANCE v25 — Foydali maʼlumotlar JSON ko‘rsatish tuzatildi
 
 Muammo:
 Admin panelga kiritilgan ijara JSON fayli BuxgalterPRO tuzilmasida edi: hududlar / joylar / zonalar. Oldingi kod esa faqat regions / rates tuzilmasini kutgan. Shu sabab saytda “maʼlumot hali kiritilmagan” chiqardi.

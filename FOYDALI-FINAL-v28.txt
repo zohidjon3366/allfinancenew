@@ -1,0 +1,9 @@
+ALL FINANCE v28 — Foydali maʼlumotlar final tuzatishlari
+
+1. Foydali baza nomi barcha sahifalarda Foydali maʼlumotlar / Полезная информация / Useful information / 实用信息 deb o‘zgartirildi.
+2. Public sahifalardan Render orqali boshqariladi, Admin panelda yangilanadi va ortiqcha izoh matnlari olib tashlandi.
+3. Bosh sahifadagi 01/02/03/04 raqamlari 1./2./3./4. ko‘rinishiga keltirildi va raqamdan keyin bo‘sh joy qo‘yildi.
+4. /admin/foydali.html sahifasida har bir til uchun alohida JSON maydoni qo‘shildi: uz, ru, en, zh.
+5. BuxgalterPRO uslubidagi calendar JSON (sanalar → muddatlar) va rent JSON (hududlar → joylar/zonalar) qo‘llab-quvvatlanadi.
+
+Deploy: GitHub fayllarini to‘liq almashtiring, Render’da Manual Deploy → Clear build cache & deploy qiling. Brauzerda Ctrl+F5 bosing.

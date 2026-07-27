@@ -1,8 +1,8 @@
-ALL FINANCE v21 — Foydali baza alohida ichki sahifalar
+ALL FINANCE v21 — Foydali maʼlumotlar alohida ichki sahifalar
 
-Bu versiyada Foydali baza bo‘limlari bitta uzun sahifada emas, alohida sahifalarda ochiladi:
+Bu versiyada Foydali maʼlumotlar bo‘limlari bitta uzun sahifada emas, alohida sahifalarda ochiladi:
 
-/foydali.html — umumiy Foydali baza
+/foydali.html — umumiy Foydali maʼlumotlar
 /foydali-calendar.html — Buxgalter taqvimi jadvali
 /foydali-workdays.html — 2026-yil ish kunlari
 /foydali-rent.html — Eng kam ijara stavkalari formasi

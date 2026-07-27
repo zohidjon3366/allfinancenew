@@ -784,9 +784,36 @@ function localizeObject(value, lang){
   }
   return value;
 }
+function plainObject(value) {
+  return value && typeof value === 'object' && !Array.isArray(value);
+}
+function hasKeys(value) {
+  return plainObject(value) && Object.keys(value).length > 0;
+}
+function publicUsefulSection(section, lang) {
+  const base = deepClone(section || {});
+  const langData = plainObject(base.langData) ? base.langData : null;
+  delete base.langData;
+  if (langData) {
+    const selected = hasKeys(langData[lang]) ? langData[lang] : (hasKeys(langData.uz) ? langData.uz : null);
+    if (selected) {
+      const merged = { ...base, ...deepClone(selected) };
+      merged.slug = base.slug;
+      merged.kind = base.kind;
+      merged.title = base.title;
+      merged.subtitle = base.subtitle;
+      merged.sourceName = base.sourceName;
+      merged.sourceUrl = base.sourceUrl;
+      return merged;
+    }
+  }
+  return base;
+}
 function usefulPublicPayload(lang){
   const store = readUsefulCustom();
-  return { updatedAt: store.updatedAt, sections: store.sections || {} };
+  const sections = {};
+  for (const [slug, section] of Object.entries(store.sections || {})) sections[slug] = publicUsefulSection(section, lang);
+  return { updatedAt: store.updatedAt, sections };
 }
 function sanitizeUsefulSection(input, existingSlug){
   const section = input && typeof input === 'object' ? input : {};
@@ -799,6 +826,13 @@ function sanitizeUsefulSection(input, existingSlug){
   for (const l of SUPPORTED_LANGS) {
     out.title[l] = String(title[l] || title.uz || '').trim();
     out.subtitle[l] = String(subtitle[l] || subtitle.uz || '').trim();
+  }
+  if (section.langData && typeof section.langData === 'object') {
+    out.langData = {};
+    for (const l of SUPPORTED_LANGS) {
+      const value = section.langData[l];
+      out.langData[l] = value && typeof value === 'object' && !Array.isArray(value) ? value : {};
+    }
   }
   if (!out.title.uz) throw new Error('O‘zbekcha sarlavha majburiy');
   return out;
@@ -843,7 +877,7 @@ const server = http.createServer(async (req, res) => {
       const store = readUsefulCustom();
       const section = store.sections && store.sections[usefulCustomMatch[1]];
       if (!section) return sendJson(res, 404, { message: 'Foydali bo‘lim topilmadi' });
-      return sendJson(res, 200, section);
+      return sendJson(res, 200, publicUsefulSection(section, lang));
     }
 
     const buxproToolMatch = pathname.match(/^\/buxpro\/(calendar|workdays|rent|laws|links)$/);

@@ -1,10 +1,10 @@
-ALL FINANCE v19 — Foydali baza ichki ko‘rinish tuzatmasi
+ALL FINANCE v19 — Foydali maʼlumotlar ichki ko‘rinish tuzatmasi
 
 Muammo:
-- Foydali baza kartalari bosilganda tashqi saytga o‘tib ketishi yoki tashqi manbadan ma’lumot kelmasa bo‘lim ishlamasligi mumkin edi.
+- Foydali maʼlumotlar kartalari bosilganda tashqi saytga o‘tib ketishi yoki tashqi manbadan ma’lumot kelmasa bo‘lim ishlamasligi mumkin edi.
 
 Tuzatildi:
-1. Foydali baza kartalari endi tashqi saytga avtomatik o‘tmaydi.
+1. Foydali maʼlumotlar kartalari endi tashqi saytga avtomatik o‘tmaydi.
 2. Ma’lumotlar ALL FINANCE saytining ichki panelida ochiladi.
 3. Buxgalter taqvimi timeline ko‘rinishida berildi.
 4. 2026-yil ish kunlari jadval ko‘rinishida berildi.

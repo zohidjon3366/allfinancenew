@@ -1,6 +1,6 @@
-ALL FINANCE v18 - Foydali baza ichki korinish
+ALL FINANCE v18 - Foydali maʼlumotlar ichki korinish
 
-Bu versiyada Foydali baza kartalari tashqi saytga avtomatik otmaydi.
+Bu versiyada Foydali maʼlumotlar kartalari tashqi saytga avtomatik otmaydi.
 BuxgalterPRO manbalaridan malumotlar server orqali olinadi va ALL FINANCE dizaynida shu sahifa ichida korsatiladi.
 
 Yangi API:

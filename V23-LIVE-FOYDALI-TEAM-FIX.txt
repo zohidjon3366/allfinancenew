@@ -1,4 +1,4 @@
-ALL FINANCE v23 — Jamoa va Foydali baza tuzatishlari
+ALL FINANCE v23 — Jamoa va Foydali maʼlumotlar tuzatishlari
 
 1) Bosh sahifadagi Jamoa bo‘limi
 - Endi index.html, ru/index.html, en/index.html va zh/index.html sahifalaridagi jamoa kartalari ham /api/team orqali olinadi.
@@ -10,7 +10,7 @@ ALL FINANCE v23 — Jamoa va Foydali baza tuzatishlari
   en/index.html
   zh/index.html
 
-2) Foydali baza — alohida ichki sahifalar
+2) Foydali maʼlumotlar — alohida ichki sahifalar
 - Buxgalter taqvimi, 2026 ish kunlari va eng kam ijara stavkalari endi statik qo‘lda yozilgan jadval emas.
 - Har bir sahifa ichida BuxgalterPRO ma’lumotlari server proxy orqali jonli olinadi.
 - Foydalanuvchi tashqi saytga avtomatik o‘tib ketmaydi.
