@@ -136,13 +136,13 @@ for (const langDir of ['', 'ru/', 'en/', 'zh/']) {
     if (!fs.existsSync(path.join(root, f))) { console.error('MISSING useful subpage:', f); process.exitCode = 1; }
     else {
       const html = fs.readFileSync(path.join(root, f), 'utf8');
-      if (!html.includes('data-useful-custom-page') || !html.includes('useful-custom.js?v=25')) { console.error('INVALID useful subpage:', f); process.exitCode = 1; }
+      if (!html.includes('data-useful-custom-page') || !html.includes('useful-custom.js?v=27')) { console.error('INVALID useful subpage:', f); process.exitCode = 1; }
       else console.log('OK:', f, 'admin-managed useful page');
     }
   }
   const hub = langDir + 'foydali.html';
   const hubHtml = fs.readFileSync(path.join(root, hub), 'utf8');
-  if (!hubHtml.includes('data-useful-hub') || !hubHtml.includes('useful-custom.js?v=25')) { console.error('INVALID useful hub:', hub); process.exitCode = 1; }
+  if (!hubHtml.includes('data-useful-hub') || !hubHtml.includes('useful-custom.js?v=27')) { console.error('INVALID useful hub:', hub); process.exitCode = 1; }
   else console.log('OK:', hub, 'uses admin-managed useful data');
 }
 try {

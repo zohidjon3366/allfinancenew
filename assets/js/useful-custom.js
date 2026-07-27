@@ -21,7 +21,12 @@
   const DEFAULT_MONTHS = Array.from({length:12},(_,i)=>({month:i+1,name:{uz:MONTH_NAMES.uz[i],ru:MONTH_NAMES.ru[i],en:MONTH_NAMES.en[i],zh:MONTH_NAMES.zh[i]}}));
 
   const t = (v) => {
-    if (v && typeof v === 'object' && !Array.isArray(v)) return v[lang] || v.uz || v.ru || v.en || v.zh || '';
+    if (v && typeof v === 'object' && !Array.isArray(v)) {
+      const direct = v[lang] || v.uz || v.ru || v.en || v.zh;
+      if (direct !== undefined && direct !== null && String(direct).trim() !== '') return direct;
+      const first = Object.values(v).find(x => x !== undefined && x !== null && String(x).trim() !== '');
+      return first == null ? '' : String(first);
+    }
     return v == null ? '' : String(v);
   };
   const langObj = (v) => {
@@ -40,25 +45,29 @@
   };
 
   async function get(slug){
-    const res = await fetch(`/api/useful-custom/${slug}?lang=${lang}&v=26`, {cache:'no-store'});
+    const res = await fetch(`/api/useful-custom/${slug}?lang=${lang}&v=27`, {cache:'no-store'});
     if(!res.ok) throw new Error('Maʼlumot yuklanmadi');
     return await res.json();
   }
   async function getAll(){
-    const res = await fetch(`/api/useful-custom?lang=${lang}&v=26`, {cache:'no-store'});
+    const res = await fetch(`/api/useful-custom?lang=${lang}&v=27`, {cache:'no-store'});
     if(!res.ok) throw new Error('Maʼlumot yuklanmadi');
     return await res.json();
   }
 
   function normalizeSectionBase(data, slug, kind){
     const d = data || {};
+    const titleCandidate = d.sarlavha || d.name || d.nomi || d.heading || d.caption || '';
+    const subtitleCandidate = d.izoh || d.description || d.tavsif || d.note || d.tuzilma_izohi || '';
+    const titleObj = d.title && t(d.title) ? d.title : langObj(titleCandidate);
+    const subtitleObj = d.subtitle && t(d.subtitle) ? d.subtitle : langObj(subtitleCandidate);
     return {
       ...d,
       slug: d.slug || slug,
       kind: d.kind || kind || slug,
-      title: d.title || langObj(d.sarlavha || d.name || d.nomi || d.heading || d.caption || ''),
-      subtitle: d.subtitle || langObj(d.izoh || d.description || d.tavsif || d.note || ''),
-      sourceName: d.sourceName || d.manba_nomi || d.source || d.source_name || 'ALL FINANCE',
+      title: titleObj,
+      subtitle: subtitleObj,
+      sourceName: d.sourceName || d.manba_nomi || d.manba_nomi || d.source || d.source_name || 'ALL FINANCE',
       sourceUrl: d.sourceUrl || d.manba || d.url || d.source_url || ''
     };
   }
@@ -116,44 +125,136 @@
   function inferType(item){
     const raw = String(firstVal(item,['type','turi','category','kategoriya','tur'],'')).toLowerCase();
     const text = [raw, t(firstVal(item,['title','nomi','name','mavzu','description','izoh','matn'],''))].join(' ').toLowerCase();
-    if (/hisobot|отчет|report|申报/.test(text)) return 'hisobot';
-    if (/to.?lov|т[оө]лов|плат|payment|付款/.test(text)) return 'tolov';
+    const hasReport = /hisobot|отчет|report|申报/.test(text);
+    const hasPayment = /tolov|to.?lov|т[оө]лов|плат|payment|付款/.test(text);
+    if (raw && (raw.includes('hisobot') || raw.includes('tolov') || raw.includes('reestr') || raw.includes('ariza') || raw.includes('tuzatish') || raw.includes('malumotnoma'))) return raw;
+    if (hasReport && hasPayment) return 'hisobot_tolov';
+    if (hasReport) return 'hisobot';
+    if (hasPayment) return 'tolov';
     return raw || 'boshqa';
   }
 
+
+  function makeCalendarWeeks(year, month, highlightDays = []){
+    year = Number(year || 2026); month = Number(month || 1);
+    const first = new Date(year, month - 1, 1);
+    const lastDay = new Date(year, month, 0).getDate();
+    const start = (first.getDay() + 6) % 7;
+    const weeks = []; let week = Array(start).fill('');
+    for(let day=1; day<=lastDay; day++){
+      week.push(day);
+      if(week.length === 7){ weeks.push(week); week = []; }
+    }
+    if(week.length) { while(week.length < 7) week.push(''); weeks.push(week); }
+    return weeks;
+  }
+  function categoryLabel(value){
+    const raw = String(value || '').toLowerCase();
+    const map = {
+      hisobot:{uz:'Hisobot',ru:'Отчёт',en:'Report',zh:'报表'},
+      tolov:{uz:'To‘lov',ru:'Платёж',en:'Payment',zh:'付款'},
+      hisobot_va_tolov:{uz:'Hisobot / to‘lov',ru:'Отчёт / платёж',en:'Report / payment',zh:'报表/付款'},
+      reestr_va_tolov:{uz:'Reyestr / to‘lov',ru:'Реестр / платёж',en:'Register / payment',zh:'登记/付款'},
+      ariza:{uz:'Ariza',ru:'Заявление',en:'Application',zh:'申请'},
+      tuzatish:{uz:'Tuzatish',ru:'Исправление',en:'Correction',zh:'更正'},
+      malumotnoma:{uz:'Maʼlumotnoma',ru:'Справка',en:'Reference',zh:'证明'}
+    };
+    return map[raw] || (raw ? langObj(raw.replaceAll('_',' ')) : langObj('Boshqa'));
+  }
   function normalizeCalendarData(data){
     const d = normalizeSectionBase(data, 'calendar', 'calendar');
-    let months = arr(d.months || d.oylar || d.kalendar_oylar || d.calendarMonths);
-    if (!months.length) months = DEFAULT_MONTHS;
-    months = months.map((m,i)=>({
-      month: Number(firstVal(m,['month','oy','number','id'], i+1)),
-      name: m.name || m.nomi || langObj(MONTH_NAMES.uz[(Number(firstVal(m,['month','oy','number','id'], i+1))-1)||i] || ''),
-      weekdays: m.weekdays || m.hafta_kunlari || WEEKDAYS,
-      weeks: m.weeks || m.haftalar || []
-    }));
+    const year = Number(d.yil || d.year || 2026);
 
-    let events = firstArray(d,['events','muddatlar','deadlines','calendar','taqvim','kalendar','items','rows','data']);
-    // BuxgalterPRO JSON ko‘pincha oylar ichida ro‘yxat bo‘lib keladi.
-    if (!events.length && Array.isArray(d.oylar)) {
-      events = d.oylar.flatMap(m => firstArray(m, ['events','muddatlar','deadlines','items','rows']).map(x=>({...x, month:firstVal(m,['month','oy','number','id'],monthFromName(firstVal(m,['name','nomi'],'')))})));
+    let months = arr(d.months || d.oylar || d.kalendar_oylar || d.calendarMonths);
+    if (!months.length && (d.oy || d.oy_nomi)) {
+      const mNum = Number(d.oy || monthFromName(d.oy_nomi) || 1);
+      months = [{ month:mNum, name:langObj(d.oy_nomi || MONTH_NAMES.uz[mNum-1]), weekdays:WEEKDAYS, weeks:makeCalendarWeeks(year, mNum) }];
     }
+    if (!months.length) months = DEFAULT_MONTHS;
+    months = months.map((m,i)=>{
+      const mNum = Number(firstVal(m,['month','oy','number','id'], i+1));
+      return {
+        month: mNum,
+        name: m.name || m.nomi || langObj(MONTH_NAMES.uz[(mNum-1)||i] || ''),
+        weekdays: m.weekdays || m.hafta_kunlari || WEEKDAYS,
+        weeks: m.weeks || m.haftalar || makeCalendarWeeks(year, mNum)
+      };
+    });
+
+    let events = firstArray(d,['events','deadlines','calendar','taqvim','kalendar','items','rows','data']);
+    // BuxgalterPRO calendar JSON: sanalar[] -> muddatlar[]
+    if (!events.length && Array.isArray(d.sanalar)) {
+      events = d.sanalar.flatMap(dayItem => {
+        const date = firstVal(dayItem, ['date','sana','deadline','muddat'], '');
+        const dp = dateParts(date);
+        const weekday = firstVal(dayItem, ['weekday','hafta_kuni','kun_nomi','weekDay','dayName'], '');
+        const count = firstVal(dayItem, ['count','muddat_soni','muddatlar_soni','soni'], arr(dayItem.muddatlar).length || 1);
+        const originalDeadline = firstVal(dayItem, ['asl_muddat','originalDeadline','original_deadline'], '');
+        const moveReason = firstVal(dayItem, ['kochirish_sababi','moveReason','reason'], '');
+        const list = arr(dayItem.muddatlar);
+        if (!list.length) return [{ ...dayItem, date, day:dp.day, month:dp.month, weekday, count }];
+        return list.map((m, i) => ({
+          ...m,
+          date,
+          day: dp.day,
+          month: dp.month,
+          weekday,
+          count: `${i + 1}/${count}`,
+          originalDeadline,
+          moveReason,
+          type: firstVal(m, ['type','turi','category','kategoriya','tur'], ''),
+          title: firstVal(m, ['title','nomi','name','mavzu','subject'], ''),
+          description: firstVal(m, ['description','izoh','matn','content','text','note','tavsif'], ''),
+          reportPeriod: firstVal(m, ['hisobot_davri','period','reportPeriod'], ''),
+          note: firstVal(m, ['eslatma','note','izoh'], '')
+        }));
+      });
+    }
+    // Another common format: muddatlar[] at top-level.
+    if (!events.length && Array.isArray(d.muddatlar)) events = d.muddatlar;
+    // BuxgalterPRO JSON may also use oylar[] -> sanalar[] -> muddatlar[].
+    if (!events.length && Array.isArray(d.oylar)) {
+      events = d.oylar.flatMap(m => {
+        const mNum = Number(firstVal(m,['month','oy','number','id'], monthFromName(firstVal(m,['name','nomi','oy_nomi'],'')) || 1));
+        const direct = firstArray(m, ['events','deadlines','items','rows','muddatlar']);
+        const nestedDates = firstArray(m, ['sanalar','dates','days']);
+        if (nestedDates.length) return nestedDates.flatMap(dayItem => arr(dayItem.muddatlar).map((x,i)=>({...x, date:dayItem.sana || dayItem.date, month:mNum, weekday:dayItem.hafta_kuni || dayItem.weekday, count:`${i+1}/${dayItem.muddatlar_soni || arr(dayItem.muddatlar).length}`})));
+        return direct.map(x=>({...x, month:mNum}));
+      });
+    }
+
     events = arr(events).map((e,idx)=>{
       const dp = dateParts(firstVal(e,['date','sana','deadline','muddat','kun_sana'],''));
-      const month = Number(firstVal(e,['month','oy'], dp.month || monthFromName(firstVal(e,['monthName','oy_nomi','oyNomi'],'')) || 1));
+      const month = Number(firstVal(e,['month','oy'], dp.month || monthFromName(firstVal(e,['monthName','oy_nomi','oyNomi'],'')) || d.oy || 1));
       const day = Number(firstVal(e,['day','kun','sana_kuni'], dp.day || '')) || '';
+      const reportPeriod = firstVal(e,['reportPeriod','hisobot_davri','period','davr'], '');
+      const note = firstVal(e,['note','eslatma','izoh'], '');
+      const originalDeadline = firstVal(e,['originalDeadline','asl_muddat','original_deadline'], '');
+      const moveReason = firstVal(e,['moveReason','kochirish_sababi','reason'], '');
+      const typ = inferType(e);
       return {
         id: e.id || `event-${idx}`,
-        date: firstVal(e,['date','sana','deadline','muddat'],'') || (day && month ? `2026-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}` : ''),
+        date: firstVal(e,['date','sana','deadline','muddat'],'') || (day && month ? `${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}` : ''),
         day,
         month,
         weekday: langObj(firstVal(e,['weekday','hafta_kuni','kun_nomi','weekDay','dayName'],'')),
-        count: firstVal(e,['count','muddat_soni','muddatlar_soni','soni'],'1 ta muddat'),
-        type: inferType(e),
+        count: firstVal(e,['count','muddat_soni','muddatlar_soni','soni'],'1'),
+        type: typ,
+        typeLabel: categoryLabel(typ),
         title: langObj(firstVal(e,['title','nomi','name','mavzu','subject','tur'],'Muddat')),
-        description: langObj(firstVal(e,['description','izoh','matn','content','text','note','tavsif'], firstVal(e,['title','nomi','name','mavzu'],'')))
+        description: langObj(firstVal(e,['description','izoh','matn','content','text','tavsif'], '') || firstVal(e,['title','nomi','name','mavzu'],'')),
+        reportPeriod,
+        note,
+        originalDeadline,
+        moveReason
       };
     }).filter(e=>e.day || t(e.title) || t(e.description));
-    return {...d, months, events};
+
+    if (!months.length && events.length) {
+      const mNums = [...new Set(events.map(e => Number(e.month || dateParts(e.date).month)).filter(Boolean))];
+      months = mNums.map(mNum => ({ month:mNum, name:langObj(MONTH_NAMES.uz[mNum-1] || String(mNum)), weekdays:WEEKDAYS, weeks:makeCalendarWeeks(year, mNum) }));
+    }
+    return {...d, year, months, events, stats:d.statistika || d.statistics || {}};
   }
 
   function renderCalendar(data){
@@ -172,7 +273,15 @@
         const hay = [t(e.title), t(e.description), t(e.weekday), e.type, e.count].join(' ').toLowerCase();
         return (!month || month==='all' || Number(month)===m) && (type==='all' || String(e.type||'').includes(type)) && (!q || hay.includes(q));
       });
-      list.innerHTML = rows.length ? rows.map(e=>`<article class="bp-deadline-card" data-type="${esc(e.type)}"><div class="bp-deadline-date"><strong>${esc(e.day || dateParts(e.date).day)}</strong><span>${esc(t(e.weekday))}</span></div><div class="bp-deadline-body"><div class="bp-deadline-top"><span class="bp-tag">${esc(t(e.count)||'1')}</span><span class="bp-soft">${esc(e.type||'')}</span></div><h3>${esc(t(e.title))}</h3><p>${esc(t(e.description))}</p></div></article>`).join('') : `<div class="bp-empty-note">${lang==='ru'?'Ничего не найдено':lang==='en'?'Nothing found':lang==='zh'?'未找到':'Maʼlumot topilmadi'}</div>`;
+      list.innerHTML = rows.length ? rows.map(e=>{
+        const meta = [
+          e.reportPeriod ? `${lang==='ru'?'Период':lang==='en'?'Period':lang==='zh'?'期间':'Davr'}: ${e.reportPeriod}` : '',
+          e.originalDeadline ? `${lang==='ru'?'Первоначальный срок':lang==='en'?'Original deadline':lang==='zh'?'原期限':'Asl muddat'}: ${e.originalDeadline}` : '',
+          e.moveReason || '',
+          e.note || ''
+        ].filter(Boolean).map(x=>`<span>${esc(x)}</span>`).join('');
+        return `<article class="bp-deadline-card" data-type="${esc(e.type)}"><div class="bp-deadline-date"><strong>${esc(e.day || dateParts(e.date).day)}</strong><span>${esc(t(e.weekday))}</span></div><div class="bp-deadline-body"><div class="bp-deadline-top"><span class="bp-tag">${esc(t(e.count)||'1')}</span><span class="bp-soft">${esc(t(e.typeLabel)||e.type||'')}</span></div><h3>${esc(t(e.title))}</h3>${t(e.description)&&t(e.description)!==t(e.title)?`<p>${esc(t(e.description))}</p>`:''}${meta?`<div class="bp-deadline-meta">${meta}</div>`:''}</div></article>`;
+      }).join('') : `<div class="bp-empty-note">${lang==='ru'?'Ничего не найдено':lang==='en'?'Nothing found':lang==='zh'?'未找到':'Maʼlumot topilmadi'}</div>`;
     };
     root.querySelectorAll('[data-type]').forEach(b=>b.addEventListener('click',()=>{root.querySelectorAll('[data-type]').forEach(x=>x.classList.remove('active')); b.classList.add('active'); type=b.dataset.type; render();}));
     root.querySelectorAll('[data-month]').forEach((b,i)=>{ if(i===0) b.classList.add('active'); b.addEventListener('click',()=>{root.querySelectorAll('[data-month]').forEach(x=>x.classList.remove('active')); b.classList.add('active'); month=b.dataset.month; render();});});
