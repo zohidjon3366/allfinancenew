@@ -1,12 +1,14 @@
 {
-  "name": "all-finance-render-disk-cms-final-v6",
-  "version": "1.0.0",
+  "name": "all-finance-v30-final",
+  "version": "30.0.0",
   "private": true,
+  "description": "ALL FINANCE — O‘zbekiston Mustaqilligining 35 yilligiga bag‘ishlangan ko‘p tilli sayt",
   "scripts": {
-    "build": "node scripts/verify-build.js",
+    "build": "node scripts/generate-pages.js && node scripts/verify-build.js",
+    "verify": "node scripts/verify-build.js",
     "start": "node server.js"
   },
   "engines": {
-    "node": ">=22 <25"
+    "node": ">=18"
   }
 }

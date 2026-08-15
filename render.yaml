@@ -1,18 +1,18 @@
 services:
   - type: web
-    name: allfinanceuz
+    name: all-finance
     runtime: node
-    buildCommand: node scripts/verify-build.js
-    startCommand: node server.js
+    buildCommand: npm run build
+    startCommand: npm start
     healthCheckPath: /health
-    autoDeploy: true
-
     envVars:
+      - key: NODE_VERSION
+        value: 20
       - key: DATA_DIR
         value: /var/data/allfinance
       - key: ADMIN_PASSWORD
         sync: false
-      - key: ADMIN_SESSION_SECRET
-        generateValue: true
-      - key: BACKUP_RETENTION_WEEKS
-        value: 8
+    disk:
+      name: all-finance-data
+      mountPath: /var/data/allfinance
+      sizeGB: 1

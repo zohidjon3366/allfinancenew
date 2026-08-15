@@ -1,86 +1,68 @@
-[
-  {
-    "id": "atakulov-zohidjon",
-    "order": 1,
-    "status": "active",
-    "image": "/assets/team/atakulov-zohidjon.webp",
-    "translations": {
-      "uz": {"name": "Atakulov Zohidjon Voxidoviç", "role": "Direktor", "experienceText": "Buxgalteriyada 18 yil tajriba", "bio": ""},
-      "ru": {"name": "Атакулов Зохиджон Вохидович", "role": "Директор", "experienceText": "18 лет опыта в бухгалтерии", "bio": ""},
-      "en": {"name": "Zohidjon Atakulov Voxidovich", "role": "Director", "experienceText": "18 years of accounting experience", "bio": ""},
-      "zh": {"name": "阿塔库洛夫·佐希德琼·沃希多维奇", "role": "总经理", "experienceText": "18年会计经验", "bio": ""}
+{
+  "updatedAt": "2026-08-15T00:00:00.000Z",
+  "members": [
+    {
+      "id": "zohidjon-atakulov",
+      "order": 1,
+      "active": true,
+      "image": "",
+      "name": {"uz":"Atakulov Zohidjon Voxidovich","ru":"Атакулов Зохиджон Вохидович","en":"Zohidjon Atakulov","zh":"佐希德容·阿塔库洛夫"},
+      "role": {"uz":"Korxona direktori","ru":"Директор компании","en":"Company Director","zh":"公司总经理"},
+      "detail": {"uz":"Buxgalteriyada 17 yil tajriba","ru":"17 лет опыта в бухгалтерии","en":"17 years of accounting experience","zh":"17年会计经验"}
+    },
+    {
+      "id": "asadbek-karimov",
+      "order": 2,
+      "active": true,
+      "image": "",
+      "name": {"uz":"Karimov Asadbek Dilshod o‘g‘li","ru":"Каримов Асадбек Дилшодович","en":"Asadbek Karimov","zh":"阿萨德别克·卡里莫夫"},
+      "role": {"uz":"Buxgalter","ru":"Бухгалтер","en":"Accountant","zh":"会计师"},
+      "detail": {"uz":"Moliyada 4 yil tajriba","ru":"4 года опыта в финансах","en":"4 years of finance experience","zh":"4年财务经验"}
+    },
+    {
+      "id": "abdusaid-abdurashidov",
+      "order": 3,
+      "active": true,
+      "image": "",
+      "name": {"uz":"Abdurashidov Abdusaid Abduvaxobovich","ru":"Абдурашидов Абдусаид Абдувахобович","en":"Abdusaid Abdurashidov","zh":"阿卜杜赛义德·阿卜杜拉希多夫"},
+      "role": {"uz":"Bosh mutaxassis","ru":"Главный специалист","en":"Chief Specialist","zh":"首席专家"},
+      "detail": {"uz":"Buxgalteriyada 20 yil tajriba","ru":"20 лет опыта в бухгалтерии","en":"20 years of accounting experience","zh":"20年会计经验"}
+    },
+    {
+      "id": "xotam-djurayev",
+      "order": 4,
+      "active": true,
+      "image": "",
+      "name": {"uz":"Djurayev Xotam Qaxramonovich","ru":"Джураев Хотам Кахрамонович","en":"Xotam Djurayev","zh":"霍塔姆·朱拉耶夫"},
+      "role": {"uz":"Sotuv menejeri","ru":"Менеджер по продажам","en":"Sales Manager","zh":"销售经理"},
+      "detail": {"uz":"Buxgalteriyada 6 yil, sotuvda 10 yil tajriba","ru":"6 лет в бухгалтерии, 10 лет в продажах","en":"6 years in accounting and 10 years in sales","zh":"6年会计与10年销售经验"}
+    },
+    {
+      "id": "rasul-abdurashidov",
+      "order": 5,
+      "active": true,
+      "image": "",
+      "name": {"uz":"Abdurashidov Rasul Abduvaxobovich","ru":"Абдурашидов Расул Абдувахобович","en":"Rasul Abdurashidov","zh":"拉苏尔·阿卜杜拉希多夫"},
+      "role": {"uz":"Marketolog","ru":"Маркетолог","en":"Marketing Specialist","zh":"市场专家"},
+      "detail": {"uz":"Marketingda 20 yil tajriba","ru":"20 лет опыта в маркетинге","en":"20 years of marketing experience","zh":"20年市场经验"}
+    },
+    {
+      "id": "yoqubjon-toshpolotov",
+      "order": 6,
+      "active": true,
+      "image": "",
+      "name": {"uz":"Toshpo‘lotov Yoqubjon Uchqun o‘g‘li","ru":"Тошполотов Якубжон Учкунович","en":"Yoqubjon Toshpo‘lotov","zh":"亚库布容·托什波洛托夫"},
+      "role": {"uz":"Buxgalter","ru":"Бухгалтер","en":"Accountant","zh":"会计师"},
+      "detail": {"uz":"Buxgalteriyada 2 yil, sotuvda 6 yil tajriba","ru":"2 года в бухгалтерии, 6 лет в продажах","en":"2 years in accounting and 6 years in sales","zh":"2年会计与6年销售经验"}
+    },
+    {
+      "id": "xabiba-zoxidjonova",
+      "order": 7,
+      "active": true,
+      "image": "",
+      "name": {"uz":"Zoxidjonova Xabiba Xusanboy qizi","ru":"Зохиджонова Хабиба Хусанбоевна","en":"Xabiba Zoxidjonova","zh":"哈比巴·佐希德容诺娃"},
+      "role": {"uz":"Buxgalter","ru":"Бухгалтер","en":"Accountant","zh":"会计师"},
+      "detail": {"uz":"Buxgalteriyada va ishlab chiqarishda 2 yillik tajriba","ru":"2 года опыта в бухгалтерии и производстве","en":"2 years of accounting and production experience","zh":"2年会计及生产经验"}
     }
-  },
-  {
-    "id": "karimov-asadbek",
-    "order": 2,
-    "status": "active",
-    "image": "/assets/team/karimov-asadbek.webp",
-    "translations": {
-      "uz": {"name": "Karimov Asadbek Dilşod öğli", "role": "Buxgalter", "experienceText": "Moliyada 5 yil tajriba", "bio": ""},
-      "ru": {"name": "Каримов Асадбек Дилшод угли", "role": "Бухгалтер", "experienceText": "5 лет опыта в финансах", "bio": ""},
-      "en": {"name": "Asadbek Karimov Dilshod ugli", "role": "Accountant", "experienceText": "5 years of finance experience", "bio": ""},
-      "zh": {"name": "卡里莫夫·阿萨德别克", "role": "会计", "experienceText": "5年财务经验", "bio": ""}
-    }
-  },
-  {
-    "id": "abdurashidov-abdusaid",
-    "order": 3,
-    "status": "active",
-    "image": "/assets/team/abdurashidov-abdusaid.webp",
-    "translations": {
-      "uz": {"name": "Abduraşidov Abdusaid Abduvaxoboviç", "role": "Boş mutaxassis", "experienceText": "Buxgalteriyada 21 yil tajriba", "bio": ""},
-      "ru": {"name": "Абдурашидов Абдусаид Абдувахобович", "role": "Главный специалист", "experienceText": "21 год опыта в бухгалтерии", "bio": ""},
-      "en": {"name": "Abdusaid Abdurashidov Abduvaxobovich", "role": "Chief Specialist", "experienceText": "21 years of accounting experience", "bio": ""},
-      "zh": {"name": "阿卜杜拉希多夫·阿卜杜赛义德", "role": "首席专家", "experienceText": "21年会计经验", "bio": ""}
-    }
-  },
-  {
-    "id": "djurayev-xotam",
-    "order": 4,
-    "status": "active",
-    "image": "/assets/team/djurayev-xotam.webp",
-    "translations": {
-      "uz": {"name": "Djurayev Xotam Qaxramonoviç", "role": "Sotuv menejeri", "experienceText": "Buxgalteriyada 6 yil tajriba\nSotuvda 11 yil tajriba", "bio": ""},
-      "ru": {"name": "Джураев Хотам Кахрамонович", "role": "Менеджер по продажам", "experienceText": "6 лет опыта в бухгалтерии\n11 лет опыта в продажах", "bio": ""},
-      "en": {"name": "Xotam Djurayev Qaxramonovich", "role": "Sales Manager", "experienceText": "6 years of accounting experience\n11 years of sales experience", "bio": ""},
-      "zh": {"name": "朱拉耶夫·霍塔姆", "role": "销售经理", "experienceText": "6年会计经验\n11年销售经验", "bio": ""}
-    }
-  },
-  {
-    "id": "abdurashidov-rasul",
-    "order": 5,
-    "status": "active",
-    "image": "/assets/team/abdurashidov-rasul.webp",
-    "translations": {
-      "uz": {"name": "Abduraşidov Rasul Abduvaxoboviç", "role": "Marketolog", "experienceText": "Marketingda 21 yil tajriba", "bio": ""},
-      "ru": {"name": "Абдурашидов Расул Абдувахобович", "role": "Маркетолог", "experienceText": "21 год опыта в маркетинге", "bio": ""},
-      "en": {"name": "Rasul Abdurashidov Abduvaxobovich", "role": "Marketer", "experienceText": "21 years of marketing experience", "bio": ""},
-      "zh": {"name": "阿卜杜拉希多夫·拉苏尔", "role": "市场营销专员", "experienceText": "21年市场营销经验", "bio": ""}
-    }
-  },
-  {
-    "id": "toshpolotov-yoqubjon",
-    "order": 6,
-    "status": "active",
-    "image": "/assets/team/toshpolotov-yoqubjon.webp",
-    "translations": {
-      "uz": {"name": "Toşpölotov Yoqubjon Uçqun öğli", "role": "Buxgalter", "experienceText": "Buxgalteriyada 3 yil tajriba\nSotuvda 6 yil tajriba", "bio": ""},
-      "ru": {"name": "Тошпулатов Ёкубжон Учкун угли", "role": "Бухгалтер", "experienceText": "3 года опыта в бухгалтерии\n6 лет опыта в продажах", "bio": ""},
-      "en": {"name": "Yoqubjon Toshpolotov Uchqun ugli", "role": "Accountant", "experienceText": "3 years of accounting experience\n6 years of sales experience", "bio": ""},
-      "zh": {"name": "托什波洛托夫·约库布琼", "role": "会计", "experienceText": "3年会计经验\n6年销售经验", "bio": ""}
-    }
-  },
-  {
-    "id": "zoxidjonova-habiba",
-    "order": 7,
-    "status": "active",
-    "image": "/assets/team/zoxidjonova-habiba.webp",
-    "translations": {
-      "uz": {"name": "Zoxidjonova Xabiba Xusanboy qizi", "role": "Buxgalter", "experienceText": "Buxgalteriyada 3 yil tajriba\nIşlab çiqarişda 2 yil tajriba", "bio": ""},
-      "ru": {"name": "Зохиджонова Хабиба Хусанбой кизи", "role": "Бухгалтер", "experienceText": "3 года опыта в бухгалтерии\n2 года опыта в производстве", "bio": ""},
-      "en": {"name": "Xabiba Zoxidjonova Xusanboy qizi", "role": "Accountant", "experienceText": "3 years of accounting experience\n2 years of production experience", "bio": ""},
-      "zh": {"name": "佐希德琼诺娃·哈比巴", "role": "会计", "experienceText": "3年会计经验\n2年生产领域经验", "bio": ""}
-    }
-  }
-]
+  ]
+}
