@@ -1,0 +1,9 @@
+RENDER VARIANT
+- Paket to'liq Node/Render loyihasi sifatida tayyor.
+- GitHub fayllarini to'liq almashtiring.
+- Renderda Clear build cache & deploy qiling.
+
+TILDA VARIANT
+- Tilda uchun faqat dekor snippet kerak bo'lsa:
+  TILDA-INDEPENDENCE-35-SNIPPET.html
+- Bu snippet sayt bazasi yoki backendga tegmaydi; faqat ko'rinishni bayramona qiladi.
