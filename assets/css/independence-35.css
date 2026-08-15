@@ -1,0 +1,259 @@
+/* ALL FINANCE — O‘zbekiston Respublikasi Mustaqilligining 35 yilligi uchun bayramona bezak
+   Asosiy kod, ma'lumotlar bazasi va admin funksiyalariga tegilmagan: faqat public dizayn qatlami. */
+:root{
+  --uz-blue:#1b8eea;
+  --uz-blue-deep:#0e5dc7;
+  --uz-green:#17ad65;
+  --uz-green-deep:#078148;
+  --uz-red:#e23b3b;
+  --uz-gold:#d8aa45;
+  --uz-sky:#eaf7ff;
+}
+body.independence-35{
+  background:#eef7fb;
+}
+body.independence-35::before{
+  opacity:.105;
+  filter:saturate(1.04) contrast(1.02);
+}
+body.independence-35::after{
+  background:
+    radial-gradient(circle at 7% 15%,rgba(27,142,234,.14),transparent 28%),
+    radial-gradient(circle at 94% 26%,rgba(23,173,101,.12),transparent 30%),
+    radial-gradient(circle at 50% 105%,rgba(216,170,69,.12),transparent 30%),
+    linear-gradient(180deg,rgba(255,255,255,.78),rgba(243,251,255,.9));
+}
+body.independence-35 .top-strip{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(90deg,rgba(234,248,255,.96),rgba(255,255,255,.96) 45%,rgba(236,251,243,.96));
+}
+body.independence-35 .top-strip::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;height:3px;
+  background:linear-gradient(90deg,var(--uz-blue),#fff 33%,var(--uz-red) 34%,#fff 38%,var(--uz-green));
+  opacity:.7;
+}
+body.independence-35 .site-header{
+  background:rgba(255,255,255,.92);
+  box-shadow:0 14px 34px rgba(14,93,199,.06);
+}
+body.independence-35 .site-header::before{
+  left:auto;
+  right:18px;
+  top:10px;
+  width:235px;
+  height:62px;
+  border-radius:999px;
+  background:
+    linear-gradient(105deg,rgba(27,142,234,.44) 0 31%,rgba(255,255,255,.72) 31% 44%,rgba(226,59,59,.45) 44% 48%,rgba(255,255,255,.78) 48% 60%,rgba(23,173,101,.46) 60% 100%);
+  transform:skewX(-13deg);
+  opacity:.25;
+}
+body.independence-35 .site-header::after{
+  height:4px;
+  background:linear-gradient(90deg,var(--uz-blue) 0 32%,#fff 32% 43%,var(--uz-red) 43% 47%,#fff 47% 58%,var(--uz-green) 58% 100%);
+  opacity:.86;
+}
+body.independence-35 .social-link,
+body.independence-35 .global-language-switcher{
+  box-shadow:0 8px 24px rgba(18,59,139,.06);
+}
+body.independence-35 .btn.primary{
+  background:linear-gradient(135deg,#139f62,#17b56e 54%,#1d94e8);
+  box-shadow:0 16px 30px rgba(23,173,101,.25), inset 0 1px 0 rgba(255,255,255,.2);
+}
+body.independence-35 .btn.outline{
+  background:rgba(255,255,255,.88);
+}
+body.independence-35 .hero,
+body.independence-35 .page-hero{
+  overflow:hidden;
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 88% 20%,rgba(27,142,234,.18),transparent 23%),
+    radial-gradient(circle at 91% 64%,rgba(23,173,101,.15),transparent 26%),
+    linear-gradient(135deg,rgba(240,250,255,.62),rgba(255,255,255,.38) 45%,rgba(236,250,242,.50));
+}
+body.independence-35 .hero::before,
+body.independence-35 .page-hero::before{
+  content:"";
+  position:absolute;
+  inset:auto -9vw -72px auto;
+  width:min(780px,62vw);
+  height:330px;
+  border-radius:50%;
+  background:
+    linear-gradient(172deg,transparent 0 21%,rgba(27,142,234,.72) 21% 31%,#fff 31% 39%,rgba(226,59,59,.70) 39% 43%,#fff 43% 52%,rgba(23,173,101,.72) 52% 64%,transparent 64% 100%);
+  transform:rotate(-12deg);
+  filter:drop-shadow(0 24px 42px rgba(18,59,139,.14));
+  opacity:.88;
+  z-index:-1;
+  pointer-events:none;
+}
+body.independence-35 .hero::after,
+body.independence-35 .page-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 8% 26%,rgba(255,255,255,.0) 0 22px,rgba(27,142,234,.16) 23px 25px,transparent 26px),
+    radial-gradient(circle at 93% 18%,rgba(216,170,69,.8) 0 3px,transparent 4px),
+    radial-gradient(circle at 85% 48%,rgba(216,170,69,.8) 0 3px,transparent 4px),
+    radial-gradient(circle at 11% 73%,rgba(216,170,69,.64) 0 3px,transparent 4px);
+  opacity:.85;
+  pointer-events:none;
+  z-index:-1;
+}
+body.independence-35 .hero .shell,
+body.independence-35 .page-hero .shell{
+  position:relative;
+  z-index:2;
+}
+.ind35-badge{
+  position:absolute;
+  right:clamp(22px,6vw,92px);
+  top:clamp(22px,5vw,62px);
+  width:clamp(180px,24vw,300px);
+  min-height:128px;
+  border-radius:32px;
+  padding:22px 22px 20px;
+  color:#0d3275;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 18%,rgba(255,255,255,.98),rgba(255,255,255,.74) 64%,rgba(233,247,255,.70)),
+    linear-gradient(180deg,rgba(255,255,255,.96),rgba(242,250,255,.88));
+  border:1px solid rgba(18,59,139,.12);
+  box-shadow:0 24px 70px rgba(14,93,199,.14);
+  pointer-events:none;
+  z-index:1;
+  transform:rotate(-1.5deg);
+}
+.ind35-badge::before{
+  content:"35";
+  display:block;
+  font-size:clamp(58px,8vw,104px);
+  line-height:.8;
+  font-weight:1000;
+  letter-spacing:-.08em;
+  color:transparent;
+  -webkit-text-stroke:2px var(--uz-blue-deep);
+  text-shadow:0 7px 0 rgba(216,170,69,.18),0 20px 32px rgba(18,59,139,.10);
+  background:linear-gradient(145deg,#0f5ed0,#1da4ef 38%,#fff 39% 54%,#17ad65 55% 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+}
+.ind35-badge::after{
+  content:"";
+  display:block;
+  width:70%;
+  height:12px;
+  margin:12px auto 8px;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--uz-blue),#fff 34%,var(--uz-red) 42%,#fff 52%,var(--uz-green));
+  box-shadow:0 10px 20px rgba(18,59,139,.14);
+}
+.ind35-badge span{
+  display:block;
+  font-size:clamp(11px,1.1vw,14px);
+  line-height:1.25;
+  font-weight:900;
+  letter-spacing:.035em;
+  text-transform:uppercase;
+}
+body.independence-35 .hero .ind35-badge{
+  top:28px;
+  right:3.5vw;
+}
+body.independence-35 .page-hero .ind35-badge{
+  opacity:.98;
+}
+body.independence-35 .hero-copy,
+body.independence-35 .page-hero .shell{
+  text-shadow:0 1px 0 rgba(255,255,255,.68);
+}
+body.independence-35 .eyebrow{
+  color:var(--uz-green-deep);
+}
+body.independence-35 .eyebrow::before{
+  background:linear-gradient(90deg,var(--uz-blue),var(--uz-green));
+}
+body.independence-35 .dashboard,
+body.independence-35 .metrics,
+body.independence-35 .service-card,
+body.independence-35 .process-step,
+body.independence-35 .solution-points,
+body.independence-35 .price-card,
+body.independence-35 .home-member-card,
+body.independence-35 .team-card,
+body.independence-35 .news-card,
+body.independence-35 .contact-form,
+body.independence-35 .map-card,
+body.independence-35 .calc-card,
+body.independence-35 .article-card,
+body.independence-35 .bp-panel,
+body.independence-35 .bp-hub-panel,
+body.independence-35 .bp-info-card,
+body.independence-35 .image-frame{
+  background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(248,252,255,.88));
+  border-color:rgba(27,142,234,.14);
+  box-shadow:0 24px 70px rgba(14,93,199,.10);
+}
+body.independence-35 .dashboard::before,
+body.independence-35 .bp-panel::before,
+body.independence-35 .bp-hub-panel::before,
+body.independence-35 .contact-form::before{
+  content:"";
+  position:absolute;
+  left:22px;right:22px;top:0;height:4px;
+  border-radius:0 0 999px 999px;
+  background:linear-gradient(90deg,var(--uz-blue),#fff 34%,var(--uz-red) 43%,#fff 53%,var(--uz-green));
+  opacity:.72;
+}
+body.independence-35 .dashboard,
+body.independence-35 .bp-panel,
+body.independence-35 .bp-hub-panel,
+body.independence-35 .contact-form{
+  position:relative;
+  overflow:hidden;
+}
+body.independence-35 .service-icon,
+body.independence-35 .bp-tool-icon,
+body.independence-35 .home-member-photo-wrap{
+  background:linear-gradient(180deg,#eaf5ff,#eaf9f1);
+}
+body.independence-35 .dash-badge,
+body.independence-35 .bp-tag,
+body.independence-35 .bp-filter.active,
+body.independence-35 .bp-switch button.active,
+body.independence-35 .rent-pill.green{
+  background:linear-gradient(135deg,var(--uz-green),#1bcf7a);
+  color:#fff;
+}
+body.independence-35 .bp-rent-banner,
+body.independence-35 .dash-card.navy{
+  background:linear-gradient(135deg,#123b8b,#1c80df 48%,#16a66a);
+}
+body.independence-35 .footer{
+  position:relative;
+  overflow:hidden;
+}
+body.independence-35 .footer::before{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:0;height:5px;
+  background:linear-gradient(90deg,var(--uz-blue) 0 32%,#fff 32% 43%,var(--uz-red) 43% 47%,#fff 47% 58%,var(--uz-green) 58% 100%);
+}
+@media(max-width:1080px){
+  .ind35-badge{position:relative;right:auto;top:auto;margin:18px auto 0;width:min(320px,100%);transform:none;}
+  body.independence-35 .hero .ind35-badge{position:absolute;right:16px;top:18px;width:160px;min-height:100px;padding:16px;opacity:.82;}
+  body.independence-35 .hero .ind35-badge::before{font-size:56px;}
+}
+@media(max-width:760px){
+  body.independence-35 .hero::before,
+  body.independence-35 .page-hero::before{width:120vw;height:220px;right:-44vw;bottom:-62px;opacity:.55;}
+  body.independence-35 .hero .ind35-badge{display:none;}
+  .ind35-badge{min-height:96px;border-radius:24px;padding:16px;}
+  .ind35-badge::before{font-size:60px;}
+}
