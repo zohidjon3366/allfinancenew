@@ -1,19 +1,26 @@
-ALL FINANCE v29 — Mustaqillik 35 yilligi TOP BANNER
+ALL FINANCE v29 — TOP BANNER
 
-Asos: ALL-FINANCE-MULTILANG-v28-FOYDALI-FINAL.
+Asos: v28 final baza.
+Qo‘shilgan o‘zgarish faqat sayt tepasidagi umumiy Mustaqillik 35 yilligi banneridir.
+Admin panel, JSON, foydali ma’lumotlar, jamoa, yangiliklar va server logikasi o‘zgartirilmagan.
 
-Nima o‘zgardi:
-1) Saytning eng tepasiga, top-strip va menyudan oldin, bayramona banner qo‘shildi.
-2) Baza, admin panel, foydali ma’lumotlar JSON, jamoa, yangiliklar, server logikasi o‘zgartirilmadi.
-3) Qo‘shilgan fayllar:
-   - assets/img/independence-35-top-banner.png
-   - assets/css/independence-top-banner.css
-4) Public HTML sahifalarga faqat bitta CSS link va bitta banner div qo‘shildi. Admin sahifalarga qo‘shilmadi.
+Qo‘shilgan fayllar:
+- assets/img/independence-35-top-banner.png
+- assets/css/independence-top-banner.css
+
+HTML sahifalarga qo‘shilgan link:
+<link href="/assets/css/independence-top-banner.css?v=29" rel="stylesheet"/>
+
+HTML sahifalarga qo‘shilgan banner bloki AF_TOP_BANNER_START va AF_TOP_BANNER_END markerlari orasida turadi.
+
+Banner barcha tillarda bitta rasm sifatida chiqadi.
+
+Olib tashlash oson:
+1) HTML fayllardan AF_TOP_BANNER_START ... AF_TOP_BANNER_END oralig‘ini o‘chiring.
+2) <link href="/assets/css/independence-top-banner.css?v=29" rel="stylesheet"/> qatorini o‘chiring.
+3) assets/css/independence-top-banner.css va assets/img/independence-35-top-banner.png fayllarini xohlasangiz olib tashlang.
 
 Deploy:
-- GitHub’dagi fayllarni ushbu paketdagi fayllar bilan to‘liq almashtiring.
-- Render’da Manual Deploy → Clear build cache & deploy.
-- Brauzerda Ctrl + F5.
-
-Tilda:
-Agar Tilda iframe orqali Render saytini ko‘rsatayotgan bo‘lsa, Tilda’dagi avvalgi bayramona overlay kodlarni olib tashlang. Banner Render saytining ichida ko‘rinadi.
+GitHub fayllarini paketdagi fayllar bilan almashtiring.
+Render → Manual Deploy → Clear build cache & deploy.
+Brauzerda Ctrl+F5.

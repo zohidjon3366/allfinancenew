@@ -1,0 +1,18 @@
+ALL FINANCE — v29 TOP BANNER RESPONSIVE FIX
+
+Asos: v28 baza + avvalgi v29 top banner.
+
+Tuzatildi:
+- Banner balandligi rasm nisbatiga yaqinlashtirildi.
+- Desktopda 1920x180 rasm tabiiy balandligiga yaqin ko‘rinadi.
+- Noutbuk, planshet va mobil ekranlarda banner xunuk siqilib qolmasligi uchun responsive height va object-fit sozlandi.
+- Saytdagi ma’lumotlar, admin panel, JSON, jamoa, foydali ma’lumotlar va server logikasi o‘zgartirilmadi.
+
+Olib tashlash:
+- HTMLdagi AF_TOP_BANNER_START / AF_TOP_BANNER_END orasidagi blokni o‘chiring.
+- <link href="/assets/css/independence-top-banner.css..."> qatorini o‘chiring.
+- assets/img/independence-35-top-banner.png va assets/css/independence-top-banner.css fayllarini o‘chirishingiz mumkin.
+
+Deploy:
+Render → Manual Deploy → Clear build cache & deploy
+Brauzerda Ctrl + F5.
