@@ -1,0 +1,30 @@
+ALL FINANCE v31 — Mustaqillik 35 yilligi CSS + PNG tuzatish
+
+Asos: v28 final paket.
+
+Nima o‘zgardi:
+- assets/css/independence-35.css qo‘shildi;
+- assets/img/independence-35-decor.png qo‘shildi;
+- public HTML sahifalarga faqat independence-35.css linki qo‘shildi.
+
+Nima o‘zgarmadi:
+- server.js logikasi;
+- admin panel logikasi;
+- JSON ma’lumotlar;
+- jamoa ma’lumotlari;
+- foydali ma’lumotlar API/admin funksiyalari;
+- yangiliklar va backup funksiyalari.
+
+v30 ishlamasligi sababi:
+- dekor body::after ichida z-index:-2 bilan berilgani uchun ayrim sahifalarda body/html fonining orqasida qolib ko‘rinmay qolgan.
+- v31 da z-index manfiy emas, body isolation bilan kontentdan orqada, lekin fon ustida turadigan qilib tuzatildi.
+
+Deploy:
+1. GitHub’dagi fayllarni shu paketdagi fayllar bilan to‘liq almashtiring.
+2. Render’da Manual Deploy → Clear build cache & deploy.
+3. Brauzerda Ctrl + F5 bosing.
+
+Agar Tilda orqali iframe ishlatilayotgan bo‘lsa:
+- Tilda’dagi avval qo‘yilgan barcha bayram CSS/JS kodlarini olib tashlang.
+- Tilda faqat Render saytni iframe orqali ochsin.
+- Bayram dizayni endi Render saytning o‘zida, iframe ichida chiqadi.
