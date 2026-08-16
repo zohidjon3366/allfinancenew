@@ -1,0 +1,17 @@
+ALL FINANCE v25 — Foydali maʼlumotlar JSON ko‘rsatish tuzatildi
+
+Muammo:
+Admin panelga kiritilgan ijara JSON fayli BuxgalterPRO tuzilmasida edi: hududlar / joylar / zonalar. Oldingi kod esa faqat regions / rates tuzilmasini kutgan. Shu sabab saytda “maʼlumot hali kiritilmagan” chiqardi.
+
+Tuzatish:
+assets/js/useful-custom.js fayliga ikki formatni ham o‘qiydigan normalizator qo‘shildi. Endi quyidagi formatlar ko‘rsatiladi:
+1) ALL FINANCE: regions + rates
+2) BuxgalterPRO JSON: hududlar + joylar + zonalar
+
+Deploy:
+1. GitHub fayllarini shu paket bilan to‘liq almashtiring.
+2. Render → Manual Deploy → Clear build cache & deploy.
+3. Brauzerda Ctrl+F5 bosing.
+
+Muhim:
+Agar Render Persistent Disk ichida avval kiritilgan useful-admin-data.json saqlangan bo‘lsa, deploydan keyin ham o‘sha maʼlumot ishlatiladi. Endi kod uni ham to‘g‘ri ko‘rsatadi. Agar boshlang‘ich v25 maʼlumotlarini olish kerak bo‘lsa: admin/foydali.html → Boshlang‘ichga qaytarish.

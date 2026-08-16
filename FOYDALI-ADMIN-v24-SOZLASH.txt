@@ -1,0 +1,52 @@
+ALL FINANCE v24 — Foydali maʼlumotlar admin panel
+
+1) Yangi admin sahifa:
+   /admin/foydali.html
+
+2) Admin panelda boshqariladigan bo'limlar:
+   - Amaldagi info
+   - Buxgalter taqvimi
+   - 2026-yil ish kunlari
+   - Eng kam ijara stavkalari
+   - Qonun hujjatlar
+   - Foydali linklar
+
+3) Saytdagi sahifalar:
+   /foydali.html
+   /foydali-calendar.html
+   /foydali-workdays.html
+   /foydali-rent.html
+   /foydali-laws.html
+   /foydali-links.html
+
+4) 4 tildagi nusxalar:
+   /ru/foydali.html va /ru/foydali-*.html
+   /en/foydali.html va /en/foydali-*.html
+   /zh/foydali.html va /zh/foydali-*.html
+
+5) Ma'lumotlar qayerda saqlanadi:
+   Render Persistent Disk ichida:
+   DATA_DIR/useful-admin-data.json
+
+   Birinchi deploy paytida fayl avtomatik yaratiladi.
+   Boshlang'ich ma'lumotlar paket ichidagi data/useful-admin-data.json dan olinadi.
+
+6) Render'da kerakli sozlama:
+   DATA_DIR=/var/data/allfinance
+   Persistent Disk mount path: /var/data
+
+7) Deploy tartibi:
+   GitHub fayllarini v24 paket bilan to'liq almashtiring.
+   Render -> Manual Deploy -> Clear build cache & deploy.
+
+8) Yangilash tartibi:
+   /admin/foydali.html ga kiring.
+   Administrator parolini kiriting.
+   Kerakli bo'limni tanlang.
+   Sarlavha/izoh va JSON ma'lumotlar blokini yangilang.
+   Saqlash tugmasini bosing.
+   Saytda o'zgarish darhol ko'rinadi.
+
+Eslatma:
+Bu versiyada BuxgalterPRO sahifasiga iframe yoki avtomatik o'tish yo'q.
+Ma'lumotlar ALL FINANCE saytida o'z dizaynimizda ko'rsatiladi va keyingi yangilanishlar admin panel orqali kiritiladi.
