@@ -1,0 +1,23 @@
+ALL FINANCE v29 — TOP BANNER FINAL FIXED
+
+Asos: ALL-FINANCE-MULTILANG-v28-FOYDALI-FINAL
+
+Nima qo'shildi:
+1) assets/img/independence-35-top-banner.png
+2) assets/css/independence-top-banner.css
+3) Public HTML sahifalarda <body> boshiga markerli banner blok qo'shildi:
+   <!-- AF_TOP_BANNER_START --> ... <!-- AF_TOP_BANNER_END -->
+
+Admin panel, server.js, JSON, jamoa, yangiliklar va foydali ma'lumotlar logikasi o'zgartirilmadi.
+
+Banner barcha tillarda bitta umumiy rasm sifatida chiqadi.
+
+Olib tashlash oson:
+- HTML fayllardan AF_TOP_BANNER_START va AF_TOP_BANNER_END orasidagi blokni o'chiring.
+- <link href="/assets/css/independence-top-banner.css?v=29f" rel="stylesheet"/> qatorini o'chiring.
+- assets/css/independence-top-banner.css va assets/img/independence-35-top-banner.png fayllarini o'chiring.
+
+Deploy:
+GitHub fayllarini shu paket bilan almashtiring.
+Render -> Manual Deploy -> Clear build cache & deploy.
+Brauzerda Ctrl+F5 bosing.
