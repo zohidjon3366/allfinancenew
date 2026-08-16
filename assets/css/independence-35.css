@@ -1,0 +1,127 @@
+/* ALL FINANCE — O‘zbekiston Respublikasi Mustaqilligining 35 yilligi dekor qatlami
+   v28 bazaga funksional o‘zgarish kiritmaydi: faqat 1 CSS + 1 PNG dekor.
+*/
+:root{
+  --af35-sky:#f5fbff;
+  --af35-blue:#1599ec;
+  --af35-green:#10a963;
+  --af35-red:#ef3340;
+  --af35-gold:#f6c64a;
+}
+
+html,body{overflow-x:hidden}
+body{
+  background:
+    radial-gradient(circle at 86% 14%,rgba(21,153,236,.12),transparent 28%),
+    radial-gradient(circle at 12% 34%,rgba(16,169,99,.10),transparent 31%),
+    linear-gradient(135deg,#f8fdff 0%,#eef8ff 48%,#f4fbf7 100%) !important;
+}
+
+/* Office fon saqlanadi, biroz yengillashtiriladi */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  pointer-events:none;
+  background:url('../img/office-bg.png') center/cover no-repeat;
+  opacity:.055;
+  filter:saturate(.95);
+}
+
+/* Bayram PNG aynan sayt foniga tushadi, kontent ustini yopmaydi */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background-image:
+    linear-gradient(90deg,rgba(255,255,255,.46) 0%,rgba(255,255,255,.34) 38%,rgba(255,255,255,.06) 72%,rgba(255,255,255,.00) 100%),
+    url('../img/independence-35-decor.png'),
+    linear-gradient(180deg,rgba(255,255,255,.58),rgba(244,250,255,.50));
+  background-repeat:no-repeat,no-repeat,no-repeat;
+  background-position:center top,center top,center;
+  background-size:cover,cover,cover;
+  opacity:.92;
+}
+
+/* Header bayram fonida ham o‘qiladigan bo‘lib turadi */
+.top-strip{
+  background:rgba(235,246,252,.88) !important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.site-header{
+  background:rgba(255,255,255,.86) !important;
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+.site-header::after{
+  height:3px !important;
+  background:linear-gradient(90deg,rgba(21,153,236,.75),rgba(255,255,255,.86) 35%,rgba(239,51,64,.42) 50%,rgba(255,255,255,.86) 64%,rgba(16,169,99,.76)) !important;
+}
+
+/* Sahifa bloklari fonni yutib yubormasligi uchun yumshoq shaffof qoldiriladi */
+.hero,.page-hero,.section,.section.alt{
+  background:transparent !important;
+}
+.hero::before,.page-hero::before,.section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.04));
+}
+
+.hero-copy,.dashboard,.metrics,.service-card,.process-step,.solution-points,.price-card,.home-member-card,.team-card,.news-card,.contact-form,.map-card,.calc-card,.article-card,.bp-panel,.bp-info-card,.bp-hub-panel,.bp-tool-card,.bp-table-card,.metric,.image-frame{
+  background:rgba(255,255,255,.86) !important;
+  border-color:rgba(18,59,139,.11) !important;
+  box-shadow:0 20px 58px rgba(8,43,112,.09) !important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+
+.hero-copy{
+  background:transparent !important;
+  box-shadow:none !important;
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+}
+
+/* Mayda bayram aksenti: kontentga aralashmasdan yuqori chiziqlar */
+.dashboard,.bp-info-card,.bp-panel,.bp-hub-panel,.metrics{
+  position:relative;
+  overflow:hidden;
+}
+.dashboard::before,.bp-info-card::before,.bp-panel::before,.bp-hub-panel::before,.metrics::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:4px;
+  background:linear-gradient(90deg,var(--af35-blue),#fff,var(--af35-red),#fff,var(--af35-green));
+  opacity:.72;
+}
+
+/* Dekor mobil ekranda matnni bosmasligi uchun yengillashtiriladi */
+@media (max-width:1200px){
+  body::after{
+    background-position:center top,right top,center;
+    background-size:auto 100%,auto 100%,cover;
+    opacity:.72;
+  }
+}
+@media (max-width:760px){
+  body::after{
+    background-image:
+      linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.54)),
+      url('../img/independence-35-decor.png');
+    background-size:auto 100%,auto 100%;
+    background-position:right top,right top;
+    opacity:.48;
+  }
+  .hero,.page-hero,.section{background:rgba(255,255,255,.32) !important}
+}
