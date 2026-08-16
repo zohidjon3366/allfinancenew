@@ -1,0 +1,28 @@
+ALL FINANCE v29 — 4 tilli Mustaqillik 35 yilligi tepa banneri
+
+Asos: ALL-FINANCE-MULTILANG-v28-FOYDALI-FINAL.
+O'zgartirilgan narsa: faqat public sahifalarning eng tepasiga banner qo'shildi.
+Admin panel, server.js, foydali ma'lumotlar JSON, jamoa, yangiliklar va boshqa funksiyalar o'zgartirilmadi.
+
+Qo'shilgan fayllar:
+- assets/css/independence-top-banner.css
+- assets/img/independence-35-top-banner-uz.png
+- assets/img/independence-35-top-banner-ru.png
+- assets/img/independence-35-top-banner-en.png
+- assets/img/independence-35-top-banner-zh.png
+
+HTML sahifalarga qo'shilgan link:
+<link href="/assets/css/independence-top-banner.css?v=29" rel="stylesheet"/>
+
+Banner public sahifalarda <body> ochilgandan keyin birinchi element sifatida turadi.
+Tillar bo'yicha:
+- / va /services/* — uz banner
+- /ru/* — ru banner
+- /en/* — en banner
+- /zh/* — zh banner
+
+Deploy:
+1. GitHub fayllarini shu paket bilan to'liq almashtiring.
+2. Render → Manual Deploy → Clear build cache & deploy.
+3. Tilda ichida oldin qo'yilgan bayramona overlay/fon kodlari bo'lsa olib tashlang.
+4. Brauzerda Ctrl + F5.
