@@ -1,106 +1,177 @@
-/* ALL FINANCE — Mustaqillik 35 yilligi dekor qatlami
-   v28 asosida: funksional fayllar o‘zgarmaydi, faqat CSS + PNG bayramona fon.
+/* ALL FINANCE — Mustaqillik 35 yilligi dekor foni
+   v28 asosida: ma'lumotlar, admin, JSON, server va funksiyalar o'zgarmaydi.
+   Faqat bitta CSS + bitta PNG dekor qatlam.
 */
 :root{
-  --af35-bg:#f4fbff;
-  --af35-blue:#1599ec;
-  --af35-green:#10a963;
+  --af35-sky:#eef9ff;
+  --af35-blue:#1297eb;
+  --af35-green:#12a86a;
   --af35-red:#ef3340;
   --af35-navy:#0b2f72;
 }
-html{background:var(--af35-bg) !important; overflow-x:hidden;}
+
+html{background:var(--af35-sky)!important;overflow-x:hidden;}
 body{
-  position:relative;
-  isolation:isolate;
+  background:linear-gradient(135deg,#f7fcff 0%,#eef8ff 48%,#f5fbf8 100%)!important;
   overflow-x:hidden;
-  background:
-    radial-gradient(circle at 82% 12%, rgba(21,153,236,.13), transparent 28%),
-    radial-gradient(circle at 14% 34%, rgba(16,169,99,.10), transparent 34%),
-    linear-gradient(135deg,#f9fdff 0%,#eef8ff 48%,#f5fbf7 100%) !important;
 }
-/* Muhim: z-index manfiy emas. Shuning uchun dekor ko‘rinmay qolmaydi. */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:0;
-  pointer-events:none;
-  background-image:
-    linear-gradient(90deg, rgba(255,255,255,.40) 0%, rgba(255,255,255,.30) 42%, rgba(255,255,255,.06) 76%, rgba(255,255,255,0) 100%),
-    url('../img/independence-35-decor.png'),
-    linear-gradient(180deg, rgba(255,255,255,.64), rgba(244,250,255,.52));
-  background-repeat:no-repeat,no-repeat,no-repeat;
-  background-position:center top, center top, center;
-  background-size:cover, cover, cover;
-  opacity:.95;
-}
-/* Sayt kontenti dekor ustida turadi */
-body > *{
-  position:relative;
-  z-index:1;
-}
-.top-strip{
-  background:rgba(235,246,252,.88) !important;
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-}
+
+/* Eski office-bg juda pastda qolsin */
+body::before,body::after{opacity:.06!important;}
+
+/* Header bayram rangidagi nozik chiziq */
+.top-strip{background:rgba(235,247,252,.92)!important;}
 .site-header{
-  background:rgba(255,255,255,.90) !important;
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+  background:rgba(255,255,255,.93)!important;
+  backdrop-filter:blur(18px)!important;
+  -webkit-backdrop-filter:blur(18px)!important;
 }
 .site-header::after{
-  height:3px !important;
-  background:linear-gradient(90deg, rgba(21,153,236,.78), rgba(255,255,255,.9) 34%, rgba(239,51,64,.48) 50%, rgba(255,255,255,.9) 64%, rgba(16,169,99,.80)) !important;
+  content:""!important;
+  position:absolute!important;
+  left:0!important;right:0!important;bottom:0!important;height:3px!important;
+  background:linear-gradient(90deg,var(--af35-blue),#fff 34%,var(--af35-red) 49%,#fff 63%,var(--af35-green))!important;
+  opacity:.85!important;
 }
-/* Eski sahifa fonlari dekorni yopib qo‘ymasligi uchun */
-.hero,.page-hero,.section,.section.alt,.site-footer{
-  background:transparent !important;
+
+/* Asosiy sahifa hero — dekor endi kontentning ORQASIDA turadi */
+.hero,.page-hero{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  background:linear-gradient(90deg,rgba(245,251,255,.55),rgba(245,251,255,.18))!important;
 }
-/* Hero ichidagi kontent oq shaffof panel bo‘lib qolmasin */
-.hero-copy{
-  background:transparent !important;
-  box-shadow:none !important;
-  backdrop-filter:none !important;
-  -webkit-backdrop-filter:none !important;
+body .hero::before,
+body .page-hero::before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  pointer-events:none!important;
+  z-index:0!important;
+  left:50%!important;
+  top:-82px!important;
+  width:100vw!important;
+  max-width:1900px!important;
+  height:820px!important;
+  transform:translateX(-50%)!important;
+  background-image:url('../img/independence-35-decor.png')!important;
+  background-repeat:no-repeat!important;
+  background-position:center top!important;
+  background-size:100% auto!important;
+  opacity:1!important;
+  filter:saturate(1.05)!important;
 }
-/* Kartalar o‘qiladigan, lekin fonni sezdiradigan holat */
-.dashboard,.metrics,.service-card,.process-step,.solution-points,.price-card,.home-member-card,.team-card,.news-card,.contact-form,.map-card,.calc-card,.article-card,.bp-panel,.bp-info-card,.bp-hub-panel,.bp-tool-card,.bp-table-card,.metric,.image-frame,.useful-card,.info-card{
-  background:rgba(255,255,255,.88) !important;
-  border-color:rgba(18,59,139,.11) !important;
-  box-shadow:0 20px 58px rgba(8,43,112,.09) !important;
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
+body .hero::after,
+body .page-hero::after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  z-index:1!important;
+  background:linear-gradient(90deg,
+    rgba(255,255,255,.72) 0%,
+    rgba(255,255,255,.58) 33%,
+    rgba(255,255,255,.28) 54%,
+    rgba(255,255,255,.05) 82%,
+    rgba(255,255,255,0) 100%)!important;
 }
-.dashboard,.bp-info-card,.bp-panel,.bp-hub-panel,.metrics{
-  position:relative;
-  overflow:hidden;
+.hero>.shell,.page-hero>.shell{position:relative!important;z-index:2!important;}
+
+/* Foydali sahifalarda yuqori bayram rasm ko'proq ko'rinsin */
+.useful-hero::before,
+.page-hero.useful-hero::before{
+  top:-120px!important;
+  height:760px!important;
+  background-position:center top!important;
 }
-.dashboard::before,.bp-info-card::before,.bp-panel::before,.bp-hub-panel::before,.metrics::before{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  top:0;
-  height:4px;
-  background:linear-gradient(90deg,var(--af35-blue),#fff,var(--af35-red),#fff,var(--af35-green));
-  opacity:.72;
+.useful-hero::after,
+.page-hero.useful-hero::after{
+  background:linear-gradient(90deg,
+    rgba(255,255,255,.80) 0%,
+    rgba(255,255,255,.62) 38%,
+    rgba(255,255,255,.20) 62%,
+    rgba(255,255,255,0) 100%)!important;
 }
-@media (max-width:1200px){
-  body::before{
-    background-position:center top, right top, center;
-    background-size:auto 100%, auto 100%, cover;
-    opacity:.78;
+
+/* Xizmatlar va keyingi bo'limlarda fonni to'liq yopmasin */
+.section,.section.alt{
+  position:relative!important;
+  background:rgba(246,251,254,.38)!important;
+}
+.section.alt{background:rgba(255,255,255,.32)!important;}
+
+/* Pastki chap bayroq dekorini xizmatlar bo'limida ham nozik ko'rsatish */
+.home-services,.useful-app-section,.section.alt{
+  isolation:isolate!important;
+  overflow:hidden!important;
+}
+.home-services::before,.useful-app-section::before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  z-index:0!important;
+  left:-170px!important;
+  bottom:-150px!important;
+  width:min(640px,48vw)!important;
+  height:460px!important;
+  background:url('../img/independence-35-decor.png') left bottom/900px auto no-repeat!important;
+  opacity:.62!important;
+  pointer-events:none!important;
+}
+.home-services>.shell,.useful-app-section>.shell{position:relative!important;z-index:1!important;}
+
+/* Kartalar o'qilishi saqlansin */
+.dashboard,.metrics,.metric,.service-card,.process-step,.solution-points,.price-card,.home-member-card,.team-card,.news-card,.contact-form,.map-card,.calc-card,.article-card,.bp-panel,.bp-info-card,.bp-hub-panel,.bp-tool-card,.bp-table-card,.image-frame,.useful-card,.info-card{
+  background:rgba(255,255,255,.90)!important;
+  border-color:rgba(18,59,139,.12)!important;
+  box-shadow:0 20px 58px rgba(8,43,112,.10)!important;
+  backdrop-filter:blur(12px)!important;
+  -webkit-backdrop-filter:blur(12px)!important;
+}
+.metrics,.dashboard,.bp-panel,.bp-info-card,.bp-hub-panel{
+  position:relative!important;
+  overflow:hidden!important;
+}
+.metrics::before,.dashboard::before,.bp-panel::before,.bp-info-card::before,.bp-hub-panel::before{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;right:0!important;top:0!important;height:4px!important;
+  background:linear-gradient(90deg,var(--af35-blue),#fff,var(--af35-red),#fff,var(--af35-green))!important;
+  opacity:.72!important;
+}
+
+/* Foydali sahifalarda 'Render/BuxgalterPRO' kabi texnik yozuvlar yashirilsin, v28 final talabi saqlansin */
+.bp-pill,.useful-card-content small{font-size:0!important;}
+.bp-pill::after,.useful-card-content small::after{content:"ALL FINANCE";font-size:12px!important;}
+
+@media(max-width:1300px){
+  body .hero::before,body .page-hero::before{
+    left:54%!important;
+    width:124vw!important;
+    height:760px!important;
+    top:-80px!important;
   }
 }
-@media (max-width:760px){
-  body::before{
-    background-image:
-      linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.58)),
-      url('../img/independence-35-decor.png');
-    background-size:auto 100%, auto 100%;
-    background-position:right top, right top;
-    opacity:.56;
+@media(max-width:980px){
+  body .hero::before,body .page-hero::before{
+    left:62%!important;
+    width:155vw!important;
+    height:650px!important;
+    top:-40px!important;
+    opacity:.72!important;
   }
-  .hero,.page-hero,.section{background:rgba(255,255,255,.28) !important;}
+  body .hero::after,body .page-hero::after{background:rgba(255,255,255,.50)!important;}
+  .home-services::before,.useful-app-section::before{opacity:.32!important;}
+}
+@media(max-width:640px){
+  body .hero::before,body .page-hero::before{
+    left:78%!important;
+    width:210vw!important;
+    height:520px!important;
+    top:-20px!important;
+    opacity:.48!important;
+  }
+  body .hero::after,body .page-hero::after{background:rgba(255,255,255,.62)!important;}
+  .home-services::before,.useful-app-section::before{display:none!important;}
 }
