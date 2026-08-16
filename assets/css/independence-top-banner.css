@@ -1,65 +1,60 @@
 /* ALL FINANCE — Mustaqillik 35 yilligi top banner
-   Olib tashlash oson: HTMLdagi AF_TOP_BANNER_START/END blokini va shu CSS linkini o‘chirish kifoya.
-   v29 responsive fix: banner rasm nisbatiga yaqinroq, kengroq va chiroyli ko‘rinadi. */
-
-.af-top-independence-banner{
-  width:100%;
-  height:clamp(112px, 9.375vw, 180px); /* 1920x180 rasm nisbatiga mos */
-  background:#071f5e;
-  line-height:0;
-  position:relative;
-  z-index:50;
-  overflow:hidden;
-  box-shadow:0 8px 24px rgba(8,43,112,.16);
+   Faqat yuqori banner bezagi; kontent, baza va admin logikasi o'zgarmaydi. */
+.af-top-independence-banner {
+  width: 100%;
+  background: #08245f;
+  line-height: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 60;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  box-shadow: 0 8px 28px rgba(8, 36, 92, .18);
 }
 
-.af-top-independence-banner__img{
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center center;
-  border:0;
-  margin:0;
-  padding:0;
+.af-top-independence-banner__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  object-fit: contain;
 }
 
-body:has(.af-top-independence-banner) .top-strip{
-  border-top:0;
-}
-
-/* Katta monitorlarda banner rasm o‘z tabiiy balandligida ko‘rinadi */
-@media (min-width: 1920px){
-  .af-top-independence-banner{
-    height:180px;
+/* Juda katta monitorlarda banner juda balandlashib ketmasligi uchun */
+@media (min-width: 1800px) {
+  .af-top-independence-banner {
+    max-height: 340px;
+  }
+  .af-top-independence-banner__img {
+    transform: translateY(-2px);
   }
 }
 
-/* Noutbuk va planshetlarda matn/35 markaziy qismi kesilib ketmasin */
-@media (max-width: 1199px){
-  .af-top-independence-banner{
-    height:118px;
-  }
-  .af-top-independence-banner__img{
-    object-position:center center;
+@media (max-width: 1100px) {
+  .af-top-independence-banner__img {
+    width: 118%;
+    margin-left: -9%;
   }
 }
 
-@media (max-width: 900px){
-  .af-top-independence-banner{
-    height:100px;
+@media (max-width: 760px) {
+  .af-top-independence-banner {
+    max-height: 142px;
   }
-  .af-top-independence-banner__img{
-    object-position:center center;
+  .af-top-independence-banner__img {
+    width: 160%;
+    margin-left: -30%;
   }
 }
 
-/* Mobil ekranlarda rasm juda maydalanib ketmasligi uchun markaziy qism ko‘rsatiladi */
-@media (max-width: 560px){
-  .af-top-independence-banner{
-    height:86px;
+@media (max-width: 480px) {
+  .af-top-independence-banner {
+    max-height: 112px;
   }
-  .af-top-independence-banner__img{
-    object-position:center center;
+  .af-top-independence-banner__img {
+    width: 190%;
+    margin-left: -45%;
   }
 }
