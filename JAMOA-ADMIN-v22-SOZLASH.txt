@@ -1,0 +1,62 @@
+ALL FINANCE v22 — Jamoa boshqaruvi Render admin paneli
+
+NIMA QO‘SHILDI
+1. Jamoa sahifasi endi data/team.json va Render DATA_DIR/team.json ma’lumotlari asosida chiqadi.
+2. Administrator panelidan xodim qo‘shish, tahrirlash, o‘chirish, yashirish va rasm almashtirish mumkin.
+3. 4 til uchun alohida F.I.Sh., lavozim, tajriba va qo‘shimcha izoh kiritiladi.
+4. Xodim rasmi brauzerda 900x900 WEBP formatga avtomatik siqiladi.
+5. Yuklangan rasmlar Render persistent diskdagi DATA_DIR/media ichida saqlanadi va /media/... orqali saytga chiqadi.
+6. Haftalik backup endi news.json bilan birga team.json va media fayllarni ham saqlaydi.
+
+ADMIN PANEL MANZILLARI
+Yangiliklar boshqaruvi:
+/admin/yangiliklar.html
+
+Jamoa boshqaruvi:
+/admin/jamoa.html
+
+SAYTDA KO‘RINADIGAN SAHIFALAR
+/team.html
+/ru/team.html
+/en/team.html
+/zh/team.html
+
+RENDER SOZLAMALARI O‘ZGARMAYDI
+Build Command:
+node scripts/verify-build.js
+
+Start Command:
+node server.js
+
+Health Check Path:
+/health
+
+Majburiy Environment Variables:
+DATA_DIR=/var/data/allfinance
+ADMIN_PASSWORD=mustahkam_parol
+ADMIN_SESSION_SECRET=uzun_random_secret
+
+MUHIM
+Render’da Persistent Disk ulanishi shart. Aks holda admin paneldan kiritilgan jamoa ma’lumotlari va rasmlar deploydan keyin yo‘qolishi mumkin.
+
+DEPLOY TARTIBI
+1. GitHub’dagi eski fayllarni ushbu v22 paket fayllari bilan to‘liq almashtiring.
+2. Render’da Manual Deploy → Clear build cache & deploy bosing.
+3. Brauzerda /admin/jamoa.html sahifasini oching.
+4. ADMIN_PASSWORD orqali kiring.
+5. Jamoa ma’lumotlarini o‘zgartiring va Saqlash tugmasini bosing.
+6. /team.html sahifasini Ctrl+F5 bilan tekshiring.
+
+YANGI/ASOSIY FAYLLAR
+server.js
+admin/jamoa.html
+assets/js/admin-team.js
+assets/js/team-client.js
+data/team.json
+assets/css/admin.css
+assets/css/style.css
+team.html
+ru/team.html
+en/team.html
+zh/team.html
+scripts/verify-build.js

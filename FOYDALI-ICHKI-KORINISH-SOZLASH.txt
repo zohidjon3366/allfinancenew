@@ -1,0 +1,26 @@
+ALL FINANCE v18 - Foydali maʼlumotlar ichki korinish
+
+Bu versiyada Foydali maʼlumotlar kartalari tashqi saytga avtomatik otmaydi.
+BuxgalterPRO manbalaridan malumotlar server orqali olinadi va ALL FINANCE dizaynida shu sahifa ichida korsatiladi.
+
+Yangi API:
+/api/useful/calendar
+/api/useful/workdays
+/api/useful/rent
+/api/useful/laws
+/api/useful/links
+/api/useful/info
+
+Kesh:
+Malumotlar DATA_DIR/useful-cache.json ichida vaqtincha saqlanadi.
+Standart kesh muddati: 360 daqiqa.
+Render Environment orqali ozgartirish mumkin:
+USEFUL_CACHE_TTL_MINUTES=360
+
+Render sozlamalari ozgarmaydi:
+Build Command: node scripts/verify-build.js
+Start Command: node server.js
+Health Check Path: /health
+
+Eslatma:
+Manba sahifa vaqtincha ochilmasa, sayt oldingi keshdagi malumotni korsatadi. Kesh bolmasa, vaqtincha qisqa fallback malumot chiqadi.

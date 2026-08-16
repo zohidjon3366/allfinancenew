@@ -1,0 +1,29 @@
+ALL FINANCE v19 — Foydali maʼlumotlar ichki ko‘rinish tuzatmasi
+
+Muammo:
+- Foydali maʼlumotlar kartalari bosilganda tashqi saytga o‘tib ketishi yoki tashqi manbadan ma’lumot kelmasa bo‘lim ishlamasligi mumkin edi.
+
+Tuzatildi:
+1. Foydali maʼlumotlar kartalari endi tashqi saytga avtomatik o‘tmaydi.
+2. Ma’lumotlar ALL FINANCE saytining ichki panelida ochiladi.
+3. Buxgalter taqvimi timeline ko‘rinishida berildi.
+4. 2026-yil ish kunlari jadval ko‘rinishida berildi.
+5. Eng kam ijara stavkalari nazorat kartalari va jadval ko‘rinishida berildi.
+6. Qonun hujjatlar va foydali linklar ALL FINANCE dizaynida ro‘yxat sifatida berildi.
+7. API endi tashqi sayt ishlashiga bog‘liq emas: data/useful-data.json faylidan ishlaydi.
+8. 4 til qo‘llab-quvvatlanadi: uz/ru/en/zh.
+
+Yangi / o‘zgartirilgan fayllar:
+- data/useful-data.json
+- assets/js/useful-client.js
+- assets/css/style.css
+- server.js
+- foydali.html
+- ru/foydali.html
+- en/foydali.html
+- zh/foydali.html
+
+Render sozlamalari o‘zgarmaydi:
+Build Command: node scripts/verify-build.js
+Start Command: node server.js
+Health Check Path: /health
