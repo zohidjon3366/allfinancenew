@@ -1,0 +1,19 @@
+ALL FINANCE v30 — Mustaqillik 35 yilligi dekor qatlami
+
+Asos: v28 final holati.
+Funksional baza, admin panel, foydali ma'lumotlar, JSON, jamoa va server logikasi o'zgartirilmadi.
+
+Qo'shilgan yangi fayllar:
+1) assets/css/independence-35.css
+2) assets/img/independence-35-decor.png
+
+HTML sahifalarda faqat yangi CSS faylni ulash uchun <link> qo'shildi.
+Boshqa ma'lumotlar va tizim funksiyalari o'zgarmadi.
+
+Deploy:
+1. GitHubdagi fayllarni ushbu paket bilan almashtiring.
+2. Render → Manual Deploy → Clear build cache & deploy.
+3. Brauzerda Ctrl + F5 bosing.
+
+Agar bayram dizaynini keyin o'chirmoqchi bo'lsangiz:
+- assets/css/independence-35.css linklarini olib tashlang yoki fayl ichidagi CSSni bo'sh qoldiring.
