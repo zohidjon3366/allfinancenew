@@ -1,0 +1,938 @@
+{
+  "items": [
+    {
+      "slug": "calendar",
+      "sourceUrl": "https://buxgalterpro.uz/calendar.html",
+      "sourceName": "BuxgalterPRO — calendar.html",
+      "title": {
+        "uz": "Buxgalter taqvimi",
+        "ru": "Календарь бухгалтера",
+        "en": "Accountant calendar",
+        "zh": "会计日历"
+      },
+      "summary": {
+        "uz": "Soliq hisobotlari, tölov muddatlari va buxgalter uçun muhim eslatmalar ichki jadval körinişida beriladi. Quyidagi namunaviy blok BuxgalterPRO taqvimidagi aprel 2026 muddatlari asosida tayyorlandi.",
+        "ru": "Налоговые отчеты, сроки платежей и важные напоминания показаны внутри страницы. Ниже приведен блок сроков за апрель 2026 по данным календаря BuxgalterPRO.",
+        "en": "Tax reports, payment deadlines and key reminders are displayed inside this page. The block below is based on BuxgalterPRO’s April 2026 calendar.",
+        "zh": "税务报表、付款期限和重要提醒在本站页面内显示。以下内容基于 BuxgalterPRO 2026年4月会计日历。"
+      },
+      "groups": [
+        {
+          "type": "timeline",
+          "title": {
+            "uz": "Aprel 2026 — muhim muddatlar",
+            "ru": "Апрель 2026 — важные сроки",
+            "en": "April 2026 — key deadlines",
+            "zh": "2026年4月 — 重要期限"
+          },
+          "rows": [
+            {
+              "date": "1 apr",
+              "weekday": {
+                "uz": "Çorşanba",
+                "ru": "Среда",
+                "en": "Wednesday",
+                "zh": "星期三"
+              },
+              "badge": {
+                "uz": "1 ta muddat",
+                "ru": "1 срок",
+                "en": "1 deadline",
+                "zh": "1个期限"
+              },
+              "category": {
+                "uz": "Hisobot",
+                "ru": "Отчет",
+                "en": "Report",
+                "zh": "报表"
+              },
+              "text": {
+                "uz": "1-korxona statistika hisoboti.",
+                "ru": "Статистический отчет 1-korxona.",
+                "en": "1-korxona statistical report.",
+                "zh": "1-korxona统计报表。"
+              }
+            },
+            {
+              "date": "6 apr",
+              "weekday": {
+                "uz": "Duşanba",
+                "ru": "Понедельник",
+                "en": "Monday",
+                "zh": "星期一"
+              },
+              "badge": {
+                "uz": "1 ta muddat",
+                "ru": "1 срок",
+                "en": "1 deadline",
+                "zh": "1个期限"
+              },
+              "category": {
+                "uz": "Töloǵ",
+                "ru": "Платеж",
+                "en": "Payment",
+                "zh": "付款"
+              },
+              "text": {
+                "uz": "Bank: nerezidentlarga fevralda tölangan daromadlar böyiça foyda soliğini tölaş.",
+                "ru": "Банк: уплата налога на прибыль с доходов, выплаченных нерезидентам в феврале.",
+                "en": "Bank: profit tax payment on income paid to non-residents in February.",
+                "zh": "银行：缴纳2月份向非居民支付收入相关的利润税。"
+              }
+            },
+            {
+              "date": "7 apr",
+              "weekday": {
+                "uz": "Seşanba",
+                "ru": "Вторник",
+                "en": "Tuesday",
+                "zh": "星期二"
+              },
+              "badge": {
+                "uz": "1 ta muddat",
+                "ru": "1 срок",
+                "en": "1 deadline",
+                "zh": "1个期限"
+              },
+              "category": {
+                "uz": "Töloǵ",
+                "ru": "Платеж",
+                "en": "Payment",
+                "zh": "付款"
+              },
+              "text": {
+                "uz": "Ötgan oyda natural şaklda tölangan daromaddan JŞDS tölaş; oylik natural şaklda tölangan bölsa, INPSni 5 kun içida tölaş.",
+                "ru": "Уплата НДФЛ с дохода, выплаченного в натуральной форме за прошлый месяц; при зарплате в натуральной форме ИНПС — в течение 5 дней.",
+                "en": "PIT payment for income paid in kind in the previous month; if salary was paid in kind, INPS within 5 days.",
+                "zh": "上月实物形式收入的个人所得税；如工资以实物形式支付，INPS须在5天内缴纳。"
+              }
+            },
+            {
+              "date": "9 apr",
+              "weekday": {
+                "uz": "Payşanba",
+                "ru": "Четверг",
+                "en": "Thursday",
+                "zh": "星期四"
+              },
+              "badge": {
+                "uz": "1 ta muddat",
+                "ru": "1 срок",
+                "en": "1 deadline",
+                "zh": "1个期限"
+              },
+              "category": {
+                "uz": "Töloǵ",
+                "ru": "Платеж",
+                "en": "Payment",
+                "zh": "付款"
+              },
+              "text": {
+                "uz": "Alkogol, pivo va tamaki mahsulotlarini sotiş huquqi yiǵimini tölaş.",
+                "ru": "Уплата сбора за право реализации алкогольной, пивной и табачной продукции.",
+                "en": "Fee for the right to sell alcohol, beer and tobacco products.",
+                "zh": "销售酒类、啤酒和烟草产品权利费。"
+              }
+            },
+            {
+              "date": "10 apr",
+              "weekday": {
+                "uz": "Juma",
+                "ru": "Пятница",
+                "en": "Friday",
+                "zh": "星期五"
+              },
+              "badge": {
+                "uz": "4 ta muddat",
+                "ru": "4 срока",
+                "en": "4 deadlines",
+                "zh": "4个期限"
+              },
+              "category": {
+                "uz": "Hisobot / töloǵ",
+                "ru": "Отчет / платеж",
+                "en": "Report / payment",
+                "zh": "报表/付款"
+              },
+              "text": {
+                "uz": "Aksiz soliği; yer soliği 1/12 qismi; mol-mulk soliği 1/12 qismi; nogiron bolasi bor işçiga qöşimça dam oliş kuni böyiça qoplaş arizasi.",
+                "ru": "Акциз; 1/12 земельного налога; 1/12 налога на имущество; заявление на возмещение дополнительного выходного работнику с ребенком-инвалидом.",
+                "en": "Excise tax; 1/12 land tax; 1/12 property tax; reimbursement application for an additional day off for an employee with a disabled child.",
+                "zh": "消费税；土地税1/12；财产税1/12；有残疾子女员工额外休息日补偿申请。"
+              }
+            },
+            {
+              "date": "15 apr",
+              "weekday": {
+                "uz": "Çorşanba",
+                "ru": "Среда",
+                "en": "Wednesday",
+                "zh": "星期三"
+              },
+              "badge": {
+                "uz": "7 ta muddat",
+                "ru": "7 сроков",
+                "en": "7 deadlines",
+                "zh": "7个期限"
+              },
+              "category": {
+                "uz": "Hisobot / töloǵ",
+                "ru": "Отчет / платеж",
+                "en": "Report / payment",
+                "zh": "报表/付款"
+              },
+              "text": {
+                "uz": "Aylanmadan soliq, daromad/ijtimoiy soliq, INPS, soliq agenti AOS, ekologiya hisoboti, onlayn-NKM texnik xatolari va foyda soliği avans maʼlumotnomasi.",
+                "ru": "Налог с оборота, НДФЛ/социальный налог, ИНПС, АОС налогового агента, экологический отчет, исправление технических ошибок онлайн-ККМ и справка по авансу налога на прибыль.",
+                "en": "Turnover tax, income/social tax, INPS, tax-agent turnover tax, ecology report, online cash-register technical corrections and profit tax advance statement.",
+                "zh": "营业税、个人/社会税、INPS、税务代理营业税、生态报表、线上收银机技术错误修正及利润税预缴说明。"
+              }
+            },
+            {
+              "date": "20 apr",
+              "weekday": {
+                "uz": "Duşanba",
+                "ru": "Понедельник",
+                "en": "Monday",
+                "zh": "星期一"
+              },
+              "badge": {
+                "uz": "10 ta muddat",
+                "ru": "10 сроков",
+                "en": "10 deadlines",
+                "zh": "10个期限"
+              },
+              "category": {
+                "uz": "Hisobot / töloǵ",
+                "ru": "Отчет / платеж",
+                "en": "Report / payment",
+                "zh": "报表/付款"
+              },
+              "text": {
+                "uz": "QQS, çet elliklardan olingan xizmatlar böyiça QQS va foyda soliği, yer qaʼridan foydalanganlik, renta soliği, dividend/foiz hisoboti, foyda soliği, suv soliği va onlayn-NKM tuzatişlari.",
+                "ru": "НДС, НДС и налог на прибыль по услугам иностранных лиц, налог за пользование недрами, рентный налог, отчет по дивидендам/процентам, налог на прибыль, водный налог и корректировки онлайн-ККМ.",
+                "en": "VAT, VAT and profit tax for foreign services, subsoil-use tax, rent tax, dividends/interest report, profit tax, water tax and online cash-register corrections.",
+                "zh": "增值税、外国服务相关增值税和利润税、矿产资源使用税、租金税、股息/利息报表、利润税、水税及线上收银机修正。"
+              }
+            },
+            {
+              "date": "23 apr",
+              "weekday": {
+                "uz": "Payşanba",
+                "ru": "Четверг",
+                "en": "Thursday",
+                "zh": "星期四"
+              },
+              "badge": {
+                "uz": "1 ta muddat",
+                "ru": "1 срок",
+                "en": "1 deadline",
+                "zh": "1个期限"
+              },
+              "category": {
+                "uz": "Töloǵ",
+                "ru": "Платеж",
+                "en": "Payment",
+                "zh": "付款"
+              },
+              "text": {
+                "uz": "Daromadi 20 mlrd sömdan ortiq korxonalar uçun aprel oyiga foyda soliği avans tölovi.",
+                "ru": "Авансовый платеж по налогу на прибыль за апрель для организаций с доходом свыше 20 млрд сум.",
+                "en": "April profit-tax advance payment for entities with income over UZS 20 billion.",
+                "zh": "收入超过200亿苏姆企业的4月利润税预付款。"
+              }
+            },
+            {
+              "date": "27 apr",
+              "weekday": {
+                "uz": "Duşanba",
+                "ru": "Понедельник",
+                "en": "Monday",
+                "zh": "星期一"
+              },
+              "badge": {
+                "uz": "1 ta muddat",
+                "ru": "1 срок",
+                "en": "1 deadline",
+                "zh": "1个期限"
+              },
+              "category": {
+                "uz": "Boşqa",
+                "ru": "Прочее",
+                "en": "Other",
+                "zh": "其他"
+              },
+              "text": {
+                "uz": "Fevral oyi böyiça xodimning mehnatda mayib bölişi yoki kasb kasalligi sababli tayinlangan pensiyalarni korxona tomonidan töliq qoplaş.",
+                "ru": "Возмещение предприятием пенсий, назначенных в связи с трудовым увечьем или профессиональным заболеванием за февраль.",
+                "en": "Company reimbursement of pensions related to work injury or occupational disease for February.",
+                "zh": "企业补偿2月份因工伤或职业病而指定的相关养老金。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "workdays",
+      "sourceUrl": "https://buxgalterpro.uz/tools/ish_vaqti_normasi_2026.html",
+      "sourceName": "BuxgalterPRO — ish vaqti normasi 2026",
+      "title": {
+        "uz": "2026-yil iş kunlari",
+        "ru": "Рабочие дни 2026 года",
+        "en": "2026 working days",
+        "zh": "2026年工作日"
+      },
+      "summary": {
+        "uz": "Haftasiga 5 kunlik iş tartibi uçun 2026-yil oylar kesimidagi iş kuni va iş soati balansi.",
+        "ru": "Баланс рабочих дней и часов по месяцам на 2026 год для 5-дневной рабочей недели.",
+        "en": "Monthly balance of working days and hours for a 5-day workweek in 2026.",
+        "zh": "2026年五天工作周的月度工作日与工时平衡。"
+      },
+      "groups": [
+        {
+          "type": "table",
+          "title": {
+            "uz": "5 kunlik iş haftasi — oylar kesimida",
+            "ru": "5-дневная рабочая неделя — по месяцам",
+            "en": "5-day workweek — monthly table",
+            "zh": "五天工作周 — 月度表"
+          },
+          "columns": {
+            "uz": [
+              "Oy",
+              "İş kuni",
+              "İş soati"
+            ],
+            "ru": [
+              "Месяц",
+              "Раб. дни",
+              "Раб. часы"
+            ],
+            "en": [
+              "Month",
+              "Work days",
+              "Work hours"
+            ],
+            "zh": [
+              "月份",
+              "工作日",
+              "工时"
+            ]
+          },
+          "rows": [
+            [
+              "Yanvar",
+              "20",
+              "160"
+            ],
+            [
+              "Fevral",
+              "20",
+              "160"
+            ],
+            [
+              "Mart",
+              "19",
+              "151"
+            ],
+            [
+              "Aprel",
+              "22",
+              "176"
+            ],
+            [
+              "May",
+              "17",
+              "134"
+            ],
+            [
+              "Iyun",
+              "22",
+              "176"
+            ],
+            [
+              "Iyul",
+              "23",
+              "184"
+            ],
+            [
+              "Avgust",
+              "20",
+              "160"
+            ],
+            [
+              "Sentabr",
+              "21",
+              "167"
+            ],
+            [
+              "Oktabr",
+              "21",
+              "168"
+            ],
+            [
+              "Noyabr",
+              "21",
+              "168"
+            ],
+            [
+              "Dekabr",
+              "22",
+              "175"
+            ],
+            [
+              "Jami",
+              "248",
+              "1979"
+            ]
+          ]
+        },
+        {
+          "type": "items",
+          "title": {
+            "uz": "2026-yilda işlanmaydigan bayram kunlari",
+            "ru": "Нерабочие праздничные дни 2026 года",
+            "en": "Public holidays in 2026",
+            "zh": "2026年非工作节假日"
+          },
+          "items": {
+            "uz": [
+              "1 yanvar — Yangi yil",
+              "8 mart — Xotin-qizlar kuni",
+              "20 mart — Ramazon hayiti (özgariş mumkin)",
+              "21 mart — Navröz bayrami",
+              "9 may — Xotira va qadrlash kuni",
+              "27 may — Qurbon hayiti (özgariş mumkin)",
+              "1 sentabr — Mustaqillik kuni",
+              "1 oktabr — Öqituvchi va murabbiylar kuni",
+              "8 dekabr — Konstitutsiya kuni"
+            ],
+            "ru": [
+              "1 января — Новый год",
+              "8 марта — Международный женский день",
+              "20 марта — Рамазан хайит (может измениться)",
+              "21 марта — Навруз",
+              "9 мая — День памяти и почестей",
+              "27 мая — Курбан хайит (может измениться)",
+              "1 сентября — День независимости",
+              "1 октября — День учителя и наставника",
+              "8 декабря — День Конституции"
+            ],
+            "en": [
+              "January 1 — New Year",
+              "March 8 — Women’s Day",
+              "March 20 — Ramadan Hayit (may change)",
+              "March 21 — Navruz",
+              "May 9 — Day of Remembrance and Honor",
+              "May 27 — Kurban Hayit (may change)",
+              "September 1 — Independence Day",
+              "October 1 — Teachers and Mentors Day",
+              "December 8 — Constitution Day"
+            ],
+            "zh": [
+              "1月1日 — 新年",
+              "3月8日 — 妇女节",
+              "3月20日 — 开斋节（可能调整）",
+              "3月21日 — 纳乌鲁兹节",
+              "5月9日 — 纪念与荣誉日",
+              "5月27日 — 古尔邦节（可能调整）",
+              "9月1日 — 独立日",
+              "10月1日 — 教师和导师日",
+              "12月8日 — 宪法日"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "rent",
+      "sourceUrl": "https://buxgalterpro.uz/tools/eng_kam_ijara_stavkalari_2026.html",
+      "sourceName": "BuxgalterPRO — ijara stavkalari 2026",
+      "title": {
+        "uz": "Eng kam ijara stavkalari",
+        "ru": "Минимальные ставки аренды",
+        "en": "Minimum rental rates",
+        "zh": "最低租金标准"
+      },
+      "summary": {
+        "uz": "2026-yil uçun turar va noturar joy ijara tölovining eng kam stavkalari hududlar kesimida tekşiriladi. Saytda maʼlumot ALL FINANCE dizaynida içki kartalar orqali berildi.",
+        "ru": "Минимальные ставки аренды жилой и нежилой недвижимости на 2026 год проверяются по регионам. Данные показаны внутри страницы в дизайне ALL FINANCE.",
+        "en": "Minimum rental rates for residential and non-residential property in 2026 are checked by region and shown inside the ALL FINANCE page.",
+        "zh": "2026年住宅和非住宅物业最低租金标准按地区核查，并在 ALL FINANCE 页面内展示。"
+      },
+      "metrics": [
+        {
+          "label": {
+            "uz": "Ölçov",
+            "ru": "Единица",
+            "en": "Unit",
+            "zh": "单位"
+          },
+          "value": {
+            "uz": "söm/m²/oy",
+            "ru": "сум/м²/мес.",
+            "en": "UZS/m²/month",
+            "zh": "苏姆/平方米/月"
+          }
+        },
+        {
+          "label": {
+            "uz": "Turlar",
+            "ru": "Виды",
+            "en": "Types",
+            "zh": "类型"
+          },
+          "value": {
+            "uz": "Turar / noturar",
+            "ru": "Жилое / нежилое",
+            "en": "Residential / non-residential",
+            "zh": "住宅/非住宅"
+          }
+        },
+        {
+          "label": {
+            "uz": "Yil",
+            "ru": "Год",
+            "en": "Year",
+            "zh": "年份"
+          },
+          "value": "2026"
+        }
+      ],
+      "groups": [
+        {
+          "type": "cards",
+          "title": {
+            "uz": "İçki ko‘rinishdagi nazorat kartalari",
+            "ru": "Карточки внутреннего контроля",
+            "en": "Internal control cards",
+            "zh": "内部控制卡片"
+          },
+          "cards": [
+            {
+              "title": {
+                "uz": "Turar joy",
+                "ru": "Жилое помещение",
+                "en": "Residential property",
+                "zh": "住宅物业"
+              },
+              "text": {
+                "uz": "Hudud, maydon va shartnoma summasi bo‘yicha minimal baza solishtiriladi.",
+                "ru": "Минимальная база сопоставляется по региону, площади и сумме договора.",
+                "en": "The minimum base is compared by region, area and contract amount.",
+                "zh": "按地区、面积和合同金额比较最低计税基础。"
+              }
+            },
+            {
+              "title": {
+                "uz": "Noturar joy",
+                "ru": "Нежилое помещение",
+                "en": "Non-residential property",
+                "zh": "非住宅物业"
+              },
+              "text": {
+                "uz": "Savdo, ofis va boshqa noturar obyektlar uchun m²/oy ko‘rsatkichi nazorat qilinadi.",
+                "ru": "Для торговых, офисных и иных нежилых объектов контролируется показатель м²/мес.",
+                "en": "The m²/month indicator is checked for retail, office and other non-residential objects.",
+                "zh": "对商铺、办公室及其他非住宅对象按平方米/月进行核查。"
+              }
+            },
+            {
+              "title": {
+                "uz": "Hisoblash formulasi",
+                "ru": "Формула расчета",
+                "en": "Calculation formula",
+                "zh": "计算公式"
+              },
+              "text": {
+                "uz": "Maydon × eng kam stavka × koeffitsiyent. Shartnoma summasi past bo‘lsa, soliq bazasi minimal summadan olinadi.",
+                "ru": "Площадь × минимальная ставка × коэффициент. Если сумма договора ниже, налоговая база берется от минимума.",
+                "en": "Area × minimum rate × coefficient. If the contract amount is lower, the tax base is taken from the minimum amount.",
+                "zh": "面积 × 最低标准 × 系数。合同金额低于最低额时，按最低额作为计税基础。"
+              }
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": {
+            "uz": "Tezkor tekshiruv namunasi",
+            "ru": "Пример быстрой проверки",
+            "en": "Quick-check example",
+            "zh": "快速核查示例"
+          },
+          "columns": {
+            "uz": [
+              "Ko‘rsatkich",
+              "Qiymat"
+            ],
+            "ru": [
+              "Показатель",
+              "Значение"
+            ],
+            "en": [
+              "Indicator",
+              "Value"
+            ],
+            "zh": [
+              "指标",
+              "数值"
+            ]
+          },
+          "rows": {
+            "uz": [
+              [
+                "Toshkent shahri turar joy namunasi",
+                "56 000 söm/m²/oy"
+              ],
+              [
+                "Toshkent shahri noturar joy namunasi",
+                "48 000 söm/m²/oy"
+              ],
+              [
+                "Mahalliy koeffitsiyent",
+                "2 baravargacha qöllanişi mumkin"
+              ]
+            ],
+            "ru": [
+              [
+                "Пример для жилья в г. Ташкент",
+                "56 000 сум/м²/мес."
+              ],
+              [
+                "Пример для нежилого объекта в г. Ташкент",
+                "48 000 сум/м²/мес."
+              ],
+              [
+                "Местный коэффициент",
+                "может применяться до 2 раз"
+              ]
+            ],
+            "en": [
+              [
+                "Tashkent residential example",
+                "UZS 56,000/m²/month"
+              ],
+              [
+                "Tashkent non-residential example",
+                "UZS 48,000/m²/month"
+              ],
+              [
+                "Local coefficient",
+                "may be applied up to 2×"
+              ]
+            ],
+            "zh": [
+              [
+                "塔什干住宅示例",
+                "56,000 苏姆/平方米/月"
+              ],
+              [
+                "塔什干非住宅示例",
+                "48,000 苏姆/平方米/月"
+              ],
+              [
+                "地方系数",
+                "最高可适用2倍"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "laws",
+      "sourceUrl": "https://buxgalterpro.uz/content/lex/lexuz.html",
+      "sourceName": "BuxgalterPRO — lexuz.html",
+      "title": {
+        "uz": "Qonun hujjatlar",
+        "ru": "Законодательные документы",
+        "en": "Legislation",
+        "zh": "法规文件"
+      },
+      "summary": {
+        "uz": "BHMS, buxgalteriya, soliq, huquq va kadr böyiça asosiy normativ hujjatlar ALL FINANCE dizaynida jamlandi.",
+        "ru": "Основные документы по НСБУ, бухгалтерии, налогам, праву и кадрам собраны в дизайне ALL FINANCE.",
+        "en": "Key documents on NAS, accounting, tax, law and HR are grouped in the ALL FINANCE design.",
+        "zh": "与国家会计准则、会计、税务、法律和人事相关的主要文件以 ALL FINANCE 样式汇总。"
+      },
+      "groups": [
+        {
+          "type": "links",
+          "title": {
+            "uz": "BHMS va zarur qonunlar",
+            "ru": "НСБУ и необходимые законы",
+            "en": "NAS and key laws",
+            "zh": "会计准则和主要法律"
+          },
+          "links": [
+            {
+              "text": {
+                "uz": "BHMS-1 — Moliyaviy hisobot va hisob siyosati",
+                "ru": "НСБУ-1 — Финансовая отчетность и учетная политика",
+                "en": "NAS-1 — Financial statements and accounting policy",
+                "zh": "国家会计准则1 — 财务报表与会计政策"
+              },
+              "href": "https://lex.uz"
+            },
+            {
+              "text": {
+                "uz": "BHMS-2 — Asosiy xo‘jalik faoliyatidan daromadlar",
+                "ru": "НСБУ-2 — Доходы от основной хозяйственной деятельности",
+                "en": "NAS-2 — Revenue from core operations",
+                "zh": "国家会计准则2 — 主营业务收入"
+              },
+              "href": "https://lex.uz"
+            },
+            {
+              "text": {
+                "uz": "BHMS-4 — Tovar-moddiy zaxiralar",
+                "ru": "НСБУ-4 — Товарно-материальные запасы",
+                "en": "NAS-4 — Inventories",
+                "zh": "国家会计准则4 — 存货"
+              },
+              "href": "https://lex.uz"
+            },
+            {
+              "text": {
+                "uz": "BHMS-5 — Asosiy vositalar",
+                "ru": "НСБУ-5 — Основные средства",
+                "en": "NAS-5 — Fixed assets",
+                "zh": "国家会计准则5 — 固定资产"
+              },
+              "href": "https://lex.uz"
+            },
+            {
+              "text": {
+                "uz": "BHMS-6 — İjara hisobi",
+                "ru": "НСБУ-6 — Учет аренды",
+                "en": "NAS-6 — Lease accounting",
+                "zh": "国家会计准则6 — 租赁会计"
+              },
+              "href": "https://lex.uz"
+            },
+            {
+              "text": {
+                "uz": "BHMS-7 — Nomoddiy aktivlar",
+                "ru": "НСБУ-7 — Нематериальные активы",
+                "en": "NAS-7 — Intangible assets",
+                "zh": "国家会计准则7 — 无形资产"
+              },
+              "href": "https://lex.uz"
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": {
+            "uz": "Soliq, mehnat va boshqa havolalar",
+            "ru": "Налоги, труд и другие ссылки",
+            "en": "Tax, labor and other links",
+            "zh": "税务、劳动及其他链接"
+          },
+          "links": [
+            {
+              "text": {
+                "uz": "Soliq kodeksi",
+                "ru": "Налоговый кодекс",
+                "en": "Tax Code",
+                "zh": "税法典"
+              },
+              "href": "https://lex.uz"
+            },
+            {
+              "text": {
+                "uz": "Mehnat kodeksi",
+                "ru": "Трудовой кодекс",
+                "en": "Labor Code",
+                "zh": "劳动法典"
+              },
+              "href": "https://lex.uz"
+            },
+            {
+              "text": {
+                "uz": "Buxgalteriya hisobi to‘g‘risidagi qonun",
+                "ru": "Закон о бухгалтерском учете",
+                "en": "Accounting Law",
+                "zh": "会计法"
+              },
+              "href": "https://lex.uz"
+            },
+            {
+              "text": {
+                "uz": "Davlat xaridlari bo‘yicha hujjatlar",
+                "ru": "Документы по госзакупкам",
+                "en": "Public procurement documents",
+                "zh": "公共采购文件"
+              },
+              "href": "https://lex.uz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "links",
+      "sourceUrl": "https://buxgalterpro.uz/",
+      "sourceName": "BuxgalterPRO — foydali linklar",
+      "title": {
+        "uz": "Foydali linklar",
+        "ru": "Полезные ссылки",
+        "en": "Useful links",
+        "zh": "实用链接"
+      },
+      "summary": {
+        "uz": "Buxgalter va rahbarlar kundalik ishda foydalanadigan asosiy xizmatlar bir joyga jamlandi.",
+        "ru": "Основные сервисы для ежедневной работы бухгалтера и руководителя собраны в одном месте.",
+        "en": "Key services used daily by accountants and managers are grouped in one place.",
+        "zh": "会计和管理者日常使用的主要服务集中在一个页面。"
+      },
+      "groups": [
+        {
+          "type": "links",
+          "title": {
+            "uz": "Davlat va moliyaviy xizmatlar",
+            "ru": "Государственные и финансовые сервисы",
+            "en": "Government and finance services",
+            "zh": "政府和金融服务"
+          },
+          "links": [
+            {
+              "text": "mySoliq",
+              "href": "https://my.soliq.uz"
+            },
+            {
+              "text": "myMehnat",
+              "href": "https://my.mehnat.uz"
+            },
+            {
+              "text": "Markaziy bank",
+              "href": "https://cbu.uz"
+            },
+            {
+              "text": "Lex.uz",
+              "href": "https://lex.uz"
+            },
+            {
+              "text": "Faktura.uz",
+              "href": "https://faktura.uz"
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": {
+            "uz": "BuxgalterPRO foydali bo‘limlari",
+            "ru": "Полезные разделы BuxgalterPRO",
+            "en": "BuxgalterPRO useful sections",
+            "zh": "BuxgalterPRO实用栏目"
+          },
+          "links": [
+            {
+              "text": {
+                "uz": "Buxgalter taqvimi",
+                "ru": "Календарь бухгалтера",
+                "en": "Accountant calendar",
+                "zh": "会计日历"
+              },
+              "href": "https://buxgalterpro.uz/calendar.html"
+            },
+            {
+              "text": {
+                "uz": "2026-yil ish kunlari",
+                "ru": "Рабочие дни 2026",
+                "en": "2026 working days",
+                "zh": "2026年工作日"
+              },
+              "href": "https://buxgalterpro.uz/tools/ish_vaqti_normasi_2026.html"
+            },
+            {
+              "text": {
+                "uz": "Eng kam ijara stavkalari",
+                "ru": "Минимальные ставки аренды",
+                "en": "Minimum rental rates",
+                "zh": "最低租金标准"
+              },
+              "href": "https://buxgalterpro.uz/tools/eng_kam_ijara_stavkalari_2026.html"
+            },
+            {
+              "text": {
+                "uz": "Qonun hujjatlar",
+                "ru": "Законодательные документы",
+                "en": "Legislation",
+                "zh": "法规文件"
+              },
+              "href": "https://buxgalterpro.uz/content/lex/lexuz.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "info",
+      "sourceUrl": "https://buxgalterpro.uz/",
+      "sourceName": "BuxgalterPRO — amaldagi info",
+      "title": {
+        "uz": "Amaldagi info",
+        "ru": "Актуальная информация",
+        "en": "Current info",
+        "zh": "当前信息"
+      },
+      "summary": {
+        "uz": "BuxgalterPRO oynasidagi asosiy ko‘rsatkichlar ALL FINANCE sahifasida kichik panel ko‘rinishida beriladi.",
+        "ru": "Основные показатели из окна BuxgalterPRO показаны на странице ALL FINANCE отдельным блоком.",
+        "en": "Main indicators from BuxgalterPRO are shown inside the ALL FINANCE page as a small panel.",
+        "zh": "BuxgalterPRO 的主要指标在 ALL FINANCE 页面内以小面板显示。"
+      },
+      "metrics": [
+        {
+          "label": "BHM",
+          "value": "412 000"
+        },
+        {
+          "label": "MHEKM",
+          "value": "1 271 000"
+        },
+        {
+          "label": {
+            "uz": "Asosiy stavka",
+            "ru": "Основная ставка",
+            "en": "Key rate",
+            "zh": "基准利率"
+          },
+          "value": "14 %"
+        }
+      ],
+      "groups": [
+        {
+          "type": "links",
+          "title": {
+            "uz": "Tezkor havolalar",
+            "ru": "Быстрые ссылки",
+            "en": "Quick links",
+            "zh": "快速链接"
+          },
+          "links": [
+            {
+              "text": "mySoliq",
+              "href": "https://my.soliq.uz"
+            },
+            {
+              "text": "myMehnat",
+              "href": "https://my.mehnat.uz"
+            },
+            {
+              "text": "CBU",
+              "href": "https://cbu.uz"
+            },
+            {
+              "text": "Lex.uz",
+              "href": "https://lex.uz"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
