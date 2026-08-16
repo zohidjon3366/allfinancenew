@@ -1,0 +1,25 @@
+ALL FINANCE v34 — Mustaqillik 35 yilligi chiroyliroq dekor
+
+Asos: v28 final paket.
+O'zgargan narsa: faqat bayramona dizayn qatlami.
+
+Qo'shilgan fayllar:
+- assets/css/independence-35.css
+- assets/img/independence-35-decor.png
+
+Public HTML sahifalarga faqat bitta CSS ulanishi qo'shildi:
+<link href="/assets/css/independence-35.css?v=34" rel="stylesheet"/>
+
+Admin, JSON, jamoa, foydali ma'lumotlar, yangiliklar va server logikasi o'zgartirilmagan.
+
+Deploy:
+1) Tilda'ga avval qo'yilgan bayramona HTML/CSS kodlarni olib tashlang.
+2) GitHub fayllarini ushbu paket bilan to'liq almashtiring.
+3) Render: Manual Deploy -> Clear build cache & deploy.
+4) Brauzerda Ctrl + F5 bosing.
+
+v34 da dekor yarim ko'rinib qolmasligi uchun PNG fon hero/page-hero sahifalarida balandlik bo'yicha moslandi:
+- o'ng tomonda 35 yillik kompozitsiya to'liqroq chiqadi;
+- chap tomonda naqsh yengil ko'rinadi;
+- pastki bo'limlarga nozik dekor qo'shiladi;
+- matnlar va kartalar usti yopilmaydi.
