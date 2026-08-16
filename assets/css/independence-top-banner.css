@@ -1,34 +1,36 @@
-/* ALL FINANCE — Mustaqillik 35 yilligi yuqori banneri
-   V28 bazasi o‘zgarmaydi: faqat eng tepaga rasm-banner qo‘shiladi. */
+/* ALL FINANCE — Independence 35 top banner
+   v29: only visual top banner, no data/admin/server logic changes */
 .af35-top-banner{
-  width:100%;
-  height:96px;
   display:block;
+  width:100%;
+  height:94px;
+  margin:0;
+  padding:0;
   position:relative;
-  z-index:60;
+  z-index:40;
   overflow:hidden;
-  background:#063389;
-  box-shadow:0 1px 0 rgba(255,255,255,.35) inset, 0 8px 26px rgba(8,36,92,.10);
+  background-color:#061a4c;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:cover;
+  border-bottom:1px solid rgba(255,255,255,.35);
+  box-shadow:0 8px 24px rgba(8,36,92,.12);
 }
-.af35-top-banner img{
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center center;
+.af35-top-banner::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0) 45%, rgba(0,0,0,.12));
 }
-.af35-top-banner + .top-strip{
-  border-top:0;
+.af35-lang-uz{background-image:url('/assets/img/independence-35-top-banner-uz.png');}
+.af35-lang-ru{background-image:url('/assets/img/independence-35-top-banner-ru.png');}
+.af35-lang-en{background-image:url('/assets/img/independence-35-top-banner-en.png');}
+.af35-lang-zh{background-image:url('/assets/img/independence-35-top-banner-zh.png');}
+@media (max-width:1100px){
+  .af35-top-banner{height:78px;background-size:cover;background-position:center center;}
 }
-@media (max-width:1200px){
-  .af35-top-banner{height:78px;}
-  .af35-top-banner img{object-position:center center;}
+@media (max-width:680px){
+  .af35-top-banner{height:64px;background-size:auto 100%;background-position:center center;}
 }
-@media (max-width:768px){
-  .af35-top-banner{height:58px;}
-  .af35-top-banner img{object-position:center center;}
-}
-@media (max-width:480px){
-  .af35-top-banner{height:48px;}
-  .af35-top-banner img{object-position:center center;}
-}
+@media print{.af35-top-banner{display:none!important;}}
