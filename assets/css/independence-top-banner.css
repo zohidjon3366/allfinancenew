@@ -1,60 +1,50 @@
-/* ALL FINANCE — Mustaqillik 35 yilligi top banner
-   Faqat yuqori banner bezagi; kontent, baza va admin logikasi o'zgarmaydi. */
-.af-top-independence-banner {
+/* ALL FINANCE — 35 yillik tepa banner */
+
+.af-top-banner {
   width: 100%;
-  background: #08245f;
+  background: #08245c;
   line-height: 0;
   overflow: hidden;
-  position: relative;
-  z-index: 60;
-  border-bottom: 1px solid rgba(255,255,255,.25);
-  box-shadow: 0 8px 28px rgba(8, 36, 92, .18);
 }
 
-.af-top-independence-banner__img {
+.af-top-banner img {
   display: block;
   width: 100%;
   height: auto;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
+  max-height: none;
   object-fit: contain;
+  object-position: center top;
 }
 
-/* Juda katta monitorlarda banner juda balandlashib ketmasligi uchun */
-@media (min-width: 1800px) {
-  .af-top-independence-banner {
-    max-height: 340px;
-  }
-  .af-top-independence-banner__img {
-    transform: translateY(-2px);
-  }
-}
-
-@media (max-width: 1100px) {
-  .af-top-independence-banner__img {
-    width: 118%;
-    margin-left: -9%;
+/* Juda katta ekranlarda banner haddan tashqari baland bo‘lib ketmasin */
+@media (min-width: 1400px) {
+  .af-top-banner img {
+    width: 100%;
+    height: auto;
   }
 }
 
-@media (max-width: 760px) {
-  .af-top-independence-banner {
-    max-height: 142px;
+/* Planshet */
+@media (max-width: 1024px) {
+  .af-top-banner {
+    background: #08245c;
   }
-  .af-top-independence-banner__img {
-    width: 160%;
-    margin-left: -30%;
+
+  .af-top-banner img {
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+    object-fit: cover;
+    object-position: center center;
   }
 }
 
-@media (max-width: 480px) {
-  .af-top-independence-banner {
-    max-height: 112px;
-  }
-  .af-top-independence-banner__img {
-    width: 190%;
-    margin-left: -45%;
+/* Telefon */
+@media (max-width: 640px) {
+  .af-top-banner img {
+    width: 100%;
+    height: 96px;
+    object-fit: cover;
+    object-position: center center;
   }
 }
