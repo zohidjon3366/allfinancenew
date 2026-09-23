@@ -1,0 +1,21 @@
+ALL FINANCE v30 — Banner olib tashlangan + iPhone/Safari moslik paketi
+
+1. Banner butunlay olib tashlandi.
+2. Foydali ma'lumotlar sahifalarining admin boshqaruvi saqlandi.
+3. Frontend JavaScript eski iPhone/Safari brauzerlar bilan yaxshiroq moslashishi uchun ES5 formatga transpile qilindi.
+4. Asosiy polyfilllar qo'shildi (Array.from, includes, Object.values/entries/fromEntries va boshqalar).
+5. node scripts/verify-build.js to'liq muvaffaqiyatli o'tdi.
+6. Lokal server testida /health, / va /foydali.html 200 qaytardi.
+
+MUHIM — allfinance.uz domeni:
+Agar allfinance.uz Tilda ichidagi iframe/HTML wrapper orqali Render saytini ko'rsatayotgan bo'lsa, iPhone Safari muammosi koddan tashqari domen arxitekturasidan ham kelishi mumkin.
+Eng barqaror variant — allfinance.uz domenini Render web service'ga to'g'ridan-to'g'ri ulash.
+Render Dashboard -> Service -> Settings -> Custom Domains -> Add Custom Domain -> allfinance.uz
+So'ng DNS yozuvlarini Render ko'rsatmasiga muvofiq sozlang va Verify qiling.
+
+Deploy:
+- GitHub repository fayllarini ushbu paket bilan yangilang.
+- Render -> Manual Deploy -> Clear build cache & deploy.
+- Build Command: node scripts/verify-build.js
+- Start Command: node server.js
+- Health Check Path: /health

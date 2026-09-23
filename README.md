@@ -6,9 +6,3 @@ Asosiy qo‘llanma: `MULTILANG-SOZLASH.txt`.
 
 
 V12 fix: language flags moved to the top strip and verified on UZ/RU/EN/ZH pages.
-
-
-## 2026-09-23 iPhone / Safari fix
-- Top seasonal banner removed completely
-- Useful pages rendered statically for Safari compatibility
-- Core front-end JS simplified for broader iPhone Safari support
