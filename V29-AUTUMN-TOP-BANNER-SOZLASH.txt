@@ -1,0 +1,14 @@
+ALL FINANCE v29 — AUTUMN TOP BANNER
+
+Nima o'zgardi:
+- Yuqoridagi 35 yillik banner o'rniga kuzgi ALL FINANCE banneri qo'yildi.
+- Banner o'lchami avvalgi top banner bilan bir xil: 2172x724.
+- Sayt logikasi, matnlar, JSON, admin panel va qolgan sahifalar o'zgartirilmadi.
+
+Asosiy fayl:
+- assets/img/independence-35-top-banner.png  (endi kuzgi banner bilan almashtirilgan)
+
+Agar Render/GitHub ga yuklasangiz:
+1) Zipni oching.
+2) Hammasini loyihangiz ustiga yozing.
+3) Deploy qiling.
