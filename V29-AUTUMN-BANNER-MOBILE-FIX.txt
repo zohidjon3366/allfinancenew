@@ -1,0 +1,16 @@
+ALL FINANCE v29 — kuz banner mobile fix
+
+O'zgargan narsa:
+- assets/css/independence-top-banner.css
+- HTML sahifalardagi CSS cache versiyasi: ?v=29m
+
+Nima tuzatildi:
+- Desktopda banner juda balandlashmaydi.
+- Planshet va mobil ekranda banner kichikroq bo'ladi.
+- Rasm siqilib buzilmaydi; object-fit: cover orqali toza joylashadi.
+- Admin, JSON, foydali ma'lumotlar, jamoa va server logikasi o'zgarmadi.
+
+Deploy:
+1) GitHub fayllarini shu paket bilan almashtiring.
+2) Render -> Manual Deploy -> Clear build cache & deploy.
+3) Telefon va kompyuter brauzerida Ctrl+F5 yoki cache tozalab tekshiring.

@@ -1,60 +1,60 @@
-/* ALL FINANCE — Kuzgi top banner
-   Faqat yuqori banner bezagi; kontent, baza va admin logikasi o'zgarmaydi. */
+/* ALL FINANCE — Kuzgi top banner (mobile compact fix)
+   Faqat yuqori banner o‘lchami va joylashuvi; kontent, baza va admin logikasi o‘zgarmaydi. */
 .af-top-independence-banner {
   width: 100%;
-  background: #08245f;
+  height: clamp(92px, 11vw, 176px);
+  background: #f7efe4;
   line-height: 0;
   overflow: hidden;
   position: relative;
   z-index: 60;
-  border-bottom: 1px solid rgba(255,255,255,.25);
-  box-shadow: 0 8px 28px rgba(8, 36, 92, .18);
+  border-bottom: 1px solid rgba(13, 47, 108, .10);
+  box-shadow: 0 8px 22px rgba(8, 36, 92, .10);
 }
 
 .af-top-independence-banner__img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: none;
   margin: 0;
   padding: 0;
   border: 0;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center center;
 }
 
-/* Juda katta monitorlarda banner juda balandlashib ketmasligi uchun */
 @media (min-width: 1800px) {
   .af-top-independence-banner {
-    max-height: 340px;
-  }
-  .af-top-independence-banner__img {
-    transform: translateY(-2px);
+    height: 180px;
   }
 }
 
 @media (max-width: 1100px) {
+  .af-top-independence-banner {
+    height: 104px;
+  }
   .af-top-independence-banner__img {
-    width: 118%;
-    margin-left: -9%;
+    object-position: center center;
   }
 }
 
 @media (max-width: 760px) {
   .af-top-independence-banner {
-    max-height: 142px;
+    height: 72px;
+    box-shadow: 0 4px 14px rgba(8, 36, 92, .08);
   }
   .af-top-independence-banner__img {
-    width: 160%;
-    margin-left: -30%;
+    object-fit: cover;
+    object-position: center center;
   }
 }
 
 @media (max-width: 480px) {
   .af-top-independence-banner {
-    max-height: 112px;
+    height: 58px;
   }
   .af-top-independence-banner__img {
-    width: 190%;
-    margin-left: -45%;
+    object-position: center center;
   }
 }
