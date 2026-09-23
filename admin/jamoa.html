@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="uz">
 <head>
 <meta charset="utf-8"/>
@@ -17,7 +18,7 @@
 <h1>Jamoa boshqaruvi</h1>
 <p>Xodim rasmi, F.I.Sh., lavozimi va tajribasini Render orqali o‘zingiz kiritishingiz uchun administrator parolini kiriting.</p>
 <form id="loginForm">
-<label>Administrator paroli<input autocomplete="current-password" id="password" required type="password"/></label>
+<label>Administrator paroli<input autocomplete="current-password" id="password" required="" type="password"/></label>
 <button class="primary-btn" type="submit">Kirish</button>
 <div class="message" id="loginMessage"></div>
 </form>
@@ -31,15 +32,15 @@
 <div class="admin-grid">
 <section class="editor-card">
 <div class="card-heading"><div><span class="eyebrow">Muharrir</span><h2 id="formTitle">Yangi xodim</h2></div><button class="ghost-btn" id="newBtn" type="button">+ Yangi</button></div>
-<form id="teamForm" novalidate>
+<form id="teamForm" novalidate="">
 <input id="editingId" type="hidden"/>
 <div class="two-col"><label>Tartib raqami<input id="order" min="1" step="1" type="number"/></label><label>Holati<select id="status"><option value="active">Saytda ko‘rsatish</option><option value="hidden">Vaqtincha yashirish</option></select></label></div>
 <div class="language-tabs"><button class="lang-tab active" data-lang-tab="uz" type="button">O‘zbekcha</button><button class="lang-tab" data-lang-tab="ru" type="button">Русский</button><button class="lang-tab" data-lang-tab="en" type="button">English</button><button class="lang-tab" data-lang-tab="zh" type="button">中文</button></div>
-<section class="translation-panel active" data-lang-panel="uz"><div class="two-col"><label>F.I.Sh.<input id="name_uz" maxlength="160" placeholder="Atakulov Zohidjon Voxidovich" required/></label><label>Lavozim<input id="role_uz" maxlength="120" placeholder="Direktor" required/></label></div><label>Tajriba / qisqa maʼlumot<textarea id="experienceText_uz" rows="4" placeholder="Buxgalteriyada 18 yil tajriba" required></textarea></label><label>Qo‘shimcha izoh<textarea id="bio_uz" rows="3" placeholder="Ixtiyoriy: mutaxassis yo‘nalishi yoki vazifasi"></textarea></label></section>
+<section class="translation-panel active" data-lang-panel="uz"><div class="two-col"><label>F.I.Sh.<input id="name_uz" maxlength="160" placeholder="Atakulov Zohidjon Voxidovich" required=""/></label><label>Lavozim<input id="role_uz" maxlength="120" placeholder="Direktor" required=""/></label></div><label>Tajriba / qisqa maʼlumot<textarea id="experienceText_uz" placeholder="Buxgalteriyada 18 yil tajriba" required="" rows="4"></textarea></label><label>Qo‘shimcha izoh<textarea id="bio_uz" placeholder="Ixtiyoriy: mutaxassis yo‘nalishi yoki vazifasi" rows="3"></textarea></label></section>
 <section class="translation-panel" data-lang-panel="ru"><div class="two-col"><label>Ф.И.О.<input id="name_ru" maxlength="160" placeholder="Атакулов Зохиджон Вохидович"/></label><label>Должность<input id="role_ru" maxlength="120" placeholder="Директор"/></label></div><label>Опыт / краткая информация<textarea id="experienceText_ru" rows="4"></textarea></label><label>Дополнительное описание<textarea id="bio_ru" rows="3"></textarea></label></section>
 <section class="translation-panel" data-lang-panel="en"><div class="two-col"><label>Full name<input id="name_en" maxlength="160" placeholder="Zohidjon Atakulov"/></label><label>Position<input id="role_en" maxlength="120" placeholder="Director"/></label></div><label>Experience / short info<textarea id="experienceText_en" rows="4"></textarea></label><label>Additional description<textarea id="bio_en" rows="3"></textarea></label></section>
 <section class="translation-panel" data-lang-panel="zh"><div class="two-col"><label>姓名<input id="name_zh" maxlength="160"/></label><label>职位<input id="role_zh" maxlength="120"/></label></div><label>经验 / 简介<textarea id="experienceText_zh" rows="4"></textarea></label><label>补充说明<textarea id="bio_zh" rows="3"></textarea></label></section>
-<div class="image-row"><label class="file-label">Xodim rasmi — barcha tillar uchun bitta<input accept="image/png,image/jpeg,image/webp" id="imageFile" type="file"/><span>PNG, JPG yoki WEBP — 10 MB gacha; 900×900 WEBP qilib siqiladi</span><small id="compressionInfo" class="compression-info"></small></label><div class="image-preview hidden" id="imagePreviewWrap"><img alt="Xodim rasmi preview" id="imagePreview"/><button id="removeImageBtn" type="button">Rasmni olib tashlash</button></div></div>
+<div class="image-row"><label class="file-label">Xodim rasmi — barcha tillar uchun bitta<input accept="image/png,image/jpeg,image/webp" id="imageFile" type="file"/><span>PNG, JPG yoki WEBP — 10 MB gacha; 900×900 WEBP qilib siqiladi</span><small class="compression-info" id="compressionInfo"></small></label><div class="image-preview hidden" id="imagePreviewWrap"><img alt="Xodim rasmi preview" id="imagePreview"/><button id="removeImageBtn" type="button">Rasmni olib tashlash</button></div></div>
 <div class="form-actions"><button class="primary-btn" type="submit">Saqlash</button></div>
 <div class="message" id="formMessage"></div>
 </form>
