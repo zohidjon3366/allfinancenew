@@ -160,3 +160,13 @@ try {
   if (!usefulData.sections || !usefulData.sections.calendar || !usefulData.sections.workdays || !usefulData.sections.rent) { console.error('INVALID useful admin seed'); process.exitCode = 1; }
   else console.log('OK: data/useful-admin-data.json contains useful admin seed');
 } catch (error) { console.error('INVALID JSON: data/useful-admin-data.json', error.message); process.exitCode = 1; }
+
+try {
+  execFileSync(process.execPath, ['--check', path.join(root, 'consult-security.js')], { stdio: 'pipe' });
+  execFileSync(process.execPath, ['--check', path.join(root, 'consult-security.test.js')], { stdio: 'pipe' });
+  execFileSync(process.execPath, [path.join(root, 'consult-security.test.js')], { stdio: 'pipe' });
+  console.log('OK: consultation anti-spam security tests');
+} catch (error) {
+  console.error('INVALID: consultation security tests failed', error.message);
+  process.exitCode = 1;
+}
