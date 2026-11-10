@@ -860,8 +860,16 @@ async function sendTelegram(data) {
 
 const server = http.createServer(async (req, res) => {
   try {
-    const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
-    const pathname = decodeURIComponent(url.pathname);
+    let url, pathname;
+    try {
+      url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+      pathname = decodeURIComponent(url.pathname);
+    } catch (error) {
+      if (error instanceof URIError || error.code === 'ERR_INVALID_URL') {
+        return sendJson(res, 400, { message: 'Noto‘g‘ri URL' });
+      }
+      throw error;
+    }
 
     if (pathname === '/health') return sendJson(res, 200, { ok: true, service: 'allfinanceuz' });
 
