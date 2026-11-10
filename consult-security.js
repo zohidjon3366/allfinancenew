@@ -8,7 +8,7 @@ const IP_WINDOW_MS = 10 * 60 * 1000;
 const IP_LIMIT = 3;
 const MAX_TRACKED_IPS = 5000;
 const PRUNE_INTERVAL_MS = 60 * 1000;
-const PHONE_COOLDOWN_MS = 10 * 60 * 1000;
+const PHONE_COOLDOWN_MS = 60 * 60 * 1000;
 const EXACT_DUPLICATE_MS = 24 * 60 * 60 * 1000;
 const attempts = new Map();
 let nextPrune = Date.now() + PRUNE_INTERVAL_MS;
@@ -63,6 +63,24 @@ function normalizeText(value, max) {
   return text;
 }
 
+// Filter automated SQL-injection and XSS probes before storing data or
+// relaying user-supplied text to Telegram. Regular apostrophes remain allowed.
+function isAttackPayload(value) {
+  let text = value.normalize('NFKC');
+  try { text = decodeURIComponent(text); } catch {}
+  return [
+    /lxbfyeaa/i, // sqlmap's characteristic test marker
+    /\b(?:sleep|pg_sleep|benchmark)\s*\(/i,
+    /\bdbms_lock\s*\.\s*sleep\s*\(/i,
+    /\bunion\s+(?:all\s+)?select\b/i,
+    /\binformation_schema\b/i,
+    /\b(?:xor|or|and)\s*\(\s*if\s*\(/i,
+    /<\s*script\b/i,
+    /\bon(?:error|load)\s*=/i,
+    /javascript\s*:/i
+  ].some(pattern => pattern.test(text));
+}
+
 function validate(payload) {
   if (!payload || typeof payload !== 'object' || Array.isArray(payload)) {
     throw new Error('INVALID_FIELDS');
@@ -77,6 +95,9 @@ function validate(payload) {
     throw new Error('INVALID_FIELDS');
   }
   if (payload.website || payload.faxNumber) throw new Error('INVALID_FIELDS');
+  if (phoneDigits === '5556660606' || [name, phone, company, service, comment].some(isAttackPayload)) {
+    throw new Error('SUSPICIOUS_SUBMISSION');
+  }
   return { name, phone, company, service, comment };
 }
 
