@@ -23,11 +23,38 @@ assert.equal(guard.preflight({headers:{'content-type':'text/plain'},socket:{remo
 const d = guard.validate({name:' Bob ',phone:'+998 (90) 123 45 67',company:' Test ',service:'Audit',comment:' Hello '});
 assert.equal(d.name,'Bob');
 assert.equal(d.comment,'Hello');
+// Allow legitimate names containing apostrophes.
+assert.equal(guard.validate({name:"O'Connor",phone:'+998 90 123 45 67'}).name,"O'Connor");
+// Reject the SQL-injection probes observed in the incident.
+for (const attack of [
+  "lxbfYeaa0'XOR(if(now()=sysdate(),sleep(15),0))XOR'Z",
+  'lxbfYeaa0"XOR(if(now()=sysdate(),sleep(15),0))XOR"Z',
+  'XOR(if(now()=sysdate(),sleep(15),0))',
+  'UNION ALL SELECT password FROM users',
+  'hello%20SLEEP%2815%29',
+  '<script>alert(1)</script>',
+  'javascript:alert(1)'
+]) {
+  assert.throws(
+    () => guard.validate({name:attack,phone:'+998901234567'}),
+    {message:'SUSPICIOUS_SUBMISSION'}
+  );
+}
+assert.throws(
+  () => guard.validate({name:'Valid Person',phone:'+998901234567',comment:'pg_sleep(15)'}),
+  {message:'SUSPICIOUS_SUBMISSION'}
+);
+assert.throws(
+  () => guard.validate({name:'Valid Person',phone:'555-666-0606',company:'Testing'}),
+  {message:'SUSPICIOUS_SUBMISSION'}
+);
 assert.throws(()=>guard.validate({name:'a',phone:'111'}));
 assert.throws(()=>guard.validate({name:'Bob',phone:'123456789',comment:[] }));
 const now = Date.now();
 const old = {...d, createdAt:new Date(now-5*60_000).toISOString()};
 assert.equal(guard.isDuplicate({...d,service:'Other'},[old],now),true);
+const old20 = {...d, createdAt:new Date(now-20*60_000).toISOString()};
+assert.equal(guard.isDuplicate({...d,comment:'another request'},[old20],now),true);
 const old2 = {...d, createdAt:new Date(now-2*60*60_000).toISOString()};
 assert.equal(guard.isDuplicate({...d},[old2],now),true);
 assert.equal(guard.isDuplicate({...d,comment:'different'},[old2],now),false);
