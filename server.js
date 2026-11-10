@@ -944,6 +944,11 @@ const server = http.createServer(async (req, res) => {
       try { data = consultSecurity.validate(await readJsonBody(req, 10_000)); }
       catch (error) {
         if (error.message === 'INVALID_FIELDS') return sendJson(res, 400, { message: 'Ism yoki telefon raqami noto‘g‘ri' });
+        if (error.message === 'SUSPICIOUS_SUBMISSION') {
+          console.warn('Blocked /api/consult: malicious submission pattern');
+          return sendJson(res, 400, { message: 'Murojaat ma’lumotlari qabul qilinmadi' });
+        }
+        if (error.message === 'INVALID_JSON') return sendJson(res, 400, { message: 'Noto‘g‘ri JSON formati' });
         throw error;
       }
       let requests = [];
