@@ -3,6 +3,16 @@ const fs = require('fs');
 const path = require('path');
 
 const root = path.resolve(__dirname, '..');
+
+// Refuse a deployment if consultation spam protection fails verification.
+try {
+  execFileSync(process.execPath, ['--check', path.join(root, 'consult-security.js')], { stdio: 'inherit' });
+  execFileSync(process.execPath, [path.join(root, 'consult-security.test.js')], { stdio: 'inherit' });
+  console.log('OK: anti-spam security guard tests');
+} catch (error) {
+  console.error('INVALID: consultation anti-spam security tests failed');
+  process.exit(1);
+}
 const services = [
   'buxgalteriya-autsorsingi',
   'soliq-maslahatlari',
@@ -150,3 +160,13 @@ try {
   if (!usefulData.sections || !usefulData.sections.calendar || !usefulData.sections.workdays || !usefulData.sections.rent) { console.error('INVALID useful admin seed'); process.exitCode = 1; }
   else console.log('OK: data/useful-admin-data.json contains useful admin seed');
 } catch (error) { console.error('INVALID JSON: data/useful-admin-data.json', error.message); process.exitCode = 1; }
+
+try {
+  execFileSync(process.execPath, ['--check', path.join(root, 'consult-security.js')], { stdio: 'pipe' });
+  execFileSync(process.execPath, ['--check', path.join(root, 'consult-security.test.js')], { stdio: 'pipe' });
+  execFileSync(process.execPath, [path.join(root, 'consult-security.test.js')], { stdio: 'pipe' });
+  console.log('OK: consultation anti-spam security tests');
+} catch (error) {
+  console.error('INVALID: consultation security tests failed', error.message);
+  process.exitCode = 1;
+}
